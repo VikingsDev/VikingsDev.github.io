@@ -1,0 +1,19 @@
+body {
+    background-color: lightgray;
+    overflow-x: hidden;
+}
+
+.site-nav {
+    box-shadow: 0 0 10px gray;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.top-margin {
+    margin-top: 80px;
+}
+
+.site-panel {
+    margin: 10px 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px gray;
+}
