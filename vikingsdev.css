@@ -9,6 +9,14 @@ body {
     border-radius: 0px 0px 5px 5px;
 }
 
+.site-footer {
+    background-color: #222222;
+    color: white;
+    width: 100vw;
+    padding: 5vh 10vw;
+    box-shadow: 0 0 10px #222222;
+}
+
 .top-margin {
     margin-top: 80px;
 }
