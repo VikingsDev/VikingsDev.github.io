@@ -13,14 +13,28 @@ nav {
 	margin: 10px 0px 0px 0px;
 	color: white;
 	width: 100%;
-	padding: 5vh 10vw;
+	padding: 5vh 10vw 4vh 5vw;
 	box-shadow: 0 0 10px #222222;
+}
+
+.footer-link {
+	color: gray;
+	text-decoration: none;
+}
+
+.footer-link:hover {
+	color: lightgray;
+	text-decoration: none;
 }
 
 .panel-video {
 	margin: auto;
-	width: 60%;
+	width: 80%;
 	margin-bottom: 25px;
+}
+
+.margin-pos {
+	margin: auto;
 }
 
 .video-wrapper {
@@ -42,6 +56,10 @@ nav {
 
 .top-margin-sm {
 	margin-top: 30px;
+}
+
+.side-margin {
+	margin: 0px 30px;
 }
 
 .site-panel {
