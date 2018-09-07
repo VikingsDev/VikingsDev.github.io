@@ -17,6 +17,16 @@ nav {
 	box-shadow: 0 0 10px #222222;
 }
 
+.footer-link-light {
+	color: lightgray;
+	text-decoration: none;
+}
+
+.footer-link-light:hover {
+	color: white;
+	text-decoration: none;
+}
+
 .footer-link {
 	color: gray;
 	text-decoration: none;
