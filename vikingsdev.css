@@ -8,6 +8,10 @@ nav {
 	box-shadow: 0 0 10px gray;
 }
 
+.media-link {
+	width: 50%;
+}
+
 .site-footer {
 	background-color: #222222;
 	margin: 10px 0px 0px 0px;
