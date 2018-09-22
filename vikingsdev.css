@@ -85,6 +85,11 @@ nav {
 	height: auto;
 }
 
+.form {
+	position: relative;
+	width: 100%;
+}
+
 .discord-card {
 	border-color: #7289DA;
 }
