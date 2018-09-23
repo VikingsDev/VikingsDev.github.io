@@ -57,7 +57,7 @@ nav {
 	height: 0;
 }
 
-.video-wrapper iframe {
+iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -83,12 +83,6 @@ nav {
 	position: relative;
 	width: 100%;
 	height: auto;
-}
-
-.form {
-	position: relative;
-	width: 100%;
-	min-width: 320px;
 }
 
 .discord-card {
