@@ -2,19 +2,269 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d62bb3-38bd-4ce0-8d11-251aa79a899a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/css/normalize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/img/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/js/jquery-1.11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/js/jquery.nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shAutoloader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushAS3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushAppleScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushBash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushCSharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushColdFusion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushCpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushCss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushDelphi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushDiff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushErlang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushGroovy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushJScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushJava.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushJavaFX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushPerl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushPhp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushPlain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushPowerShell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushPython.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushRuby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushSass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushScala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushSql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushVb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shBrushXml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/scripts/shLegacy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCore.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreDjango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreEclipse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreEmacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreFadeToGrey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreMDUltra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreMidnight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shCoreRDark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeDjango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeEclipse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeEmacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeFadeToGrey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeMDUltra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeMidnight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interior Heaven Doc/syntax-highlighter/styles/shThemeRDark.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Facebook_Banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/GoogleForm_Banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/SquareBanner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vhh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vikingsdev.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vikingsdev_isometric_poster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/aos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/aos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/flaticon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/gijgo.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_tips.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_tips.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/nice-select.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/swiper.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Flaticon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Flaticon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Flaticon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Flaticon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/gijgo-material.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/gijgo-material.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/themify.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/themify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Quote.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/about_overlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/about_us_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner_bg_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/author.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/blog_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/blog_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/blog_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/blog_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/blog_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/learn_about_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/single_blog_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/single_blog_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/single_blog_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/single_blog_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/single_blog_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog/slide_thumb_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blog_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/breadcrumb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/client/client_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/client/client_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/client/client_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comment/comment_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comment/comment_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comment/comment_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/disabled-check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/disabled-radio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/f8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/g8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/primary-check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/primary-radio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/success-check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/elements/success-radio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gallery/gallery_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gallery/gallery_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gallery/gallery_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gallery/gallery_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gallery/gallery_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/special_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/special_2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/special_3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/post_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post/preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pricing_img/pricing_img_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/project/project_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/project/project_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/project/project_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/project_details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/service_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/service_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/services_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/single_about_overlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/video_popup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/vikingsdev-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/vikingsdev-logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vikingsdev.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/aos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/aos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/gijgo.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/gmap3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/gmaps.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope.pkgd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-1.12.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.3.1.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.ajaxchimp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.magnific-popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.magnific-popup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.nice-select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mail-script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/masonry.pkgd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/masonry.pkgd.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/particles.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/swiper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/swiper_custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_about.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_blog.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_blog_post.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_button.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_common.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_contact.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_contact_us.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_copyright_part.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_elements.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_extends.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_home_tips.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_map.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_our_speciality.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_overlay_section.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_project_gallery.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_project_part.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_service_part.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_single_blog.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_single_page_special.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-blog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_project.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.woff2" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,23 +276,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6802721">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="291">
-                  <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+                <state relative-caret-position="-172">
+                  <caret line="324" column="49" lean-forward="true" selection-start-line="324" selection-start-column="49" selection-end-line="324" selection-end-column="49" />
+                  <folding>
+                    <element signature="n#style#0;n#b#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#1;n#div#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#34400#34406#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/custom.js">
+            <entry file="file://$PROJECT_DIR$/css/flaticon.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+                <state relative-caret-position="380">
+                  <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -50,12 +313,28 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-31">
-                  <caret line="2553" column="14" selection-start-line="2553" selection-start-column="14" selection-end-line="2553" selection-end-column="14" />
+                <state relative-caret-position="34199">
+                  <caret line="9847" column="22" selection-start-line="9847" selection-start-column="22" selection-end-line="9847" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#37807#38041#2" expanded="true" />
+                    <element signature="e#39014#39167#1" expanded="true" />
+                    <element signature="e#39209#39443#1" expanded="true" />
+                    <element signature="e#43005#43281#2" expanded="true" />
+                    <element signature="e#44282#44435#1" expanded="true" />
+                    <element signature="e#44477#44753#1" expanded="true" />
+                    <element signature="e#84181#84368#2" expanded="true" />
+                    <element signature="e#84623#84759#2" expanded="true" />
+                    <element signature="e#85212#85345#2" expanded="true" />
+                    <element signature="e#87552#87705#1" expanded="true" />
+                    <element signature="e#106791#107021#2" expanded="true" />
+                    <element signature="e#108052#108288#2" expanded="true" />
+                    <element signature="e#149652#149829#2" expanded="true" />
+                    <element signature="e#149884#150061#2" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -64,23 +343,34 @@
       </split-second>
     </splitter>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>b</find>
+      <find>indigo</find>
+      <find>6927ff</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>c69249</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/custom.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/css/flaticon.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1787" />
-    <option name="y" value="27" />
-    <option name="width" value="1670" />
-    <option name="height" value="787" />
+    <option name="x" value="170" />
+    <option name="y" value="91" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -99,7 +389,18 @@
             <path>
               <item name="VikingsDev.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="VikingsDev.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VikingsDev.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VikingsDev.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VikingsDev.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VikingsDev.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="flaticon" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -108,6 +409,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -146,30 +448,31 @@
       <option name="presentableId" value="Default" />
       <updated>1562383804576</updated>
       <workItem from="1562383807035" duration="3109000" />
+      <workItem from="1562434563575" duration="7602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3109000" />
+    <option name="totallyTimeSpent" value="10711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12506597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20089285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32922733" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -179,24 +482,67 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="2553" column="14" selection-start-line="2553" selection-start-column="14" selection-end-line="2553" selection-end-column="14" />
+        <state relative-caret-position="456">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/scss/bootstrap/_nav.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="182">
+          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34199">
+          <caret line="9847" column="22" selection-start-line="9847" selection-start-column="22" selection-end-line="9847" selection-end-column="22" />
+          <folding>
+            <element signature="e#37807#38041#2" expanded="true" />
+            <element signature="e#39014#39167#1" expanded="true" />
+            <element signature="e#39209#39443#1" expanded="true" />
+            <element signature="e#43005#43281#2" expanded="true" />
+            <element signature="e#44282#44435#1" expanded="true" />
+            <element signature="e#44477#44753#1" expanded="true" />
+            <element signature="e#84181#84368#2" expanded="true" />
+            <element signature="e#84623#84759#2" expanded="true" />
+            <element signature="e#85212#85345#2" expanded="true" />
+            <element signature="e#87552#87705#1" expanded="true" />
+            <element signature="e#106791#107021#2" expanded="true" />
+            <element signature="e#108052#108288#2" expanded="true" />
+            <element signature="e#149652#149829#2" expanded="true" />
+            <element signature="e#149884#150061#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/flaticon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+        <state relative-caret-position="-172">
+          <caret line="324" column="49" lean-forward="true" selection-start-line="324" selection-start-column="49" selection-end-line="324" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#1;n#div#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#34400#34406#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
