@@ -1,0 +1,97 @@
+/*************** our speciality *****************/
+.our_speciality {
+    margin-top: -98px;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    right: 0;
+    .single_special_part {
+        background-color: $white_color;
+        width: 33.33%;
+        float: left;
+        position: relative;
+        padding: 45px 50px;
+        border-left: 1px solid $border;
+        
+        &:first-child{
+            border-left: 0px solid transparent;
+        }
+        @media #{$small_mobile}{
+            width:100%;
+            padding: 20px 15px;
+            border-left: 0px solid transparent;
+        }
+        @media #{$large_mobile}{
+            width:50%;
+            padding: 20px 15px 20px 35px;
+            border-left: 0px solid transparent;
+        }
+        @media #{$tab_device}{
+            width:50%;
+            padding: 20px 15px;
+            border-left: 0px solid transparent;
+        }
+        @media #{$medium_device}{
+            padding: 25px 30px;
+        }
+        img {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            @media #{$small_mobile}{
+                left: 15px;
+                top: 20px;
+            }
+            @media #{$large_mobile}{
+                left: 15px;
+                top: 25px;
+                width: 35px;
+            }
+            @media #{$tab_device}{
+                left: 15px;
+                top: 25px;
+                width: 35px;
+            }
+            @media #{$medium_device}{
+                left: 15px;
+                top: 25px;
+                width: 45px;
+            }
+        }
+
+        .single_special_text {
+            padding-left: 85px;
+            @media #{$small_mobile}{
+               
+            }
+            @media #{$large_mobile}{
+                padding-left: 25px;
+            }
+            @media #{$tab_device}{
+                padding-left: 50px;
+            }
+            @media #{$medium_device}{
+                padding-left: 50px;
+            }
+            p{
+                font-size: 14px;
+            }
+            h3 {
+                font-weight: 600;
+                margin-bottom: 24px;
+                @media #{$small_mobile}{
+                    margin-bottom: 5px;
+                }
+                @media #{$large_mobile}{
+                    margin-bottom: 10px;
+                }
+                @media #{$tab_device}{
+                    margin-bottom: 10px;
+                }
+                @media #{$medium_device}{
+                
+                }
+            }
+        }
+    }
+}

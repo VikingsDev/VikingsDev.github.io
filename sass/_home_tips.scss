@@ -1,0 +1,46 @@
+/************** home tips css******************/
+.home_tips{
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 99;
+    
+    h1{
+        font-size: 48px;
+        font-weight: 600;
+    }
+    p{
+        padding: 23px 0px 82px;
+        @media #{$small_mobile}{
+            padding: 10px 0px 40px;
+        }
+        @media #{$large_mobile}{
+            padding: 10px 0px 40px;
+        }
+        @media #{$tab_device}{
+            padding: 10px 0px 40px;
+        }
+        @media #{$medium_device}{
+            padding: 10px 0px 40px;
+        }
+    }
+    .popup-youtube {
+        height: 35px;
+        width: 60px;
+        display: inline-block;
+        background-color: red;
+        color: #fff;
+        line-height: 44px;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 66%;
+        i {
+            font-size: 25px;
+            margin-left: 6px;
+        }
+    }
+    
+    
+}

@@ -1,0 +1,81 @@
+.about_part{
+    padding: 230px 0 50px;
+    @media #{$medium_device}{
+        padding: 145px 0 80px;
+    }
+    .about_part_text{
+        padding-left: 78px;
+        @media #{$small_mobile}{
+            padding-left: 0;
+            padding-top: 100px;
+        }
+        @media #{$large_mobile}{
+            padding-left: 0;
+            margin-top: 25px;
+        }
+        @media #{$tab_device}{
+            padding-left: 0;
+            padding-top: 0;
+        }
+        @media #{$medium_device}{
+            padding-left: 0;
+        }
+        h2{
+            color: #010101;
+            font-weight: 600;
+            margin-bottom: 27px; 
+            font-size: 48px;
+            line-height: 39px;
+            @media #{$small_mobile}{
+                font-size: 30px;
+            }
+            @media #{$large_mobile}{
+                font-size: 30px;
+            }
+            @media #{$tab_device}{
+                font-size: 30px;
+            }
+            @media #{$medium_device}{
+            
+            }
+         }
+        @media #{$small_mobile}{
+            .btn_1{
+                margin-bottom: 25px;
+            }
+        }
+        @media #{$large_mobile}{
+            .btn_1{
+                margin-bottom: 25px;
+            }
+        }
+        @media #{$tab_device}{
+            .btn_1{
+                margin-bottom: 25px;
+            }
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+   
+    .about_img{
+        img{
+            width: 100%;
+            position: absolute;
+            right: 0;
+            @media #{$small_mobile}{
+                position: relative;
+            }
+            @media #{$large_mobile}{
+                position: relative;
+            }
+            @media #{$tab_device}{
+                position: relative;
+            }
+            @media #{$medium_device}{
+            
+            }
+        }
+    }
+}

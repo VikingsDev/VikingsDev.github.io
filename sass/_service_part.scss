@@ -1,0 +1,96 @@
+.service_part {
+    padding: 445px 0px 130px;
+    background-image: url(../img/services_bg.png);
+    background-position: center left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    @media #{$small_mobile}{
+        padding: 70px 0px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px;
+    }
+    @media #{$medium_device}{
+        padding: 80px 0px;
+    }
+    .service_text {
+        padding: 0 25px 0 0;
+        border-right: 3px solid $btn_bg;
+        margin-left: 26px;
+        @media #{$small_mobile}{
+            padding: 20px 0;
+            margin-left: 0;
+            border-right: 0px solid $btn_bg;
+        }
+        @media #{$large_mobile}{
+            padding: 20px 0;
+            margin-left: 0;
+            border-right: 0px solid $btn_bg;
+        }
+        @media #{$tab_device}{
+            padding: 20px 0;
+            margin-left: 0;
+            border-right: 0px solid $btn_bg;
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+
+    .mt_less_115 {
+        margin-top: -115px;
+        @media #{$small_mobile}{
+            margin-top: 0;
+        }
+        @media #{$large_mobile}{
+           margin-top: 0;
+        }
+        @media #{$tab_device}{
+            margin-top: 0;
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+
+    .owl-prev, .owl-next   {
+        background-color: transparent;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        color: $white_color;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $black_color !important;
+        transition: all 1s;
+        &:hover{
+            background-color: $btn_bg !important;
+            color: $white_color !important;
+        }
+    }
+    .owl-prev{
+        margin-right: 80px;
+    }
+}
+.single_service_padding{
+    padding: 130px 0px;
+    @media #{$small_mobile}{
+        padding: 70px 0px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px;
+    }
+    @media #{$medium_device}{
+        padding: 80px 0px;
+    }
+}

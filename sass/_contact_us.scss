@@ -1,0 +1,83 @@
+/*************** contact us start******************/
+.contact_us{
+    position: relative;
+    z-index: 5;
+    .contact_us_iner{
+        background-color: $btn_bg;
+        padding: 95px 0px;
+        @media #{$small_mobile}{
+            padding: 30px 15px;
+        }
+        @media #{$large_mobile}{
+            padding: 30px 15px;
+        }
+        @media #{$tab_device}{
+            padding: 30px 15px;
+        }
+        @media #{$medium_device}{
+        
+        }
+        p{
+            color: $black_color;
+        }
+        .contact_us_left_text{
+            
+            h4{
+                display: inline-block;
+                font-size: 24px;
+               font-weight: 600;
+               margin-bottom: 27px;
+            }
+            span{
+                font-size: 14px;
+                float: right;
+            }
+            p{
+                margin-bottom: 25px;
+            }
+        }
+        .contact_us_right_text{
+            @media #{$small_mobile}{
+                margin-top: 25px;
+            }
+            @media #{$large_mobile}{
+                margin-top: 25px;
+            }
+            @media #{$tab_device}{
+                margin-top: 25px;
+            }
+            @media #{$medium_device}{
+            
+            }
+            h5{
+                font-size: 16px;
+                font-weight: 600;
+            }
+            h2{
+                font-size: 36px;
+                margin-bottom: 34px;
+                @media #{$small_mobile}{
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+                @media #{$large_mobile}{
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+                @media #{$tab_device}{
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+                @media #{$medium_device}{
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+            }
+            span{
+                margin-bottom: 30px;
+                display: inline-block;
+            }
+           
+        }
+    }
+}

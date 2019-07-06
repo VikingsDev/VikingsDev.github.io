@@ -1,0 +1,36 @@
+.map_part{
+    position: relative;
+    z-index: 1;
+    margin-top: -225px;
+    @media #{$small_mobile}{
+        margin-top: -100px;
+    }
+    @media #{$large_mobile}{
+        margin-top: -100px;
+    }
+    @media #{$tab_device}{
+        margin-top: -100px;
+    }
+    @media #{$medium_device}{
+    
+    }
+    .col-lg-12{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .map{
+        height: 770px;
+        @media #{$small_mobile}{
+            height: 400px;
+        }
+        @media #{$large_mobile}{
+            height: 400px;
+        }
+        @media #{$tab_device}{
+            height: 400px;
+        }
+        @media #{$medium_device}{
+            height: 500px;
+        }
+    }
+}

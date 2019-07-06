@@ -1,0 +1,225 @@
+/**************menu part start*****************/
+.main_menu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	padding: 25px 0px;
+	#search_1{
+        i{
+            color: #fff;
+        }
+    }
+    #search_input_box {
+        position: fixed;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1140px;
+        z-index: 999;
+        text-align: center;
+        background: #aaa;
+        ::placeholder {
+            color: #fff;
+        }
+        margin-top: 25px;
+    }
+    
+    #search_input_box .form-control {
+        background: transparent;
+        border: 0;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 15px;
+        padding: 0;
+    }
+    
+    #search_input_box .btn {
+        width: 0;
+        height: 0;
+        padding: 0;
+        border: 0;
+    }
+    
+    #search_input_box .ti-close {
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px;
+        padding-right: 0;
+    }
+    
+    
+    .search-inner{
+        padding: 5px 5px;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+	}
+	.main_menu_iner{
+		display: flex;
+		justify-content: space-between;
+    }
+    .menu-trigger span {
+        display: block;
+        height: 2px;
+        background: #ffffff;
+        transition: 0.5s;
+    }
+    
+    .menu-trigger span:nth-child(2) {
+        margin: 10px 0px 8px;
+    }
+    
+    span.menu-trigger {
+        display: inline-block;
+        width: 30px;
+    }
+    .menu-trigger {
+        cursor: pointer;
+    }
+    .menu-trigger span:nth-child(1) {
+        width: 15px;
+        float: right;
+    }
+    .menu-trigger span:nth-child(3) {
+        width: 23px;
+        float: right;
+    }
+    .menu-trigger:hover span:nth-child(1), .menu-trigger:hover span:nth-child(3) {
+        width: 30px;
+    }
+    .off-canven-menu {
+        position: fixed;
+        background: #fff;
+        width: 400px;
+        height: 100vh;
+        z-index: 99;
+        top: 0;
+        padding: 0px 60px;
+        transition: 0.5s;
+        right: -400px;
+        @media #{$small_mobile}{
+            right: -300px;
+            width: 300px;
+        }
+        
+    }
+    
+    .offcanvas-overlay.active {
+        opacity: 0.2;
+        visibility: visible;
+        z-index: 3;
+    }
+    .off-canven-menu.active{
+        right: 0;
+    }
+    
+    .menu-btm-tex {
+        background: #EFEBFF;
+        padding: 7px;
+        font-weight: 700;
+    }
+    
+    .off-canven-menu a {
+        color: #B6B3C1;
+        font-size: 20px;
+        display: inline-block;
+        padding-right: 20px;
+    }
+    .off-canven-menu a:hover {
+        color: $btn_bg;
+    }
+    .social-icon {
+        margin-bottom: 20px;
+    }
+    .canven-menu-iner {
+        padding: 20px 0px;
+    }
+    
+    .off-canven-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .off-canven-menu ul li a {
+        text-transform: capitalize;
+        font-size: 20px;
+        line-height: 1.8;
+        color: #100060;
+        font-weight: 600;
+        letter-spacing: -0.12px;
+        margin: 10px 0px;
+    }
+    .off-canven-menu ul li a:hover {
+        color: $btn_bg;
+    }
+    .close-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50px;
+    }
+    
+    
+    .off-canven-menu i {
+        height: 65px;
+        width: 65px;
+        background-color: #272822;
+        color:  #fff;
+        font-size: 31px;
+        border-radius:  50%;
+        text-align:  center;
+        line-height: 63px;
+    }
+    
+    .off-canven-menu i:hover {
+        background-color: #FF0083;
+    }
+    .menu-btm-section {
+        position: absolute;
+        bottom: 67px;
+        max-width: 306px;
+    }
+    .close-icon i {
+        position: absolute;
+        text-align: center;
+        top: 5%;
+        width: 100%;
+        line-height: 40px;
+        margin-top: -20px;
+        font-size: 25px;
+        cursor: pointer;
+        background-color: transparent;
+        color: #000;
+    }
+    .close-icon i:hover {
+        position: absolute;
+        text-align: center;
+        top: 5%;
+        width: 100%;
+        line-height: 40px;
+        margin-top: -20px;
+        font-size: 25px;
+        cursor: pointer;
+        background-color: transparent;
+        color: #000;
+    }
+}
+.menu_fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #161f23;
+}
+
