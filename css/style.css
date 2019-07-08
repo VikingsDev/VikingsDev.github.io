@@ -10050,6 +10050,12 @@ body {
   padding: 0 10px;
 }
 
+.column-event{
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+}
+
 /* Remove extra left and right margins, due to padding in columns */
 .row {margin: 0 -5px;}
 
@@ -10078,4 +10084,12 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+
+.event-picture{
+    text-align: left;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
