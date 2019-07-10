@@ -51,47 +51,188 @@
 </nav>
 <!-- END nav -->
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/discord-ws.png');" data-stellar-background-ratio="0.5">
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/discord-ws.png');"
+     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
             <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops<i class="ion-ios-arrow-forward"></i></a></span> <span>Java Discord Bot</span></p>
-                <h1 class="mb-3 bread">Java Discord Bot</h1>
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i
+                        class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops<i
+                        class="ion-ios-arrow-forward"></i></a></span> <span>Python Discord Bot</span></p>
+                <h1 class="mb-3 bread">Python Discord Bot</h1>
+                <h3 class="mb-3 bread">Frank Hui</h3>
             </div>
         </div>
     </div>
 </div>
 
+<div class="card" style="margin: 0 auto; display: block; max-width: 500px; padding:20px">
+    <p class="toc_title">Table of Contents</p>
+    <ul class="toc_list">
+        <li><a href="#setup-discord">Setting up a Discord Bot</a>
+            <!--            <ul>-->
+            <!--                <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>-->
+            <!--                <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>-->
+            <!--            </ul>-->
+        </li>
+        <li><a href="#setup-env">Setting up the environment</a></li>
+        <li><a href="#coding">Writing the code</a></li>
+    </ul>
+</div>
+
 <section class="ftco-section testimony-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-                <span class="subheading">Don't know where to start?</span>
-                <h2 class="mb-4">Try a Workshop.</h2>
+            <div class="col-md-7 heading-section ftco-animate">
+                <p>In this workshop, I'll show you how to make a basic Discord Bot. The goal of this is to provide a
+                    platform for you to be creative, so don't be afraid to riff on this
+                    workshop and explore! <br> <b>You'll need a Discord account and Google account.</b></p>
+                <h2 id="setup-discord" class="text-center">Setting up a Discord Bot</h2>
+                <p>This assumes that you have a Discord account. If you don't, click the button below to sign up.</p>
+                <p class="text-center"><a href="https://discordapp.com/register" class="btn btn-primary py-3">Register
+                    for Discord</a></p>
+                <p>Next, we want to go to the Discord Developer Portal. Clicking the button below will bring you to the
+                    Portal.</p>
+                <p class="text-center"><a href="https://discordapp.com/developers/applications/"
+                                          class="btn btn-primary py-3">Discord Developer Portal</a></p>
+                <p>Sign in if you need to, and click on 'New Application' and create a name for the bot and fill it in.
+                    Then click 'Create'.</p>
+                <p>Go to the Bot tab on the left menu and click 'Add Bot' and then click 'Yes, do it!'</p>
+                <p>Now go to the OAuth2 tab on the menu on the left, copy the Client ID by clicking the 'Copy' button
+                    and replace the bold text below (you can edit it!) with the Client ID you just copied.</p>
+                <p><b>This is your OAuth2 Redirect Link.</b></p>
+                <p>https://discordapp.com/api/oauth2/authorize?client_id=<b contentEditable="true">CLIENT_ID</b>&permissions=8&scope=bot
+                </p>
+                <p>Go back to the Developer Portal, now scroll up to the button that says 'Add Redirect' and paste in
+                    your OAuth2 Redirect Link and click the green 'Save Changes' button.</p>
+                <p>Go to the place that says 'Select Redirect URL' and select the OAuth2 Redirect Link you just added.
+                    This link lets you add your bot to the server. Paste the link into a new tab and follow the
+                    instructions on screen to add a bot to your own server.</p>
+                <p>You've now created a bot! Don't close the Developer Portal yet because we'll need it later.</p>
+                <h2 id="setup-env" class="text-center">Setting up the environment</h2>
+                <p>We'll be using a pre-made developing environment called Google Colab. Click the button
+                    below to get started. You'll need a Google account if you want to use Google Colab.</p>
+                <p class="text-center"><a href="https://colab.research.google.com" class="btn btn-primary py-3">Google
+                    Colab</a></p>
+                <p>Once you've opened Google Colab, go to File -> New Python 3 Notebook</p>
+                <img style="width:100%" src="discordbot-assets/new-notebook.png">
+                <br>
+                <p>Pick a name for your Discord bot, and rename the file if you want. Keep the .ipynb file
+                    extension.</p>
+                <img style="width:100%" src="discordbot-assets/name-the-file.png">
+                <br>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <a href="#">
-                    <div class="text-center heading-section card" style="padding: 20px; border-color: #c69249; height: 300px;">
-                        <img src="../images/Discord-Logo-Color.png" class="profile" alt="Avatar">
-                        <h4 class="mb-2">Java Discord Bot</h4>
-                        <span class="subheading">Frank Hui</span>
-                        <p style="color:black;">In this workshop you learn how to make a basic Hello World Discord bot that can send messages.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="column">
-                <a href="#">
-                    <div class="text-center heading-section card" style="padding: 20px; border-color: #c69249; height: 300px;">
-                        <img src="../images/gamemaker.png" class="profile" alt="Avatar">
-                        <h4 class="mb-2">GameMaker Platformer</h4>
-                        <span class="subheading">Andy Shen</span>
-                        <p style="color:black;">In this workshop you learn how to make a basic platformer in GameMaker.</p>
-                    </div>
-                </a>
+                <h2 id="coding" class="text-center">Writing the Code</h2>
+
+                <p>"Let's start coding already!"
+                    <br> Alright, let's get started. Type this command into the box and hit run. <b>Do NOT copy and
+                        paste! You will learn better if you type it out!</b></p>
+                <pre>
+                  <code>!python3 -m pip install -U discord.py[voice]</code>
+                </pre>
+                <p>Here's what your screen should look like afterwards.</p>
+                <img style="width:100%" src="discordbot-assets/install-command.png">
+                <p>What this command did was install the Discord python package that we will use to build our Discord
+                    bot. <b>Everytime you leave Google Colab, the environment that is used to run the code is
+                        deleted, so you'll have to run this code everytime you open up Google Colab to run the bot.</b></p>
+                <p>Let's create a new code box by clicking '+ CODE' on the top left corner and write our imports in:</p>
+
+                <pre><code>import discord
+import asyncio</code></pre>
+
+                <p>This imports the discord package we just installed, as well as a tool we'll need later on.</p>
+
+                <p>Next, we want to write in the same box:</p>
+
+                <pre><code>TOKEN = '<span contenteditable="true">YOUR TOKEN</span>'
+
+client = discord.Client()
+
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(asyncio.new_event_loop())
+asyncio.get_event_loop()
+
+@client.event
+async def on_message(message):
+
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
+
+client.run(TOKEN)
+                </code></pre>
+
+                <p>This code first creates a <b>variable</b> which is then set to equal a client that connects to
+                    Discord, resets an async loop (which you don't need
+                    to understand or know about), defines an action that is triggered when the client is ready to accept
+                    commands, defines an action that is triggered when the client receives a message, and finally runs
+                    the client with the token. A token is basically the password which your
+                    bot uses to login to the Discord server.</p>
+
+                <p>Now, go back to the Bot tab on the left menu in the Developer Portal, then go ahead and click 'Copy'
+                    right below where it says 'Token'. Now paste it into the code where it says 'YOUR TOKEN'. Don't
+                    remove the apostrophes!</p>
+
+                <div class="card" style="border-color: red; background-color: lightcoral; padding: 20px;">
+                    <img src="../images/warning.png" style="width: 50px; margin: 0 auto;">
+                    <br>
+                    <b class="text-center" style="color:white">NEVER give this token to anyone
+                        else, or else they can log on to your bot!</b>
+                </div>
+
+                <p>Okay, now let's focus on this part: </p>
+                <pre><code>@client.event
+async def on_message(message):</code></pre>
+
+                <p>This piece of code listens to Discord and waits for someone to send a message. This is called a
+                    function, or a method. You can think of a function as an input/output machine, where if you put in
+                    <b>x</b>, you get <b>y</b> out. In this case, our <b>x</b> is the message that is sent in the
+                    server,
+                    and out <b>y</b> is the response we'll give. Our next step is to write our response.</p>
+
+                <p>For this workshop we'll just do something very basic. If the message "!ping" is sent, we'll send
+                    back "Pong!"</p>
+
+                <p>We set up an if statement:</p>
+                <pre>
+                    <code>@client.event
+async def on_message(message):
+    if message.content == "!ping":</code>
+                </pre>
+
+                <p>
+                    This if statement basically translates to: "When a message is received, if the message's contents
+                    are !ping, then do something".
+                    We will now define the "something" that it does. You might notice that the if statement is indented
+                    one tab. This indicates that the if statement 'belongs' to the on_message() function, and will run
+                    whenever on_message() does.
+                </p>
+
+                <pre>
+                    <code>@client.event
+async def on_message(message):
+    if message.content == "!ping":
+        message.channel.send("Pong!")
+                    </code>
+                </pre>
+
+                <p>
+                    Now this code translates to: "When a message is received, if the message's contents are !ping, then
+                    send a new message in the same channel the original message was sent that says "Pong!""
+                </p>
+
+                <p>
+                    Okay, we're done! Your code should look something like this:</p>
+                <img src="discordbot-assets/finalresult.png" style="width:100%">
+                <p>
+                Now just run the code by hitting the play button on the left side of the box, and try sending
+                    !ping to a channel that the bot is in.
+                </p>
+
             </div>
         </div>
         <br>
@@ -108,7 +249,8 @@
                 </div>
             </div>
             <div class="col-md-3 ftco-animate">
-                <p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4" style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+                <p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4"
+                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
             </div>
         </div>
         <div class="row mb-5">
@@ -117,9 +259,12 @@
                     <h2 class="ftco-heading-2">VikingsDev</h2>
                     <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
                     <ul class="ftco-footer-social list-unstyled mb-0">
-                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/362209544233564/"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+                                class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/362209544233564/"><span
+                                class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
+                                class="icon-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -152,7 +297,8 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a href="https://github.com/FrankWhoee">Frank Hui</a></p>
+                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
                 <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
             </div>
         </div>
