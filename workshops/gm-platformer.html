@@ -91,30 +91,45 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate">
-                <p>In this workshop, we will be learning how to build a platformer style game using Gamemaker Studio and GML.
-                Gamemaker is <i>no longer free for download,</i> to obtain a login so you can work on your projects at home, please see
-                me (Andy) at the next club meeting.</p>
+                <p>
+                    In this workshop, we will be learning how to build a platformer style game using Gamemaker Studio and GML.
+                    Since the release of Gamemaker Studio 2, Gamemaker is <i>no longer free for download.</i>
+                    To obtain a login so you can work on your projects at home, please see
+                    me (Andy) at the next club meeting.
+                </p>
 
                 <div id = "Project" class = "row">
                     <h2 class = "text-center"><br>Creating our First Project</h2>
-                    <p>Open <code style = "font-size:100%">Gamemaker:Studio 1.4</code> on your computer.
-                    On the school computers, Gamemaker is located in this directory:</p>
+                    <p>
+                        <br>
+                        Open <code style = "font-size:100%">Gamemaker:Studio 1.4</code> on your computer.
+                        On the school computers, Gamemaker is located in this directory:
+                    </p>
                     <pre>
                         <code>Desktop 💻<br> ↳ Desk Tools<br>  ↳ Locally Installed Apps<br>   ↳ Lab 315<br>    ↳ Gamemaker Studio</code>
                     </pre>
-                    <p>If you are working at home, open the application where you installed it.<br>
-                    You should be greeted by this screen.</p>
+                    <p>
+                        If you are working at home, open the application where you installed it.<br>
+                        You should be greeted by this screen.
+                    </p>
                     <img style="width: 100%; text-align: center" src="gamemaker-assets/welcome.png">
-                    <p><br>There are several tabs at the top. Go to the <code>New</code> tab</p>
+                    <p>
+                        <br>There are several tabs at the top. Go to the <code>New</code> tab
+                    </p>
                     <img style="width: 100%" src="gamemaker-assets/newproject.png">
-                    <p><br>Rename this to whatever you want and hit <code>Create</code></p>
+                    <p>
+                        <br>Rename this to whatever you want and hit <code>Create</code>
+                    </p>
                     <img style = "width:100%" src="gamemaker-assets/projectname.png">
-                    <p><br>Congratulations! You've made your first project! It's looking sort of empty right now though... let's fix that!</p>
+                    <p>
+                        <br>Congratulations! You've made your first project! It's looking sort of empty right now though... let's fix that!
+                    </p>
                 </div>
 
                 <div id = "SpritesAndObjects" class = "row">
                     <h2 class = "text-center"><br>Sprites and Objects</h2>
                     <p>
+                        <br>
                         <img style="float: left; margin: 0px 20px 20px 0px; width: 40%" src="gamemaker-assets/assetpanel.png">
                         In your new project, you should see a lot of folders on the left side, as well as a panel of icons at the top. These are to organize your
                         <code> assets</code>, such as images, music, objects, and most importantly, code.
@@ -130,15 +145,130 @@
                         <br><br><b>Tip:</b> Always use prefixes. The prefix <code>spr_</code> is used to distinguish sprites from other assets, which will be important later. Another common
                         alternative is <code>s_</code> or simply <code>s</code>, but these can confuse sounds and sprites.
                     </p>
-                    <p></p>
+                    <p>
+                        <br>In the second window (which we will call the animation panel), click the paper icon in the top left corner to create an image. Size <code>32 x 32</code>
+                        will work for our purposes.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/newimage.png">
+                    <p>
+                        <br>To edit the image, click the pencil icon in the top right. '
+                    </p>
+                    <img style = "width:100%" src="gamemaker-assets/editimage.png">
+                    <p>
+                        <br>This opens a paint-like interface to draw and create images. For now, we can
+                        fill our image with a solid colour, such as cyan.
+                    </p>
+                    <img style ="width:100%" src="gamemaker-assets/imageeditor.png">
+                    <p>
+                        <img style="float:left; margin: 0px 20px 20px 0px; width:10%" src="gamemaker-assets/greencheck.png">
+                        Hit the green check mark in the top left of each window to save your changes.
+                    </p>
+                    <p>
+                        Once you've finished creating <code>spr_player</code>, try making a sprite for your wall as well. It will be the same size, and for now, fill it with a solid
+                        colour that is different than your player. Name it <code>spr_wall</code>.
+                    </p>
+                    <img style = "width:100%" src="gamemaker-assets/sprites.png">
+                    <p>
+                        <br>Cool! Your images are created, now let's start writing some code for them.
+
+                        <br><br>
+                        Find the objects folder, and make two new objects,
+                        called <code>obj_player</code> and <code>obj_wall</code>. On the bar on the left, under <code>Sprite</code>, click the icon and select the corresponding sprite</p>
+                    <img style = "width:100%" src="gamemaker-assets/addsprite.png">
+                    <p>
+                        <br>
+                        Now, click the green <code>OK</code> checkmark on <code>obj_wall</code>, but keep the <code>obj_player</code> window open. We will be writing most of
+                        the code in here.
+                    </p>
+
                 </div>
                 <div id = "Create" class = "row">
                     <h2><br>The Create Event</h2>
+                    <p>
+                        <br>
+                        <img style="float:right; margin: 0px 0px 20px 20px; width:40%" src="gamemaker-assets/eventpanel.png">
+                        In the player object, click the <code>Add Event</code> button at the bottom. You should see this window appear. We will be making two events,
+                        <code>Create</code> and <code>Step</code>, so repeat this twice.
+                    </p>
+                    <p>
+                        Once those events are created, let's start writing some code, shall we? On the right side, there are several panels. Go to the control panel, and
+                        drag and drop the paper icon for <code>Execute a piece of code</code> onto the <code>Actions</code> section.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/createevent.png">
+                    <p>
+                        <br>
+                        In the newly opened code block, we need to make some variables, which are our speed, gravity, horizontal and vertical speed, and jump speed variables.
+                        <br>
+                        <br>
+                        <b>Tip:</b> End all your lines of code with a semicolon (<code>;</code>). While Gamemaker doesn't require it, most other programming languages do, so
+                        it's a good habit to get into.
+                    </p>
+                    <pre style="width:100%">
+                        <code> hsp = 0; <br> vsp = 0; <br> movespeed = 5; <br> jumpspeed = 7; <br> grav = 0.2;</code>
+                    </pre>
+                    <p>
+                        (<b>Note:</b> Use <code>hsp</code> and <code>vsp</code>, as <code>hspeed</code> and <code>vspeed</code> are variables already built in, which do
+                        not work with our code)
+                        <br><br>
+                        That's the <code>create</code> event done with! This code will run once when the object is created, but only once. The <code>step</code> event is
+                        the meat of this sandwich, so let's chow down!
+                    </p>
                 </div>
                 <div id = "Step">
                     <h2><br>The Step Event</h2>
+                    <p>
+                        Following the same steps as we did for the <code>create</code> event, drag in a code block for our step event, and open it. First, let's establish some input
+                        for our player.
+                    </p>
                     <h3 id = "Input" class = "text-center"><br>Keyboard Input</h3>
+                    <p>
+                        For our input, we will be using the <code>WASD</code> control scheme (although arrow keys, or any other control scheme, can also be used. See Andy for more information)
+                        <br>
+                        <br>
+                        Write the following code.
+                    </p>
+                    <pre>
+                        <code> key_left = keyboard_check(ord("A"));<br> key_right = keyboard_check(ord("D"));<br> key_jump = keyboard_check_pressed(ord("W"));</code>
+                    </pre>
+                    <p>
+                        This stores our keyboard inputs into 3 variables which we can easily use in our code. Notice that <code>key_jump</code> uses
+                        <code>keyboard_check_pressed</code> rather than <code>keyboard_check</code>. This is because when we hit the jump key, we
+                        want to jump once, not float infinitely into the sky. That's the input completed!
+                    </p>
                     <h3 id = "Collisions" class = "text-center"><br>Collisions</h3>
+                    <p>
+                        Time to get movement and collisions written! This code gets a bit more complicated, so take your time and ask questions if you don't understand (both in person at meetings, or
+                        in our Discord server! There's a handy <code>Get Help</code> button in the bottom right corner)
+                    </p>
+                    <pre>
+                        <code>hsp = movespeed * (key_right - key_left);
+
+if(place_meeting(x + hsp, y, obj_wall)) {
+    while(!place_meeting(x + sign(hsp), y, obj_wall)) {
+        x += sign(hsp);
+    }
+    hsp = 0;
+}
+x += hsp;
+
+if(place_meeting(x,y + 1, obj_wall)) {
+    vsp = -jumpspeed * key_jump;
+}
+
+if(vsp <= 12) {
+    vsp += grav;
+}
+
+if(place_meeting(x,y + vsp, obj_wall)) {
+    while(!place_meeting(x, y + sign(vsp), obj_wall)) {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
+                        </code>
+                    </pre>
+
                 </div>
                 <div id = "Rooms" class = "row">
                     <h2 ><br>Rooms and Views</h2>
