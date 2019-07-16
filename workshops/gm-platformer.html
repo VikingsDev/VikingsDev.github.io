@@ -95,7 +95,7 @@
                     In this workshop, we will be learning how to build a platformer style game using Gamemaker Studio and GML.
                     Since the release of Gamemaker Studio 2, Gamemaker is <i>no longer free for download.</i>
                     To obtain a login so you can work on your projects at home, please see
-                    me (Andy) at the next club meeting.
+                    Andy at the next club meeting.
                 </p>
 
                 <div id = "Project" class = "row">
@@ -160,6 +160,7 @@
                     </p>
                     <img style ="width:100%" src="gamemaker-assets/imageeditor.png">
                     <p>
+                        <br>
                         <img style="float:left; margin: 0px 20px 20px 0px; width:10%" src="gamemaker-assets/greencheck.png">
                         Hit the green check mark in the top left of each window to save your changes.
                     </p>
@@ -217,6 +218,7 @@
                 <div id = "Step">
                     <h2><br>The Step Event</h2>
                     <p>
+                        <br>
                         Following the same steps as we did for the <code>create</code> event, drag in a code block for our step event, and open it. First, let's establish some input
                         for our player.
                     </p>
@@ -268,10 +270,71 @@ if(place_meeting(x,y + vsp, obj_wall)) {
 y += vsp;
                         </code>
                     </pre>
-
+                    <p>
+                        And that's it! That's your player object done, and you can move now! Except... there's no level to move in yet. Let's design a level!
+                    </p>
                 </div>
                 <div id = "Rooms" class = "row">
                     <h2 ><br>Rooms and Views</h2>
+                    <p>
+                        <br>
+                        In Gamemaker, your level assets are called <code>rooms</code>. Make a room by right clicking on the room folder and selecting <code>create room</code>.
+                        You should be greeted by a window that looks like this.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/roomeditor.png">
+                    <p>
+                        <br>
+                        The first step you want to take is to change the speed. Default room speed is at <code>30</code>, but we're going to change it to <code>60</code>, which
+                        means our game is running at 60 frames per second. The game speed is located here.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/changespeed.png">
+                    <p>
+                        <br>
+                        Now we can start adding objects into our room. Go to the <code>object</code> tab at the top.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/addobjects.png">
+                    <p>
+                        <br>
+                        <img style="float:right; margin:0px 0px 20px 20px; width: 35%" src="gamemaker-assets/quickshortcuts.png">
+                        Select the player by clicking on the blank box and selecting <code>obj_player</code>. Click anywhere in the room to place a single player object down. Repeat this but with the
+                        wall object. To add objects down quickly, press <code>shift</code> and <code>ctrl</code> at the same time, click, and drag. Other shortcuts are shown on the right.
+                        Design your level, and once you're ready, we can test it!
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/roomdesign.png">
+                    <p>
+                        <br>
+                        <img style="float:right; margin:0px 0px 20px 20px; width:10%" src="gamemaker-assets/greencheck.png">
+                        Now that the level is designed, click the green checkmark to save your work, and hit the green play arrow on the top bar to run your game.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/run.png">
+                    <p>
+                        <br>
+                        <b>Congratulations!</b> You've made it to the end of the tutorial, and you should have a working platformer now! This is a great starting point for many games,
+                        and from here the next step is usually combat, puzzles, switching levels, or view cameras. It's all open to your creativity now. See Andy if you want to continue
+                        working on your project, and he can help you. Enjoy!
+                        <br>
+                        <br>
+                        <b>Bonus tip: </b> Subscribe to <a href="https://www.youtube.com/channel/UCCFcvGk5u6TBhJKnpoawdTQ">Osmechelon</a> on YouTube!
+                    </p>
+                </div>
+                <div id="Resources" class = "row">
+                    <h2><br> Extra Resources</h2>
+                    <p>
+                        <br>
+                        Here are some other YouTube channels and Websites to help you on your game development journey!
+                        <br><br>
+                        <a href="https://www.youtube.com/user/999Greyfox/about">Shaun Spalding (Youtube)</a><br>
+                        <a href="https://www.youtube.com/user/uheartbeast">Heartbeast (Youtube)</a><br>
+                        <a href="https://www.youtube.com/channel/UCnKHIXYeYkehIJtF414f65A">PixelatedPope (Youtube)</a><br>
+                        <a href="https://www.youtube.com/user/RealTutsGML">RealTutsGML (Youtube)</a><br>
+                        <a href="https://www.reddit.com/r/gamemaker/">r/Gamemaker (Reddit)</a><br>
+                        <a href="https://help.yoyogames.com/hc/en-us">Official Gamemaker Help Page (YoyoGames)</a><br>
+                        <a href="https://docs.yoyogames.com/source/dadiospice/index.html">Official Gamemaker Manual (YoyoGames)</a><br><br>
+                        And of course, Google is your best friend! There's plenty of help you can get by just searching your question up online.
+                        <br>
+                        <br><b>So go forth, explorers, pioneers, and innovators.
+                        Engineer your own games and express your creativity. The adventure has only begun!</b>
+                    </p>
                 </div>
             </div>
         </div>
