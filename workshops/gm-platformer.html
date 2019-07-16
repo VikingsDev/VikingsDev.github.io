@@ -94,20 +94,55 @@
                 <p>In this workshop, we will be learning how to build a platformer style game using Gamemaker Studio and GML.
                 Gamemaker is <i>no longer free for download,</i> to obtain a login so you can work on your projects at home, please see
                 me (Andy) at the next club meeting.</p>
-                <h2 id = "Project" class = "text-center"><br>Creating our First Project</h2>
-                <p>Open <code style = "font-size:100%">Gamemaker:Studio 1.4</code> on your computer.
-                On the school computers, Gamemaker is located in this directory:</p>
-                <pre>
-                    <code>Desktop 💻<br> ↳ Desk Tools<br>  ↳ Locally Installed Apps<br>   ↳ Lab 315<br>    ↳ Gamemaker Studio</code>
-                </pre>
-                <p>If you are working at home, open the application where you installed it.<br>
-                You should be greeted by this screen.</p>
-                <h2 id = "SpritesAndObjects" class = "text-center"><br>Sprites and Objects</h2>
-                <h2 id = "Create" class = "text-center"><br>The Create Event</h2>
-                <h2 id = "Step" class = "text-center"><br>The Step Event</h2>
-                <h3 id = "Input" class = "text-center"><br>Keyboard Input</h3>
-                <h3 id = "Collisions" class = "text-center"><br>Collisions</h3>
-                <h2 id = "Rooms" class = "text-center"><br>Rooms and Views</h2>
+
+                <div id = "Project" class = "row">
+                    <h2 class = "text-center"><br>Creating our First Project</h2>
+                    <p>Open <code style = "font-size:100%">Gamemaker:Studio 1.4</code> on your computer.
+                    On the school computers, Gamemaker is located in this directory:</p>
+                    <pre>
+                        <code>Desktop 💻<br> ↳ Desk Tools<br>  ↳ Locally Installed Apps<br>   ↳ Lab 315<br>    ↳ Gamemaker Studio</code>
+                    </pre>
+                    <p>If you are working at home, open the application where you installed it.<br>
+                    You should be greeted by this screen.</p>
+                    <img style="width: 100%; text-align: center" src="gamemaker-assets/welcome.png">
+                    <p><br>There are several tabs at the top. Go to the <code>New</code> tab</p>
+                    <img style="width: 100%" src="gamemaker-assets/newproject.png">
+                    <p><br>Rename this to whatever you want and hit <code>Create</code></p>
+                    <img style = "width:100%" src="gamemaker-assets/projectname.png">
+                    <p><br>Congratulations! You've made your first project! It's looking sort of empty right now though... let's fix that!</p>
+                </div>
+
+                <div id = "SpritesAndObjects" class = "row">
+                    <h2 class = "text-center"><br>Sprites and Objects</h2>
+                    <p>
+                        <img style="float: left; margin: 0px 20px 20px 0px; width: 40%" src="gamemaker-assets/assetpanel.png">
+                        In your new project, you should see a lot of folders on the left side, as well as a panel of icons at the top. These are to organize your
+                        <code> assets</code>, such as images, music, objects, and most importantly, code.
+                    </p>
+                    <p>
+                        <img style="float: right; margin: 0px 0px 20px 20px; width: 30%" src="gamemaker-assets/newsprite.png">
+                        <code>Sprites</code> are your image files. They can hold animations, and they are used by objects. Right click the <code>Sprite</code>
+                        folder to create a new sprite. You should be greeted by the sprite editor window.
+                    </p>
+                    <p>
+                        <img style="float: left; margin: 0px 20px 20px 0px; width 25%" src="gamemaker-assets/spriteeditor.png">
+                        Name your sprite <code>spr_player</code>, and click edit sprite. This opens a second window, which can be used to view your animations or make quick adjustments.
+                        <br><br><b>Tip:</b> Always use prefixes. The prefix <code>spr_</code> is used to distinguish sprites from other assets, which will be important later. Another common
+                        alternative is <code>s_</code> or simply <code>s</code>, but these can confuse sounds and sprites.
+                    </p>
+                    <p></p>
+                </div>
+                <div id = "Create" class = "row">
+                    <h2><br>The Create Event</h2>
+                </div>
+                <div id = "Step">
+                    <h2><br>The Step Event</h2>
+                    <h3 id = "Input" class = "text-center"><br>Keyboard Input</h3>
+                    <h3 id = "Collisions" class = "text-center"><br>Collisions</h3>
+                </div>
+                <div id = "Rooms" class = "row">
+                    <h2 ><br>Rooms and Views</h2>
+                </div>
             </div>
         </div>
         <br>
