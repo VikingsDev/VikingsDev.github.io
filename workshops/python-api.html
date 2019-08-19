@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VikingsDev</title>
+    <link rel="icon" href="../images/vikingsdev-icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="../index.html"><img src="../images/vikingsdev-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="../index.html" style="color:white" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../about.html" style="color:white" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../events.html" style="color:white" class="nav-link">Events</a></li>
+                <li class="nav-item active"><a class="nav-link" href="../workshops.html">Workshops</a></li>
+                <li class="nav-item"><a href="../contact.html" style="color:white" class="nav-link">Contact</a></li>
+                <li class="nav-item cta"><a href="../signup.html" style="color:white"
+                                            class="nav-link"><span>Sign Up</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+
+<div class="hero-wrap hero-wrap-2"
+     style="background-image: url('python-api/bg.jpg');"
+     data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i
+                        class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops<i
+                        class="ion-ios-arrow-forward"></i></a></span> <span>Using an API in Python</span></p>
+                <h1 class="mb-3 bread">Using an API in Python</h1>
+                <h3 class="mb-3 bread">Frank Hui</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<p class="text-center sticky-top float-right" style="top:90vh; right:20px;"><a href="https://discord.gg/JTRFMx2"
+                                                                               class="btn btn-primary py-3">Get Help</a>
+</p>
+
+<div class="card" style="margin: 0 auto; display: block; max-width: 500px; padding:20px">
+    <p class="toc_title">Table of Contents</p>
+    <ul class="toc_list">
+        <li><a href="#what-are-apis">What are APIs?</a></li>
+        <li><a href="#why-are-apis">Why do I care about APIs?</a></li>
+        <li><a href="#getting-started">Getting Started - Google Colab</a></li>
+        <li><a href="#pick-api">Picking an API</a></li>
+        <li><a href="#use-api">Using an API</a></li>
+        <li><a href="#interpret-json">Interpreting JSONs</a></li>
+        <li><a href="#implement-api">Implementing an API</a></li>
+    </ul>
+</div>
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <p>By the end of this workshop, you will learn how to use an API in Python.</b></p>
+                <h2 id="what-are-apis" class="text-center">What are APIs?</h2>
+                <p>APIs, or Application Program Interfaces allow a programmer to access an application's services,
+                    like certain functions or data. Today we'll primarily focus on web-based APIs, that you can query to
+                    receive some information.
+                </p>
+                <h2 id="why-are-apis" class="text-center">Why do I care about APIs?</h2>
+                <p>APIs are <b>super</b> cool because they allow your program to know about and interact with the real
+                    world. For example, you can make an app that recommends uniquely generated taco recipes based on the
+                    weather, utilising just <b>two</b> APIs.</p>
+                <h2 id="getting-started" class="text-center">Getting Started - Google Colab</h2>
+                <p>Before we continue, if you haven't already, follow this workshop on how to set up Google Colab:</p>
+                <p class="text-center"><a href="googlecolab.html?lesson=python-api.html" class="btn btn-primary py-3">Google
+                    Colab</a></p>
+                <h2 id="pick-api" class="text-center">Picking an API</h2>
+                <p>Here's a list of public, free to use APIs. After following this workshop, feel free to come back to
+                    this list and browse through some that you might like! <b>For now we'll focus on an International
+                        Space
+                        Station location
+                        API.</b></p>
+                <p class="text-center"><a href="https://github.com/public-apis/public-apis"
+                                          class="btn btn-primary py-3">Public APIs</a></p>
+
+                <h2 id="use-api" class="text-center">Using an API</h2>
+                <p>We'll be using this API:</p>
+                <p class="text-center"><a href="http://api.open-notify.org/iss-now.json"
+                                          target="_blank" class="btn btn-primary py-3">ISS API</a></p>
+                <p>Feel free to see the documentation, which is just a guide on how to use the
+                    API. <b>However, for this workshop you won't need to look at the documentation yourself.</b></p>
+                <p class="text-center"><a href="http://open-notify.org/Open-Notify-API/ISS-Location-Now/"
+                                          class="btn btn-primary py-3">Documentation</a></p>
+
+                <p>We'll now <b>query</b> the API using Python.</p>
+                <p>First, we'll import the libraries urllib and json.</p>
+                <pre>
+                    <code>
+from urllib.request import urlopen
+import json
+                    </code>
+                </pre>
+                <p>
+                    Then we'll query the API and parse the text into a JSON and print it.
+                </p>
+
+                <pre>
+                    <code>
+url = "http://api.open-notify.org/iss-now.json"
+jsonurl = urlopen(url)
+info = json.loads(jsonurl.read())
+
+print(info)
+                    </code>
+                </pre>
+
+                <p>What this code does is open the link, get the content using <a
+                        href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>, and stores it in
+                    the info variable. Now try running the code! By clicking the play button on the left.</p>
+
+                <p>You should get some JSON code that looks something like this: </p>
+
+                <pre>
+                  <code>{
+  "message": "success",
+  "iss_position": {
+    "longitude": "-143.7306",
+    "latitude": "19.7888"
+   },
+  "timestamp": 1566179827
+}</code>
+                </pre>
+
+                <h2 id="interpret-json" class="text-center">Interpreting JSONs</h2>
+                <p id="learn-json"> JSON, or JavaScript Object Notation is
+                    basically a standardized way for apps to communicate. You can think of it like a dictionary. In a
+                    dictionary, you look up a <b style="color:dodgerblue">word</b> and the dictionary gives you a
+                    <b style="color:lightcoral">definition</b>. In a JSON, we will refer to it as a <b
+                            style="color:dodgerblue">key</b> and <b style="color:lightcoral">value</b>.
+                </p>
+
+                <p>You can learn more about JSONs here:</p>
+                <p class="text-center"><a href="https://www.w3schools.com/js/js_json_syntax.asp"
+                                          class="btn btn-primary py-3">JSON Syntax</a></p>
+
+                <p>For now, all we have to know is how to read this dictionary. In python, square brackets allow you
+                    to access elements within a variable. So to get the latitude and longitude of the International
+                    Space Station, all we have to type is:</p>
+
+                <pre>
+                    <code>
+longitude = info['iss_position']['longitude']
+latitude = info['iss_position']['latitude']
+
+print(longitude)
+print(latitude)
+                    </code>
+                </pre>
+
+                <p>To interpret this code, I am accessing the value of the key, <b
+                        style="color:dodgerblue">iss_position</b>.
+                    I then access the value, which in my case is <b style="color:lightcoral">-143.7306</b>, of the key
+                    within, <b style="color:dodgerblue">longitude</b>. That might be a little bit confusing, so here's
+                    an image that might help you understand. Don't worry if you don't understand how JSONs work yet, we
+                    won't need to fully understand how they work for this workshop. If you're still curious, <a
+                            href="#learn-json">go back here</a> to explore JSONs more in depth.
+                </p>
+                <br>
+                <img src="python-api/json-flowchart.png" width="100%">
+                <br>
+                <br>
+                <p>You've successfully queried and interpreted a JSON! Now let's find out how we can turn this
+                    information into something more visual.</p>
+
+                <h2 id="implement-api" class="text-center">Implementing an API</h2>
+                <p>Since we'll need two other libraries for this implementation, click the '+ Code' button on the top
+                    left corner of the page to create a new code box, and type in the newly created code box:</p>
+                <pre>
+                    <code>
+!sudo apt-get install libgeos-dev
+!sudo pip3 install -U git+https://github.com/matplotlib/basemap.git
+                    </code>
+                </pre>
+                <p>Run this code by clicking the play button on the left. Now we'll add the <a style="color:blue">imports</a>
+                    to the main code box:</p>
+                <pre>
+                    <code>
+from urllib.request import urlopen
+import json
+
+url = "http://api.open-notify.org/iss-now.json"
+
+jsonurl = urlopen(url)
+info = json.loads(jsonurl.read())
+
+print(info)
+
+longitude = float(info['iss_position']['longitude'])
+latitude = float(info['iss_position']['latitude'])
+
+<a style="color:blue">
+from mpl_toolkits.basemap import Basemap
+import matplotlib.pyplot as plt
+import numpy as np</a>
+                    </code>
+                </pre>
+                <p>This imports the basemap package which we will use to plot where the ISS is on the map, as well as
+                    matplotlib, the library it is based on, which we will use to manipulate the map. Finally, we import
+                    numpy, a python math library to help with some more cosmetic stuff.</p>
+
+                <p>Now we'll generate the actual map:</p>
+                <pre>
+                    <code>
+m = Basemap(projection='robin',lon_0=0,resolution='c')
+                    </code>
+                </pre>
+                <p>You have two options here, you can make a <a style="color:dodgerblue">realistic photo version</a> of
+                    the map made by NASA called Blue Marble, or a <a style="color:coral">drawn cartoony version</a>
+                    of the map. I'll leave both options with the corresponding colours, but you can only use either one:
+                </p>
+                <pre>
+                    <code style="color: dodgerblue">
+m.bluemarble()
+                    </code>
+                </pre>
+
+                <pre>
+                    <code style="color: coral">
+m.drawcoastlines()
+m.fillcontinents(color='darkgreen',lake_color='aqua')
+m.drawparallels(np.arange(-90.,120.,30.))
+m.drawmeridians(np.arange(0.,360.,60.))
+m.drawmapboundary(fill_color='aqua')
+                    </code>
+                </pre>
+                <p>Finally we plot where the ISS is and show the map:</p>
+                <pre>
+                    <code>
+x,y = m(longitude, latitude)
+m.plot(x, y, 'ro', markersize=12)
+
+plt.show()
+                    </code>
+                </pre>
+                <p>That's it! You've finished the workshop. Good job! You can now press play however many times you want
+                    and see the position update in real time. Your code should look something like this in the end:</p>
+                <img src="python-api/final-result.png" style="width:100%">
+                <br><br><br>
+                <p class="text-center"><a href="../workshops.html"
+                                          class="btn btn-primary py-3">Back to Workshops</a></p>
+                <br>
+                <p class="text-center"><a href="https://www.tutorialsteacher.com/python/python-basic-syntax"
+                                          class="btn btn-primary py-3">Learn more Python</a></p>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5 pb-5 align-items-center d-flex">
+            <div class="col-md-6">
+                <div class="heading-section heading-section-white ftco-animate">
+                    <span class="subheading">Get Inspired</span>
+                    <h2 style="font-size: 30px;">Join VikingsDev Today!</h2>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4"
+                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 bg-primary p-4">
+                    <h2 class="ftco-heading-2">VikingsDev</h2>
+                    <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
+                    <ul class="ftco-footer-social list-unstyled mb-0">
+                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+                                class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/vikingsdev"><span
+                                class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
+                                class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Navigational</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="py-2 d-block">Home</a></li>
+                        <li><a href="../about.html" class="py-2 d-block">About</a></li>
+                        <li><a href="../events.html" class="py-2 d-block">Events</a></li>
+                        <li><a href="../workshops.html" class="py-2 d-block">Workshops</a></li>
+                        <li><a href="../contact.html" class="py-2 d-block">Contact</a></li>
+                        <li><a href="../signup.html" class="py-2 d-block">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Find Us</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">751 Hammarskjold Dr, Burnaby, BC V5B 4A1, Canada</span>
+                            </li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">vikingsdev@gmail.com</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
+                <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"/>
+    </svg>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.stellar.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.animateNumber.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery.timepicker.min.js"></script>
+<script src="../js/scrollax.min.js"></script>
+<script src="../js/google-map.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
