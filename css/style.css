@@ -8473,10 +8473,11 @@ h1, h2, h3, h4, h5,
         background-position: top center !important; } }
     .hero-wrap.hero-wrap-2 .slider-text {
       height: 600px !important; }
-      @media (max-width: 991.98px) {
-        .hero-wrap.hero-wrap-2 .slider-text {
-          text-align: center;
-          height: 600px !important; } }
+    @media (max-width: 991.98px) {
+      .hero-wrap.hero-wrap-2 .slider-text {
+        text-align: center;
+        height: 600px !important; } }
+
 
 .slider-text .breadcrumbs {
   font-size: 12px;
@@ -10115,6 +10116,7 @@ body {
 #toc_container li, #toc_container ul, #toc_container ul li{
   list-style: outside none none !important;
 }
+seems pretty op
 
 pre code {
   background-color: #eee;
