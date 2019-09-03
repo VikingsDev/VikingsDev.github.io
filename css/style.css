@@ -10116,11 +10116,20 @@ body {
 #toc_container li, #toc_container ul, #toc_container ul li{
   list-style: outside none none !important;
 }
-seems pretty op
 
 pre code {
   background-color: #eee;
   border: 1px solid #999;
   display: block;
   padding: 20px;
+}
+
+#darken div{
+  filter: brightness(100%);
+  transition: 0.5s;
+}
+
+#darken:hover {
+  filter: brightness(50%);
+  transition: 0.5s;
 }
