@@ -10162,3 +10162,7 @@ body {
 #codeheader_python {
   background-color: #3A5FCD;
 }
+
+#codeheader_output {
+  background-color: grey;
+}

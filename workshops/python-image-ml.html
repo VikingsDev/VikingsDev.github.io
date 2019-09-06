@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VikingsDev</title>
+    <link rel="icon" href="../images/vikingsdev-icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="../index.html"><img src="../images/vikingsdev-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../events.html" class="nav-link">Events</a></li>
+                <li class="nav-item active"><a class="nav-link" href="../workshops.html">Workshops</a></li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item cta"><a href="../signup.html"
+                                            class="nav-link"><span>Sign Up</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+
+<div class="hero-wrap hero-wrap-2"
+     style="background-image: url('image-ml-assets/dog-bg.jpeg');"
+     data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i
+                        class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops<i
+                        class="ion-ios-arrow-forward"></i></a></span> <span>Training a Neural Network in Python</span>
+                </p>
+                <h1 class="mb-3 bread">Training a Neural Network in Python</h1>
+                <h3 class="mb-3 bread">Frank Hui</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<p class="text-center sticky-top float-right" style="top:90vh; right:20px;"><a href="https://discord.gg/JTRFMx2"
+                                                                               class="btn btn-primary py-3">Get Help</a>
+</p>
+
+<div class="card" style="margin: 0 auto; display: block; max-width: 500px; padding:20px">
+    <p class="toc_title">Table of Contents</p>
+    <ul class="toc_list">
+        <li><a href="#what-are-nns">What are neural networks?</a></li>
+        <li><a href="#getting-started">Getting Started - Google Colab</a></li>
+        <li><a href="#data">Getting Data</a></li>
+        <li><a href="#code">Writing the Code</a></li>
+        <li><a href="#use">Using the Neural Network</a></li>
+    </ul>
+</div>
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <p>By the end of this workshop, you will learn how to train and use an image recognition neural
+                    network.</p>
+
+                <p><b>Credit to Aditya Ananthram for creating the original workshop. Use the button below to check out
+                    his tutorial:</b></p>
+                <p class="text-center"><a
+                        href="https://towardsdatascience.com/keras-transfer-learning-for-beginners-6c9b8b7143e"
+                        class="btn btn-primary py-3">Aditya Ananthram</a></p>
+                <p>This workshop expands Aditya's tutorial by adding instructions for how to gather your own data and
+                    how to use the neural network.</p>
+
+                <h2 id="what-are-nns" class="text-center">What are neural networks?</h2>
+                <p>Neural networks are a relatively new technique for artificial intelligence inspired by the human
+                    brain. We won't go in depth on how neural networks work here, but if you're curious, the Youtube
+                    Channel <a
+                            href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
+                            target="_blank">3Blue1Brown</a> has a great series on how neural networks work. To explain
+                    how neural networks work shortly, you can imagine a neural network as a person trying to learn how
+                    to do a multiple choice test. To train this person, we give it several multiple choice practice
+                    tests, and this person will at first randomly guess at the answers, however the more practice tests
+                    we give it, the better the person is at answering the test, as it learns from trial and error.
+                </p>
+                <h2 id="getting-started" class="text-center">Getting Started - Google Colab</h2>
+                <p>Before we continue, if you haven't already, follow this workshop on how to set up Google Colab:</p>
+                <p class="text-center"><a href="googlecolab.html?lesson=python-image-ml.html"
+                                          class="btn btn-primary py-3">Google
+                    Colab</a></p>
+                <h2 id="data" class="text-center">Gettin Data</h2>
+                <p>To train our neural network, we require large amounts of data. To gather your data, click the button
+                    below to add the Fatkun image downloader to your Chrome browser:</p>
+                <p class="text-center"><a
+                        href="https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf?hl=en"
+                        class="btn btn-primary py-3">Fatkun</a></p>
+                <p>Fatkun will help us download images en masse from Google Images so we can train our neural network.
+                    Pick three things you want your neural network to recognize. I am choosing dogs, Falcon 9s, and
+                    hot dogs.</p>
+                <p>First, open your settings by clicking on the three vertical dots on the right, then clicking on
+                    Settings.</p>
+                <p>Scroll to the bottom and click on 'Advanced'. Then, scroll down to 'Downloads' and turn off the
+                    setting that says 'Ask where to save each file before downloading'</p>
+                <p>Feel free to change the download location so it doesn't make a huge mess wherever it downloads.</p>
+                <p>As an example, I will search up dog in Google Images, then use the command Alt-Z to see
+                    the images that I will download. Click on any images to deselect them from the download if you think
+                    they don't have anything to do with dogs, for example the Google logo, your profile picture, and the
+                    camera icon. Now click the 'Download' button on the top left. Repeat this process for the other
+                    things you want the neural network to recognize. Each category of images should be in one folder,
+                    with the folder named as the thing in the images. In the end you should have a folder structure like
+                    this:</p>
+                <pre>
+                    <code>
+train
+  |_ dog
+  |_ falcon9
+  |_ hotdog
+                    </code>
+                </pre>
+                <p>Now you should compress the entire train folder into a ZIP file. To do this, select the train folder,
+                    navigate to the share tab in the file explorer, and click the Zip button.</p>
+                <p>Once you have compressed the folder into a zip file, upload it to your Google Drive. After, go to
+                    google Colab, click '+ Code', and type in the new box:</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">from google.colab import drive
+drive.mount('/content/drive', force_remount=True)</p>
+                    </code></pre>
+                </div>
+                <p>Run this snippet of code by clicking the little play button on the left of the box. Follow the
+                    instructions in the output of the box. This will import your Google Drive into Google Colab so you
+                    can
+                    access all the files from your Drive.</p>
+                <p>Now let's decompress the zip file by clicking '+ Code' again, and adding these commands:</p>
+                <div class="codeheader" id="codeheader_bash">BASH</div>
+                <div id="codebox">
+                    <pre><code>
+                    <p style="color: #fff;">!unzip -uq "/content/drive/My Drive/train.zip" -d "/content/"</p>
+                    </code></pre>
+                </div>
+                <p>Now if you open the left pane by clicking on the small arrow on the left, and go to the 'Files' tab,
+                    and click 'REFRESH' you will see a new folder named train there.</p>
+                <h2 id="code" class="text-center">Writing the Code</h2>
+                <p>"Get to the coding already!"</p>
+                <p>I hear you! Here's the section that I'll warn you to not copy and paste, but since this is a
+                    hard workshop, I'm assuming you already know your stuff. Let's start by putting in the imports we'll
+                    need. Click the '+ Code' button and add all of the following code in the newly created box.</p>
+
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">import pandas as pd
+import numpy as np
+import os
+import keras
+import matplotlib.pyplot as plt
+from keras.layers import Dense,GlobalAveragePooling2D
+from keras.applications import MobileNet
+from keras.preprocessing import image
+from keras.applications.mobilenet import preprocess_input
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Model
+from keras.optimizers import Adam</p>
+                    </code></pre>
+                </div>
+                <p>We'll be using the Keras library for training, since Keras is a very simple and intuitive library for
+                    beginners. We'll be using a method called transfer learning. This is where we take a model already
+                    trained by someone else, then retrain it to classify our images. We will be using the model known
+                    as MobileNet.</p>
+                <p>Here we import the MobileNet model and discard the 1000 output neurons, add three layers of dense
+                    networks and 3 output neurons, corresponding to our three image categories. In the future, if you
+                    want to add more image categories, you will have to modify this last output layer of neurons to
+                    however many neurons you will need corresponding to the number of image categories you have.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">import pandas as pd
+base_model=MobileNet(weights='imagenet',include_top=False
+
+x=base_model.output
+x=GlobalAveragePooling2D()(x)
+x=Dense(1024,activation='relu')(x)
+x=Dense(1024,activation='relu')(x)
+x=Dense(512,activation='relu')(x)
+preds=Dense(3,activation='softmax')(x)/p>
+                    </code></pre>
+                </div>
+                <p>Next, we put the output layer into this model class and lock the first 20 layers because we don't
+                    want to train those, and unlock the rest for training.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+model=Model(inputs=base_model.input,outputs=preds)
+for layer in model.layers[:20]:
+    layer.trainable=False
+for layer in model.layers[20:]:
+    layer.trainable=True
+                    </code></pre>
+                </div>
+                <p>In this next piece of code, we let a library process our data for us. Normally, this is done by
+                    yourself, which can be a bit tedious.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+train_datagen=ImageDataGenerator(preprocessing_function=preprocess_input)
+
+train_generator=train_datagen.flow_from_directory('./train/',
+                                                 target_size=(224,224),
+                                                 color_mode='rgb',
+                                                 batch_size=32,
+                                                 class_mode='categorical',
+                                                 shuffle=True)
+                    </code></pre>
+                </div>
+
+                <p>Now, we'll compile the model for training, and "fit" the model, another word for training.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
+step_size_train=train_generator.n//train_generator.batch_size
+model.fit_generator(generator=train_generator,
+                   steps_per_epoch=step_size_train,
+                   epochs=5)
+model.save('ir-model-v0')
+                    </code></pre>
+                </div>
+                <p>You may have noticed the epochs=5 bit in the code block. Epochs are how many times the neural network
+                    trains on all of the data once, in this case 5. You can adjust this number to be more, or less. The
+                    more it trains, the more accurate it becomes. The less, the faster it trains. There are caveats to
+                    both situations. The more epochs you train, the more likely the neural network will "memorize" the
+                    data, producing a situation called overfitting. This means it will have a high training accuracy,
+                    but when you test it, it may have a very low actual accuracy. The less epochs you have, the faster
+                    the network will train, but the less accurate it will be.</p>
+                <p>You are now ready to train! Hit the run button on the left side of the code box. You will see some
+                    output and a progress bar telling you how the neural network is doing. Wait for all 5 epochs to
+                    complete, and then click 'REFRESH' on the left pane, and you will see a new file called ir-model-v0.
+                    This is the model that the training produced, and you can now use it to do some image
+                    recognition!</p>
+                <h2 id="use" class="text-center">Using the Neural Network</h2>
+                <p>First, we'll need to find a picture that the neural network has never seen. You can try scrolling
+                    down the Google Image search you did previously. For example, I picked a picture of the Falcon 9
+                    that wasn't used for training. Download that image, rename it to images.jpeg and drag it into the
+                    Files section on the left pane.</p>
+                <p>
+                    Let's start the coding by clicking '+ Code' and making a new code box and put in our imports.
+                </p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+import numpy as np
+from keras.preprocessing import image
+from keras.applications.mobilenet import preprocess_input
+from keras.applications import mobilenet
+from IPython.display import Image
+from keras.models import load_model
+                    </code></pre>
+                </div>
+
+                <p>Now we load a model and define a function that helps us preprocess the image to be compatible with
+                    the input of the model.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+model = load_model('ir-model-v0')
+
+def process_image(img_path):
+  img = image.load_img(img_path, target_size=(224, 224))
+  img_array = image.img_to_array(img)
+  img_array = np.expand_dims(img_array, axis=0)
+  pImg = mobilenet.preprocess_input(img_array)
+  return pImg
+                    </code></pre>
+                </div>
+                <p>Next, we load the image, process, and predict the image.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+Image('images.jpeg')
+im = process_image('images.jpeg')
+prediction = model.predict(im)
+print(prediction)
+                    </code></pre>
+                </div>
+
+                <p>Your output should look something like this:</p>
+                <div class="codeheader" id="codeheader_output">OUTPUT</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+[[4.0999515e-10 1.0000000e+00 6.0768431e-15]]
+                    </code></pre>
+                </div>
+                <p>This output represents how sure the neural network is of each category. For my categories of
+                    pictures, it is 4.1 x 10<sup>-8</sup>% sure that it is a dog, 100% sure that it
+                    is a Falcon 9, and 6.08 x 10<sup>-13</sup>% sure it is a hot dog.</p>
+                <p>That's it! You've now trained and used a neural network to analyse and predict what an image is! The
+                    buttons below have some more resources to learn about neural networks and python.</p>
+                <p class="text-center"><a href="../workshops.html"
+                                          class="btn btn-primary py-3">Back to Workshops</a></p>
+                <br>
+                <p class="text-center"><a href="https://www.tutorialsteacher.com/python/python-basic-syntax"
+                                          class="btn btn-primary py-3">Learn more Python</a></p>
+
+                <p class="text-center"><a
+                        href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b"
+                        class="btn btn-primary py-3">Crash Course AI</a></p>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5 pb-5 align-items-center d-flex">
+            <div class="col-md-6">
+                <div class="heading-section heading-section-white ftco-animate">
+                    <span class="subheading">Get Inspired</span>
+                    <h2 style="font-size: 30px;">Join VikingsDev Today!</h2>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4"
+                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 bg-primary p-4">
+                    <h2 class="ftco-heading-2">VikingsDev</h2>
+                    <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
+                    <ul class="ftco-footer-social list-unstyled mb-0">
+                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+                                class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/vikingsdev"><span
+                                class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
+                                class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Navigational</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="py-2 d-block">Home</a></li>
+                        <li><a href="../about.html" class="py-2 d-block">About</a></li>
+                        <li><a href="../events.html" class="py-2 d-block">Events</a></li>
+                        <li><a href="../workshops.html" class="py-2 d-block">Workshops</a></li>
+                        <li><a href="../contact.html" class="py-2 d-block">Contact</a></li>
+                        <li><a href="../signup.html" class="py-2 d-block">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Find Us</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">751 Hammarskjold Dr, Burnaby, BC V5B 4A1, Canada</span>
+                            </li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">vikingsdev@gmail.com</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
+                <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"/>
+    </svg>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.stellar.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.animateNumber.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery.timepicker.min.js"></script>
+<script src="../js/scrollax.min.js"></script>
+<script src="../js/google-map.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
