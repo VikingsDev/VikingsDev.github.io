@@ -10117,13 +10117,6 @@ body {
   list-style: outside none none !important;
 }
 
-pre code {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
-}
-
 #darken div{
   filter: brightness(100%);
   transition: 0.5s;
@@ -10132,4 +10125,40 @@ pre code {
 #darken:hover {
   filter: brightness(50%);
   transition: 0.5s;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+#codebox {
+  padding: 15px;
+  font-family: Courier, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #3d3d3d;
+  -webkit-border-radius: 0px 0px 6px 6px;
+  -moz-border-radius: 0px 0px 6px 6px;
+  border-radius: 0px 0px 6px 6px;
+  margin-bottom: 10px;
+}
+.codeheader {
+  padding: 5px 5px 5px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  -webkit-border-radius: 6px 6px 0px 0px;
+  -moz-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+#codeheader_html {
+  background-color: #008B45;
+}
+#codeheader_css {
+  background-color: #CD661D;
+}
+#codeheader_bash {
+  background-color: #CD3333;
+}
+#codeheader_python {
+  background-color: #3A5FCD;
 }
