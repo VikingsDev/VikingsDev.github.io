@@ -134,16 +134,23 @@
                     bot. <b>Everytime you leave Google Colab, the environment that is used to run the code is
                         deleted, so you'll have to run this code everytime you open up Google Colab to run the bot.</b></p>
                 <p>Let's create a new code box by clicking '+ CODE' on the top left corner and write our imports in:</p>
-
-                <pre><code>import discord
-import asyncio</code></pre>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+import discord
+import asyncio
+                    </code></pre>
+                </div>
 
                 <p>This imports the discord package we just installed, as well as a tool we'll need later on.</p>
 
                 <p>Next, we want to write in the same box:</p>
-
-                <pre><code>TOKEN = '<span contenteditable="true">YOUR TOKEN</span>'
-
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+TOKEN = '<span contenteditable="true">YOUR TOKEN</span>'
 client = discord.Client()
 
 loop = asyncio.new_event_loop()
@@ -161,7 +168,8 @@ async def on_ready():
     print('------')
 
 client.run(TOKEN)
-                </code></pre>
+                    </code></pre>
+                </div>
 
                 <p>This code first creates a <b>variable</b> which is then set to equal a client that connects to
                     Discord, resets an async loop (which you don't need
@@ -182,8 +190,14 @@ client.run(TOKEN)
                 </div>
 
                 <p>Okay, now let's focus on this part: </p>
-                <pre><code>@client.event
-async def on_message(message):</code></pre>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+@client.event
+async def on_message(message):
+                    </code></pre>
+                </div>
 
                 <p>This piece of code listens to Discord and waits for someone to send a message. This is called a
                     function, or a method. You can think of a function as an input/output machine, where if you put in
@@ -195,12 +209,15 @@ async def on_message(message):</code></pre>
                     back "Pong!"</p>
 
                 <p>We set up an if statement:</p>
-                <pre>
-                    <code>@client.event
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+@client.event
 async def on_message(message):
-    if message.content == "!ping":</code>
-                </pre>
-
+    if message.content == "!ping":
+                    </code></pre>
+                </div>
                 <p>
                     This if statement basically translates to: "When a message is received, if the message's contents
                     are !ping, then do something".
@@ -208,14 +225,16 @@ async def on_message(message):
                     one tab. This indicates that the if statement 'belongs' to the on_message() function, and will run
                     whenever on_message() does.
                 </p>
-
-                <pre>
-                    <code>@client.event
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+@client.event
 async def on_message(message):
     if message.content == "!ping":
         await message.channel.send("Pong!")
-                    </code>
-                </pre>
+                    </code></pre>
+                </div>
 
                 <p>
                     Now this code translates to: "When a message is received, if the message's contents are !ping, then
