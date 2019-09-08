@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VikingsDev</title>
+    <link rel="icon" href="../images/vikingsdev-icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="../index.html"><img src="../images/vikingsdev-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../events.html" class="nav-link">Events</a></li>
+                <li class="nav-item active"><a class="nav-link" href="../workshops.html">Workshops</a></li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item cta"><a href="../signup.html" class="nav-link"><span>Sign Up</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+
+
+<div class="hero-wrap hero-wrap-2" style="background-image: url(https://i.imgur.com/eQ4E9KR.png); background-position: 100% 560px;" data-stellar-background-ratio="0.5">
+
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i
+                        class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops<i
+                        class="ion-ios-arrow-forward"></i></a></span> <span>Gamemaker Top-Down</span></p>
+                <h1 class="mb-3 bread">Gamemaker Top-Down</h1>
+                <h3 class="mb-3 bread">George Zhang</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<p class="text-center sticky-top float-right" style="top:90vh; right:20px;"><a href="https://discord.gg/JTRFMx2" class="btn btn-primary py-3">Get Help</a></p>
+
+<div class="card" style="margin: 0 auto; display: block; max-width: 500px; padding:20px">
+    <p class="toc_title">Table of Contents</p>
+    <ul class="toc_list">
+        <li><a href="#Project">Understanding Gamemaker</a></li>
+        <li><a href="#Controls">Player Controls</a></li>
+			<ul><li><a href="#Setup">Object Setup</a></li></ul>
+			<ul><li><a href="#Scripts">Scripts</a></li></ul>
+			<ul><li><a href="#PlayerCreate">Create Event</a></li></ul>
+			<ul><li><a href="#PlayerStep">Step Event</a></li></ul>
+		<li><a href="#Final">Final Touches</a></li>
+			<ul><li><a href="#Rooms">Setting Up Your Level</a></li></ul>
+		<li><a href="#Resources">Extra Resources</a></li>
+    </ul>
+</div>
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <p>In this workshop, you'll be learning the basics of creating a top-down game using Gamemaker 1.4. This workshop is meant to provide a flexible template that you can build your own game off of.</b></p>
+                <br><h2 id="Project" class="text-center">Understanding Gamemaker</h2>
+				<h3 id="Creating" class="text-center">Creating a Project</h3>
+                <p>First, create a game maker project. If you are unsure on how to create a project or how to set up the initial settings, please read the full guide workshop.</p>
+                <p class="text-center"><a href="https://vikingsdev.ca/workshops/gm-setup.html" class="btn btn-primary py-3">Full Guide on Starting a Project</a></p>
+                <br><h2 id="Player Controls" class="text-center">Player Controls</h2>
+                <h3 id="Setup" class="text-center">Object Setup</h3>
+				<p>Next, let's get your player character set up. To do this, we need to create an object.</p>
+				<img style="float:left; margin: 20px 20px 20px 0px; width:40%" src="gamemakertd-assets/createobject.png">
+				<p>Objects can be created by right-clicking the objects folder and selecting <code>Create Object</code>. Lets name our player <code>obj_player</code> so not to forget.</p>
+				<p>Next create a sprite by right clicking on the sprites folder and select <code>Create Sprite</code>, for now we'll use a place holder, you can later create a more detailed character. Rename your sprite to <code>spr_player</code>. 
+				Click the <code>Edit Button</code>, then create a new sprite image. 
+				<br><br><i>Depending on the resolution of your game sprite sizes vary, if you are unsure use 16 by 16.</i> 
+				<br><br>Double click on the square created and fill it with a random color. Thats your player for now. 
+				Remember to center the sprite afterwards with the <code>center button</code>. 
+				Set your objects sprite to the newly created sprite by clicking <code>no sprite</code> and selecting <code>spr_player</code> on the object menu.</p>
+                <img style="width:100%" src="gamemakertd-assets/sprite.png">
+				<p>
+				<br>Your player object should have a <code>Create Event</code> and a <code>step event</code>. In the <code>create event</code> drag a code block from the <code>controls</code> tab and place it into the <code>Action Box</code>, repeat this for the <code>step event</code>.
+				<br>
+				<br>Your player object should look something like this:
+				<br>- Has a sprite
+				<br>- Has a create event
+				<br>- Has a step event
+				<br>- Has Code blocks for both the step and create event
+				</p>
+				<img style="width:100%" src="gamemakertd-assets/objplayer.png">
+                <br>
+				<br><h3 id="Scripts" class="text-center">Scripts</h3>
+				<p> Before typing out our <code>Step Event</code> lets create a <code>script</code> to make our coding easier. 
+				If you're using <i>Gamemaker Studio 2</i> you could skip over this script.
+				<br><br>Create a script by right clicking the <code>scripts</code> folder just like creating <code>objects</code> and <code>sprites</code>. Name our script <code>approach</code>.
+                <div class="codeheader" id="codeheader_bash">Script: approach</div>
+				<div id="codebox">
+				<pre><code>
+///approach(number one, number two, shift);
+//What this script does: 
+//It tells your game as two numbers are closing in on each others.
+<p style="color: #fff;">
+if (argument0 < argument1){
+    return min(argument0 + argument2, argument1); 
+}
+else{
+    return max(argument0 - argument2, argument1);
+}
+				</p>
+				</code></pre>
+				</div>
+				
+				<br><h3 id="PlayerCreate" class="text-center">Create Event</h3>
+				<p>The <code>Create Event</code> is the first thing that runs from your object. Here we should establish the players initial set of variables things such as <i>player health, players speed, etc.</i>
+					<br>For now lets establish the players movement variables that we'll use later in the step event. By modifying these variables the players speed will change accordingly.
+					<br>
+					<br><b>Tip:</b> Comments (code that don't run) are labled beginning with <code>//</code>
+				</p>
+				<div class="codeheader" id="codeheader_bash">Obj_Player: Create Event</div>
+				<div id="codebox">
+				<pre><code>
+				<p style="color: #fff;">
+// Movement speed================================================= //
+vx = 0; //change in x direction
+vy = 0;//change in y direction
+tspd = 0.8; //players overall speed
+vxMax = 6.5 * tspd; //change in x direction max
+vyMax = 6.5 * tspd; //change in y direction max
+accel = 1 * tspd; // how fast player accelerates
+fric = 2 * tspd; //player decelerating from momentum
+// =============================================================== //
+				</p>
+				</code></pre>
+				</div>
+				<br>
+				<br><h3 id="PlayerStep" class="text-center">Step Event</h3>
+                <p>Finally code that will move our character. Navigate back to the player and open its <code>step event</code>. 
+					The <code>step event</code> is code that repeats every frame of the game. Here contains keyboard checks and collision checks between our character and its enviroment.
+				<br><br> <b>Don't be intimidated by the code, many of it is repeated and are essentially the same. The code is commented, but if you still are having trouble please ask for help.</b>
+				</p>
+				<div class="codeheader" id="codeheader_bash">Obj_Player: Step Event</div>
+				<div id="codebox">
+				<pre><code>
+				<p style="color: #fff;">
+//Temp Variables=========================================
+var k_left, k_right, k_up, k_down           //'var variable name' declares a temporary variable
+
+// Keyboard Input=========================================
+
+k_left        = keyboard_check(ord('A'));   //Here we assign keyboard inputs to the variables we just declared
+k_right       = keyboard_check(ord('D'));
+k_up          = keyboard_check(ord('W'));
+k_down        = keyboard_check(ord('S'));
+
+
+//Left=========================================
+if (k_left && !k_right){                    //The next series of code checks if a certian key is pressed
+    if (vx > 0)                                 // if the key is pressed it checks for the speed, if above 0 
+        vx = approach(vx, 0, fric);             // it checks to see a max speed is reached.
+        vx = approach(vx, -vxMax, accel);
+}
+
+//Right=========================================
+if (k_right && !k_left) {
+    if (vx < 0)
+        vx = approach(vx, 0, fric);   
+        vx = approach(vx, vxMax, accel);      
+
+}
+
+//Up=========================================
+if (k_up && !k_down) {
+    if (vy > 0)
+        vy = approach(vy, 0, fric);   
+        vy = approach(vy, -vyMax, accel);
+}
+
+//Down=========================================
+if (k_down && !k_up) {
+    if (vy < 0)
+        vy = approach(vy, 0, fric);   
+        vy = approach(vy, vyMax, accel);
+}
+
+//Friction=====================================
+if (!k_right && !k_left)
+    vx = approach(vx, 0, fric);
+if (!k_down && !k_up)
+    vy = approach(vy, 0, fric);
+
+    
+
+
+var i;   //for loop temp variable.
+//Collisions
+// Vertical
+for (i = 0; i < abs(vy); ++i) {                 //This loop checks when our character touches a solid object.
+    if (place_meeting(x, y + sign(vy), obj_solid) && !place_meeting(x - 1, y + sign(vy), obj_solid))
+        --x;
+    
+    if (place_meeting(x, y + sign(vy), obj_solid) && !place_meeting(x + 1, y + sign(vy), obj_solid))
+        ++x;
+
+    if (!place_meeting(x, y + sign(vy), obj_solid))
+        y += sign(vy);
+    else {
+        vy = 0;             //forcing it to stop before going through it.
+        break;
+    }
+}
+
+// Horizontal
+for (i = 0; i < abs(vx); ++i) {                 //This is repeated for the horizontal direction.
+    if (place_meeting(x + sign(vx), y, obj_solid) && !place_meeting(x + sign(vx), y - 1, obj_solid))
+        --y;
+    
+    if (place_meeting(x + sign(vx), y, obj_solid) && !place_meeting(x + sign(vx), y + 1, obj_solid))
+        ++y;
+         
+    if (!place_meeting(x + sign(vx), y, obj_solid))
+        x += sign(vx); 
+    else {
+        vx = 0;
+        break;
+    }
+}
+//benifit of checking BOTH direction gives us the option to enable slopped walls. Spicy.
+///////////////////////////////////////////////////////////////////////////////
+
+				</p>
+				</code></pre>
+				</div>
+				<br><h1 id="Final" class="text-center">Final Touches</h1>
+				<h3 id="Rooms" class="text-center">Setting Up Your Level</h3>
+				<p>
+                        <br>
+                        In Gamemaker, your level assets are called <code>rooms</code>. Make a room by right clicking on the room folder and selecting <code>create room</code>.
+                        You should be greeted by a window that looks like this.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/roomeditor.png">
+                    <p>
+                        <br>
+                        The first step you want to take is to change the speed. Default room speed is at <code>30</code>, but we're going to change it to <code>60</code>, which
+                        means our game is running at 60 frames per second. The game speed is located here.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/changespeed.png">
+                    <p>
+                        <br>
+                        Now we can start adding objects into our room. Go to the <code>object</code> tab at the top.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/addobjects.png">
+                    <p>
+                        <br>
+                        <img style="float:right; margin:0px 0px 20px 20px; width: 35%" src="gamemaker-assets/quickshortcuts.png">
+                        Select the player by clicking on the blank box and selecting <code>obj_player</code>. Click anywhere in the room to place a single player object down. Repeat this but with the
+                        wall object. To add objects down quickly, press <code>shift</code> and <code>ctrl</code> at the same time, click, and drag. Other shortcuts are shown on the right.
+                        Design your level, and once you're ready, we can test it!
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/roomdesign.png">
+                    <p>
+                        <br>
+                        <img style="float:right; margin:0px 0px 20px 20px; width:10%" src="gamemaker-assets/greencheck.png">
+                        Now that the level is designed, click the green checkmark to save your work, and hit the green play arrow on the top bar to run your game.
+                    </p>
+                    <img style="width:100%" src="gamemaker-assets/run.png">
+                    <p>
+                        <br>
+                        <b>Annnnd you're done!</b> You've made it to the end of the tutorial, and you should have a working top-down game now! This is a great starting point for many games,
+                        and from here the next step is usually combat, puzzles, switching levels, or view cameras. It's all open to your creativity now. See George if you want to continue
+                        working on your project, and he can help you. Enjoy!
+                        <br>
+                <br><br>
+				  <div id="Resources" class = "row">
+                    <h2><br> Extra Resources</h2>
+                    <p>
+                        <br>
+                        Here are some other YouTube channels and Websites to help you on your game development journey!
+                        <br><br>
+                        <a href="https://www.youtube.com/user/999Greyfox/about">Shaun Spalding (Youtube)</a><br>
+                        <a href="https://www.youtube.com/user/uheartbeast">Heartbeast (Youtube)</a><br>
+                        <a href="https://www.youtube.com/channel/UCnKHIXYeYkehIJtF414f65A">PixelatedPope (Youtube)</a><br>
+                        <a href="https://www.youtube.com/user/RealTutsGML">RealTutsGML (Youtube)</a><br>
+                        <a href="https://www.reddit.com/r/gamemaker/">r/Gamemaker (Reddit)</a><br>
+                        <a href="https://help.yoyogames.com/hc/en-us">Official Gamemaker Help Page (YoyoGames)</a><br>
+                        <a href="https://docs.yoyogames.com/source/dadiospice/index.html">Official Gamemaker Manual (YoyoGames)</a><br><br>
+                        And of course, Google is your best friend! There's plenty of help you can get by just searching your question up online.
+                        <br>
+                        <br><b>So go forth, explorers, pioneers, and innovators.
+                        Engineer your own games and express your creativity. The adventure has only begun!</b>
+                    </p>
+                </div>
+                <p class="text-center"><a href="../workshops.html"
+                                          class="btn btn-primary py-3">Back to Workshops</a></p>
+
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5 pb-5 align-items-center d-flex">
+            <div class="col-md-6">
+                <div class="heading-section heading-section-white ftco-animate">
+                    <span class="subheading">Get Inspired</span>
+                    <h2 style="font-size: 30px;">Join VikingsDev Today!</h2>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4"
+                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 bg-primary p-4">
+                    <h2 class="ftco-heading-2">VikingsDev</h2>
+                    <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
+                    <ul class="ftco-footer-social list-unstyled mb-0">
+                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+                                class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/vikingsdev"><span
+                                class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
+                                class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Navigational</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="py-2 d-block">Home</a></li>
+                        <li><a href="../about.html" class="py-2 d-block">About</a></li>
+                        <li><a href="../events.html" class="py-2 d-block">Events</a></li>
+                        <li><a href="../workshops.html" class="py-2 d-block">Workshops</a></li>
+                        <li><a href="../contact.html" class="py-2 d-block">Contact</a></li>
+                        <li><a href="../signup.html" class="py-2 d-block">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Find Us</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">751 Hammarskjold Dr, Burnaby, BC V5B 4A1, Canada</span>
+                            </li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">vikingsdev@gmail.com</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
+                <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"/>
+    </svg>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.stellar.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.animateNumber.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery.timepicker.min.js"></script>
+<script src="../js/scrollax.min.js"></script>
+<script src="../js/google-map.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
