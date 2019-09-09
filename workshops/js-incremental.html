@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Metadata -->
+	<title>JS Incremental Game Tutorial - VikingsDev</title>
+	<link rel="icon" href="../images/vikingsdev-icon.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+		<a href="../index.html"><img src="../images/vikingsdev-logo.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="oi oi-menu"></span> Menu
+		</button>
+
+		<div class="collapse navbar-collapse" id="ftco-nav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="../events.html" class="nav-link">Events</a></li>
+				<li class="nav-item active"><a class="nav-link" href="../workshops.html">Workshops</a></li>
+				<li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+				<li class="nav-item cta"><a href="../signup.html" class="nav-link"><span>Sign Up</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Title section -->
+
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/javascript-bg.png');"
+data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text align-items-end justify-content-start">
+			<div class="col-md-8 ftco-animate text-center text-md-left mb-5">
+				<p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i
+						class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops<i
+						class="ion-ios-arrow-forward"></i></a></span><span>JS Incremental Game</span></p>
+				<h1 class="mb-3 bread">JS Incremental Game</h1>
+				<h3 class="mb-3 bread">James Zhong</h3>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 'Get Help' sticky button -->
+
+<br><br>
+<p class="text-center sticky-top float-right" style="top:90vh; right:20px;"><a href="https://discord.gg/JTRFMx2" class="btn btn-primary py-3" rel="noopener" target="_blank">Get Help</a></p>
+
+<!-- Table of contents -->
+
+<div class="card" style="margin: 0 auto; display: block; max-width: 500px; padding:20px">
+	<p class="toc_title">Table of Contents</p>
+	<ul class="toc_list">
+		<li><a href="#project-demo">Project Demo</a>
+		<li><a href="#project-setup">Project Setup</a>
+			<ul>
+				<li><a href="#assets-and-files">Assets and Files</a></li>
+				<li><a href="#html-document-structure">HTML Document Structure</a></li>
+			</ul>
+		</li>
+		<li><a href="#html-content">HTML Content</a>
+		<li><a href="#css-aesthetics">CSS Aesthetics</a>
+		<li><a href="#js-functionality">JS Functionality</a></li>
+	</ul>
+</div>
+
+<!-- Tutorial Content -->
+
+<section class="ftco-section testimony-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section ftco-animate">
+
+				<!-- Introduction -->
+
+				<p>In this workshop, we will be creating an idle/clicker game using HTML, CSS, and JavaScript. Experience with said languages is recommended but not required. The project presented is meant to allow for creative expansion off of the framework provided, so don't be afraid to experiment or add on your own unique touch.<br><br>
+				Note: <em>Due to time interests, functionality and syntax will not be explained in full detail.</em></p><br>
+
+				<!-- Project Demo -->
+
+				<h2 id="project-demo" class="my-5">Project Demo</h2>
+				<iframe src="https://thebitspud.github.io/js-incremental-game/example-3" style="width: 100%" height="600"></iframe>
+				
+				<p>This is what we will be creating in this tutorial. The full source code for this demo will be available at the end of the workshop.</p><br>
+
+				<!-- Project Setup -->
+
+				<h2 id="project-setup">Project Setup</h2><br>
+				<p>Before we do anything else, we must prepare the assets and set up a document structure. I would highly recommended downloading and setting up a proper IDE or code editor such as <a href="https://code.visualstudio.com/" rel="noopener" target="_blank">Visual Studio Code</a>.</p>
+
+				<!-- Assets and Files -->
+
+				<h3 id="assets-and-files" class="text-center my-5">Assets and Files</h3>
+
+				<p>For this workshop, we will be putting everything into a single file: <code>index.html</code>. In future tutorials, we will split up our projects into multiple discrete files.</p>
+
+				<p>The only assets we will be working with for now are images, which will be stored in the same folder as <code>index.html</code> for now. For this project we will need 3 images, all of which are available for download below. (Click on the image buttons to download)</p>
+
+				<!-- Asset Downloads -->
+				<div class="text-center my-5">
+					<a href="js-incremental-assets/pencil.png" class="btn btn-primary py-3" download>
+						<img src="js-incremental-assets/pencil.png" width="64" height="64" alt="W3Schools">
+					</a>
+					<a href="js-incremental-assets/pencil-maker.png" class="btn btn-primary py-3 ml-5" download>
+						<img src="js-incremental-assets/pencil-maker.png" width="64" height="64" alt="W3Schools">
+					</a>
+					<a href="js-incremental-assets/pencil-sharpener.png" class="btn btn-primary py-3 ml-5" download>
+						<img src="js-incremental-assets/pencil-sharpener.png" width="64" height="64" alt="W3Schools">
+					</a>
+				</div>
+
+				<p>For now, your file structure should look something like this:</p>
+				<img src="js-incremental-assets/file-structure.png">
+
+				<!-- HTML Document Structure -->
+
+				<h3 id="html-document-structure" class="text-center my-5">HTML Document Structure</h3>
+
+				<p>Add the following text to <code>index.html</code>:</p>
+
+				<div class="codeheader" id="codeheader_html">index.html</div>
+				<div id="codebox">
+					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;!-- An idle/clicker game that can be played on the web -->
+&lt;!-- Tutorial by James Zhong @ VikingsDev -->
+&lt;!-- https://vikingsdev.ca/workshops/js-incremental -->
+
+&lt;!doctype html&gt;
+
+&lt;html lang="en"&gt;
+	&lt;!-- The head element defines document metadata and initializes styles + scripts --&gt;
+	&lt;head&gt;
+		&lt;!-- Text displayed in the browser's title bar --&gt;
+		&lt;title&gt;Pencil Clicker&lt;/title&gt;
+
+		&lt;!-- We will put some CSS in here to make the page look nice --&gt;
+		&lt;style&gt;
+
+		&lt;/style&gt;
+
+		&lt;!-- The script element will contain the JavaScript code that runs the game --&gt;
+		&lt;script&gt;
+
+		&lt;/script&gt;
+	&lt;/head&gt;
+
+	&lt;!-- The body element contains all the HTML elements that will appear on the page --&gt;
+	&lt;body&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				</div><br>
+
+				<p>This is the document structure of a typical HTML file. From here, we will be adding code into <code>&lt;body&gt;</code>, <code>&lt;style&gt;</code>, and <code>&lt;script&gt;</code> elements.</p>
+
+				<h2 id="html-content" class="my-5">HTML Content</h2>
+
+				<p>Replace <code>&lt;body&gt;</code> in <code>index.html</code> with the following code:</p>
+
+				<div class="codeheader" id="codeheader_html">&lt;body&gt; in index.html</div>
+				<div id="codebox">
+					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;body onload="updateResources()"&gt;
+	&lt;!-- The number of pencils, pencil makers, and pencil sharpeners you currently have --&gt;
+	&lt;div id="resource-counts"&gt;
+		&lt;img src="pencil.png" width="32" height="32"&gt; &amp;times; &lt;span id="pencil-count"&gt;0&lt;/span&gt;
+		&lt;img src="pencil-maker.png" width="32" height="32"&gt; &amp;times; &lt;span id="maker-count"&gt;0&lt;/span&gt;
+		&lt;img src="pencil-sharpener.png" width="32" height="32"&gt; &amp;times; &lt;span id="sharpener-count"&gt;1&lt;/span&gt;
+	&lt;/div&gt;
+
+	&lt;!-- The rate at which your pencil makers create additional pencils --&gt;
+	&lt;p&gt;&lt;br&gt;
+		&lt;span id="pencils-per-second"&gt;+0.00&lt;/span&gt;
+		&lt;img src="pencil.png" width="12" height="12"&gt; per second
+	&lt;/p&gt;&lt;br&gt;
+
+	&lt;!-- Buttons for making pencils and buying things --&gt;
+	&lt;div&gt;
+		&lt;!-- Pencils --&gt;
+		&lt;button onclick="makePencils()"&gt;
+			&lt;span id="pencils-per-click"&gt;+1&lt;/span&gt;
+			&lt;img src="pencil.png" width="64" height="64"&gt;
+		&lt;/button&gt;
+
+		&lt;p&gt;Make more pencils&lt;br&gt;Cost: Free!&lt;/p&gt;&lt;br&gt;
+
+		&lt;!-- Pencil Makers --&gt;
+		&lt;button onclick="buyPencilMaker()"&gt;+1
+			&lt;img src="pencil-maker.png" width="64" height="64"&gt;
+		&lt;/button&gt;
+
+		&lt;p&gt;Buy a pencil maker
+			&lt;br&gt;+0.25 &lt;img src="pencil.png" width="12" height="12"&gt; per second
+			&lt;br&gt;Cost: &lt;span id="maker-cost"&gt;10&lt;/span&gt; &lt;img src="pencil.png" width="12" height="12"&gt;
+		&lt;/p&gt;&lt;br&gt;
+
+		&lt;!-- Pencil Sharpeners --&gt;
+		&lt;button onclick="buyPencilSharpener()"&gt;+1
+			&lt;img src="pencil-sharpener.png" width="64" height="64"&gt;
+		&lt;/button&gt;
+
+		&lt;p&gt;Buy a pencil sharpener
+			&lt;br&gt;+1 &lt;img src="pencil.png" width="12" height="12"&gt; per click
+			&lt;br&gt;Cost: &lt;span id="sharpener-cost"&gt;10&lt;/span&gt; &lt;img src="pencil.png" width="12" height="12"&gt;
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+				</div><br>
+
+				<h2 id="css-aesthetics" class="my-5">CSS Aesthetics</h2>
+
+				<p>Insert the following text into <code>&lt;style&gt;</code> of <code>index.html</code>:</p>
+
+				<div class="codeheader" id="codeheader_html">&lt;style&gt; in index.html</div>
+				<div id="codebox">
+					<pre style="color: #fff; tab-size: 4;"><code data-language="css">/* Page setup */
+
+body {
+	background-color: white;
+
+	color: black;
+	font-family: monospace;
+	font-size: 24px;
+
+	text-align: center
+}
+
+img { vertical-align: middle; }
+
+p {
+	margin: 0;
+	font-size: 14px;
+}
+
+div#resource-counts span:not(:last-child) {
+	margin-right: 30px;
+}
+
+/* Modifying button properties to suit our needs */
+
+button {
+	font-size: 32px;
+	cursor: pointer;
+
+	background: white;
+	border: 1px #888 solid;
+	
+	padding: 10px 15px;
+	outline: none;
+	margin: 0 5px 5px 0;
+}
+
+button:hover { background-color: #ddd; }
+
+button:active { background-color: #bbb; }</code></pre>
+				</div><br>
+
+				<h2 id="js-functionality" class="my-5">JS Functionality</h2>
+
+				<p>Insert the following text into <code>&lt;script&gt;</code> of <code>index.html</code>:</p>
+
+				<div class="codeheader" id="codeheader_html">&lt;script&gt; in index.html</div>
+				<div id="codebox">
+					<pre style="color: #fff; tab-size: 4;"><code data-language="javascript">// Initializing the variables that we will need
+let pencils = 0.0,
+	pencilMakers = 0,
+	pencilSharpeners = 1,
+	pencilMakerPrice = 10,
+	pencilSharpenerPrice = 10;
+
+// The methods that are called whan the player presses the corresponding buttons
+
+function makePencils() {
+	pencils += pencilSharpeners;
+
+	updateResources();
+}
+
+function buyPencilMaker() {
+	// checking whether the player can buy a pencil maker
+	if(pencils >= pencilMakerPrice) {
+		// buying a pencil maker - note the order in which the statements are called
+		pencils -= pencilMakerPrice;
+		pencilMakerPrice += 3;
+		pencilMakers++;
+
+		updateResources();
+	}
+}
+
+function buyPencilSharpener() {
+	if(pencils >= pencilSharpenerPrice) {
+		// buying a pencil sharpener - see corresponding comments above
+		pencils -= pencilSharpenerPrice;
+		pencilSharpenerPrice += (10 + pencilSharpeners);
+		pencilSharpeners++;
+
+		updateResources();
+	}
+}
+
+// Adding the pencils created by the pencil makers
+var tickPencils = setInterval(addPencils, 100);
+
+function addPencils() {
+	pencils += pencilMakers / 40;
+	document.getElementById("pencil-count").innerHTML = "" + pencils.toFixed(0);
+}
+
+// Updating the document HTML to match the game code
+// Note that this is not the most efficient way to sync the page
+
+function updateResources() {
+	document.getElementById("pencil-count").innerHTML = "" + pencils.toFixed(0);
+	document.getElementById("maker-count").innerHTML = "" + pencilMakers;
+	document.getElementById("sharpener-count").innerHTML = "" + pencilSharpeners;
+
+	document.getElementById("pencils-per-click").innerHTML = "+" + pencilSharpeners;
+	document.getElementById("pencils-per-second").innerHTML = "+" + (pencilMakers / 4).toFixed(2);
+
+	document.getElementById("maker-cost").innerHTML = "" + pencilMakerPrice;
+	document.getElementById("sharpener-cost").innerHTML = "" + pencilSharpenerPrice;
+}</code></pre>
+				</div><br>
+
+				<p>Congratulations! You have successfully created an incremental game in JavaScript. Be sure to take some time to analyze the code and experiment with it before moving on to the next tutorial!</p>
+
+				<br><br>
+				<p class="text-center"><a href="https://github.com/thebitspud/js-incremental-game/blob/master/example-3.html" target="_blank" rel="noopener" class="btn btn-primary py-3 mr-5">Full Source Code</a> <a href="../workshops.html" class="btn btn-primary py-3">Back to Workshops</a></p>
+
+			</div>
+		</div>
+		<br>
+	</div>
+</section>
+
+<!-- Site Footer -->
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+	<div class="container">
+		<div class="row mb-5 pb-5 align-items-center d-flex">
+			<div class="col-md-6">
+				<div class="heading-section heading-section-white ftco-animate">
+					<span class="subheading">Get Inspired</span>
+					<h2 style="font-size: 30px;">Join VikingsDev Today!</h2>
+				</div>
+			</div>
+			<div class="col-md-3 ftco-animate">
+				<p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4"
+								   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md">
+				<div class="ftco-footer-widget mb-4 bg-primary p-4">
+					<h2 class="ftco-heading-2">VikingsDev</h2>
+					<p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
+					<ul class="ftco-footer-social list-unstyled mb-0">
+						<li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+								class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.facebook.com/groups/vikingsdev"><span
+								class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
+								class="icon-instagram"></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md">
+				<div class="ftco-footer-widget mb-4">
+					<h2 class="ftco-heading-2">Navigational</h2>
+					<ul class="list-unstyled">
+						<li><a href="../index.html" class="py-2 d-block">Home</a></li>
+						<li><a href="../about.html" class="py-2 d-block">About</a></li>
+						<li><a href="../events.html" class="py-2 d-block">Events</a></li>
+						<li><a href="../workshops.html" class="py-2 d-block">Workshops</a></li>
+						<li><a href="../contact.html" class="py-2 d-block">Contact</a></li>
+						<li><a href="../signup.html" class="py-2 d-block">Sign Up</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md">
+				<div class="ftco-footer-widget mb-4">
+					<h2 class="ftco-heading-2">Find Us</h2>
+					<div class="block-23 mb-3">
+						<ul>
+							<li><span class="icon icon-map-marker"></span><span class="text">751 Hammarskjold Dr, Burnaby, BC V5B 4A1, Canada</span>
+							</li>
+							<li><a href="#"><span class="icon icon-envelope"></span><span class="text">vikingsdev@gmail.com</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+						href="https://github.com/FrankWhoee">Frank Hui</a></p>
+				<p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- loader -->
+
+<div id="ftco-loader" class="show fullscreen">
+	<svg class="circular" width="48px" height="48px">
+		<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+		<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00"/>
+	</svg>
+</div>
+
+<!-- Scripts -->
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.stellar.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.animateNumber.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery.timepicker.min.js"></script>
+<script src="../js/scrollax.min.js"></script>
+<script src="../js/google-map.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
