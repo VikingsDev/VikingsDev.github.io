@@ -10127,6 +10127,10 @@ body {
   transition: 0.5s;
 }
 
+hr { display: block; height: 1px;
+  border: 0; border-top: 1px solid #e0a800;
+  margin: 1em 0; padding: 0; }
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 #codebox {
