@@ -313,44 +313,54 @@ button:hover { background-color: #ddd; }
 button:active { background-color: #bbb; }</code></pre>
 				</div>
 
-				<br><p><code>index.html</code> will now look identical to the page presented in the demo above (although the buttons won't work). If you already know how to use CSS, then you are more than welcome to change around the properties of certain elements.</p>
+				<br><p><code>index.html</code> will now look identical to the page presented in the demo above (although the buttons won't work). If you are already familiar with CSS, then you are more than welcome to change around the properties to suit your needs.</p>
 
 				<h2 id="js-functionality" class="my-5">JS Functionality</h2>
 
-				<p>Insert the following text into <code>&lt;script&gt;</code> of <code>index.html</code>:</p>
+				<p>Finally, we have arrived at the JavaScript section of the workshop. Read through the following code (the comments are there to help) before inserting it into <code>&lt;script&gt;</code> of <code>index.html</code>. </p>
 
 				<div class="codeheader" id="codeheader_html">&lt;script&gt; in index.html</div>
 				<div id="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="javascript">// Initializing the variables that we will need
+// Feel free to adjust the values to suit your preferences
 let pencils = 0.0,
 	pencilMakers = 0,
+	pencilsPerSec = 0.5, // number of pencils per second per pencil maker
 	pencilSharpeners = 1,
-	pencilMakerPrice = 10,
-	pencilSharpenerPrice = 10;
+	pencilMakerPrice = 10, // the initial price in pencils
+	pencilSharpenerPrice = 10; // the initial price in pencils
 
 // The methods that are called whan the player presses the corresponding buttons
 
 function makePencils() {
+	// Adding pencils to the player's inventory each time the button is pressed
 	pencils += pencilSharpeners;
 
-	updateResources();
+	// Updating document HTML after each button press
+	// (x).toFixed denotes the number of digits to the right of the decimal that are represented
+	document.getElementById("pencil-count").innerHTML = pencils.toFixed(0);
 }
 
 function buyPencilMaker() {
-	// checking whether the player can buy a pencil maker
+	// Checking whether the player can buy a pencil maker
 	if(pencils >= pencilMakerPrice) {
-		// buying a pencil maker - note the order in which the statements are called
+		// Buying a pencil maker - note the order in which the statements are called
 		pencils -= pencilMakerPrice;
+
+		// Incrementing the price of successive pencil makers after each purchase
 		pencilMakerPrice += 3;
+
+		// Adding a pencil maker to they player's inventory
 		pencilMakers++;
 
+		// Updating document HTML after each successful purchase
 		updateResources();
 	}
 }
 
 function buyPencilSharpener() {
 	if(pencils >= pencilSharpenerPrice) {
-		// buying a pencil sharpener - see corresponding comments above
+		// Buying a pencil sharpener - see corresponding comments above
 		pencils -= pencilSharpenerPrice;
 		pencilSharpenerPrice += (10 + pencilSharpeners);
 		pencilSharpeners++;
@@ -359,27 +369,30 @@ function buyPencilSharpener() {
 	}
 }
 
-// Adding the pencils created by the pencil makers
-var tickPencils = setInterval(addPencils, 100);
+// Creating a looping timer that invokes addPencils() every 1/10th* of a second 
+let ticksPerSecond = 10;
+let tickPencils = setInterval(addPencils, 1000 / ticksPerSecond);
 
+// Adding the pencils created by the pencil makers
 function addPencils() {
-	pencils += pencilMakers / 40;
-	document.getElementById("pencil-count").innerHTML = "" + pencils.toFixed(0);
+	// Adding pencils created by pencil makers (it's not as complex as it may seem at first)
+	pencils += pencilMakers * pencilsPerSec / ticksPerSecond;
+	document.getElementById("pencil-count").innerHTML = pencils.toFixed(0);
 }
 
 // Updating the document HTML to match the game code
 // Note that this is not the most efficient way to sync the page
-
 function updateResources() {
-	document.getElementById("pencil-count").innerHTML = "" + pencils.toFixed(0);
-	document.getElementById("maker-count").innerHTML = "" + pencilMakers;
-	document.getElementById("sharpener-count").innerHTML = "" + pencilSharpeners;
+	// Retrieving an element by ID ( &lt;[e] id="..."&gt; ) and modifying the text stored within
+	document.getElementById("pencil-count").innerHTML = pencils.toFixed(0);
+	document.getElementById("maker-count").innerHTML = pencilMakers;
+	document.getElementById("sharpener-count").innerHTML = pencilSharpeners;
 
-	document.getElementById("pencils-per-click").innerHTML = "+" + pencilSharpeners;
-	document.getElementById("pencils-per-second").innerHTML = "+" + (pencilMakers / 4).toFixed(2);
+	document.getElementById("pencils-per-click").innerHTML = pencilSharpeners;
+	document.getElementById("pencils-per-second").innerHTML = (pencilMakers * pencilsPerSec).toFixed(2);
 
-	document.getElementById("maker-cost").innerHTML = "" + pencilMakerPrice;
-	document.getElementById("sharpener-cost").innerHTML = "" + pencilSharpenerPrice;
+	document.getElementById("maker-cost").innerHTML = pencilMakerPrice;
+	document.getElementById("sharpener-cost").innerHTML = pencilSharpenerPrice;
 }</code></pre>
 				</div>
 
