@@ -27,6 +27,15 @@
 	<link rel="stylesheet" href="../css/flaticon.css">
 	<link rel="stylesheet" href="../css/icomoon.css">
 	<link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		img.center {
+			max-width: 100%;
+			height:auto;
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
 </head>
 <body>
 
@@ -103,28 +112,30 @@ data-stellar-background-ratio="0.5">
 
 				<!-- Introduction -->
 
-				<p>In this workshop, we will be creating an idle/clicker game using HTML, CSS, and JavaScript. Experience with said languages is recommended but not required. The project presented is meant to allow for creative expansion off of the framework provided, so don't be afraid to experiment or add on your own unique touch.<br><br>
-				Note: <em>Due to time interests, functionality and syntax will not be explained in full detail.</em></p><br>
+				<p>In this workshop, we will be creating an idle/clicker game using HTML, CSS, and JavaScript. Experience with the above languages is highly recommended but not required. The project presented is meant to allow for creative expansion off of the framework provided, so don't be afraid to experiment or add on your own unique touch.<br><br>
+				Note: <em>Due to time interests, functionality and syntax will not be explained in full detail.</em></p>
 
 				<!-- Project Demo -->
 
 				<h2 id="project-demo" class="my-5">Project Demo</h2>
+
+				<p>Here's a fully functional demo of the application we will be creating. The source code for this example will be available at the end of the workshop.</p>
+
 				<iframe src="https://thebitspud.github.io/js-incremental-game/example-3" style="width: 100%" height="620"></iframe>
-				
-				<p>This is what we will be creating in this tutorial. The full source code for this demo will be available at the end of the workshop.</p><br>
 
 				<!-- Project Setup -->
 
-				<h2 id="project-setup">Project Setup</h2><br>
-				<p>Before we do anything else, we must prepare the assets and set up a document structure. I would highly recommended downloading and setting up a proper IDE or code editor such as <a href="https://code.visualstudio.com/" rel="noopener" target="_blank">Visual Studio Code</a>.</p>
+				<h2 id="project-setup" class="mt-5">Project Setup</h2><br>
+
+				<p>Before we do anything else, we must set up a document structure and prepare the project assets. If you have not done so already, I would highly recommended setting up a proper IDE or code editor such as <a href="https://code.visualstudio.com/" rel="noopener" target="_blank">Visual Studio Code</a>.</p>
 
 				<!-- Assets and Files -->
 
 				<h3 id="assets-and-files" class="text-center my-5">Assets and Files</h3>
 
-				<p>For this workshop, we will be putting everything into a single file: <code>index.html</code>. In future tutorials, we will split up our projects into multiple discrete files.</p>
+				<p>For this workshop, we will be putting all our code into a single file: <code>index.html</code>. In future tutorials, we will split up our projects into multiple discrete files.</p>
 
-				<p>The only assets we will be using in this workshop are images, which will be stored in the same folder as <code>index.html</code> for now. For this project we will need 3 images, all of which are available for download below. (Click on the image buttons to download)</p>
+				<p>The only assets we will be using in this workshop are images, which will be stored in the same folder as <code>index.html</code> for now. For this project we will need 3 images, all of which can be downloaded below (click on the image buttons).</p>
 
 				<!-- Asset Downloads -->
 				<div class="text-center my-5">
@@ -139,14 +150,14 @@ data-stellar-background-ratio="0.5">
 					</a>
 				</div>
 
-				<p>For now, your file structure should look something like this:</p>
-				<img src="js-incremental-assets/file-structure.png" style="max-width: 100%; height:auto">
+				<p>Once you have moved your images into the project folder, your file structure should look something like this:</p>
+				<img src="js-incremental-assets/file-structure.png" class="center">
 
 				<!-- HTML Document Structure -->
 
 				<h3 id="html-document-structure" class="text-center my-5">HTML Document Structure</h3>
 
-				<p>Add the following text to <code>index.html</code>:</p>
+				<p>Before adding any content or functionality to our page, we must first set up an organizational skeleton for the code we will be writing. Add the following text to <code>index.html</code> (feel free to copy/paste).</p>
 
 				<div class="codeheader" id="codeheader_html">index.html</div>
 				<div id="codebox">
@@ -174,70 +185,91 @@ data-stellar-background-ratio="0.5">
 	&lt;/head&gt;
 
 	&lt;!-- The body element contains all the HTML elements that will appear on the page --&gt;
-	&lt;body&gt;
+	&lt;body onload="updateResources()"&gt;
 
 	&lt;/body&gt;
 &lt;/html&gt;</code></pre>
-				</div><br>
+				</div>
 
-				<p>This is the document structure of a typical HTML file. From here, we will be adding code into the <code>&lt;body&gt;</code>, <code>&lt;style&gt;</code>, and <code>&lt;script&gt;</code> elements.</p>
+				<p>This is the document structure of a typical HTML file. From now on, we will be adding code into the <code>&lt;body&gt;</code>, <code>&lt;style&gt;</code>, and <code>&lt;script&gt;</code> elements.</p>
 
 				<h2 id="html-content" class="my-5">HTML Content</h2>
 
-				<p>Replace <code>&lt;body&gt;</code> in <code>index.html</code> with the following code:</p>
+				<p>First, we will be creating the resource bar that is present at the top of the page. Read through and insert the following lines into <code>&lt;body&gt;</code> of <code>index.html</code>.</p>
 
 				<div class="codeheader" id="codeheader_html">&lt;body&gt; in index.html</div>
 				<div id="codebox">
-					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;body onload="updateResources()"&gt;
-	&lt;!-- The number of pencils, pencil makers, and pencil sharpeners you currently have --&gt;
-	&lt;div id="resource-counts"&gt;
-		&lt;img src="pencil.png" width="32" height="32"&gt; &amp;times; &lt;span id="pencil-count"&gt;0&lt;/span&gt;
-		&lt;img src="pencil-maker.png" width="32" height="32"&gt; &amp;times; &lt;span id="maker-count"&gt;0&lt;/span&gt;
-		&lt;img src="pencil-sharpener.png" width="32" height="32"&gt; &amp;times; &lt;span id="sharpener-count"&gt;1&lt;/span&gt;
-	&lt;/div&gt;
+					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;!-- The number of pencils, pencil makers, and pencil sharpeners you currently have --&gt;
+&lt;div id="resource-bar"&gt;
+	&lt;img src="pencil.png" width="32" height="32"&gt; &amp;times; &lt;span id="pencil-count"&gt;0&lt;/span&gt;
+	&lt;img src="pencil-maker.png" width="32" height="32"&gt; &amp;times; &lt;span id="maker-count"&gt;0&lt;/span&gt;
+	&lt;img src="pencil-sharpener.png" width="32" height="32"&gt; &amp;times; &lt;span id="sharpener-count"&gt;1&lt;/span&gt;
+&lt;/div&gt;
 
-	&lt;!-- The rate at which your pencil makers create additional pencils --&gt;
-	&lt;p&gt;&lt;br&gt;
-		&lt;span id="pencils-per-second"&gt;+0.00&lt;/span&gt;
-		&lt;img src="pencil.png" width="12" height="12"&gt; per second
+&lt;!-- The rate at which your pencil makers create additional pencils --&gt;
+&lt;p&gt;&lt;br&gt;
+	&lt;span id="pencils-per-second"&gt;+0.00&lt;/span&gt;
+	&lt;img src="pencil.png" width="12" height="12"&gt; per second
+&lt;/p&gt;&lt;br&gt;</code></pre>
+				</div>
+
+				<br><p>From here, you can open up <code>index.html</code> using a web browser. If you have done everything correctly, then at the top left of the page you should see something like this:</p>
+				
+				<img src="js-incremental-assets/resource-bar.png" class="center">
+
+				<br><p>We will now be adding in the buttons that the player will be using to interact with the game. Insert the following lines into <code>&lt;body&gt;</code> below the resource bar.</p>
+
+				<div class="codeheader" id="codeheader_html">&lt;body&gt; in index.html</div>
+				<div id="codebox">
+					<pre style="color: #fff; tab-size: 4;"><code data-language="html">
+&lt;!-- Buttons for making pencils and buying things --&gt;
+&lt;div&gt;
+	&lt;!-- Pencils --&gt;
+	&lt;button onclick="makePencils()"&gt;
+		&lt;span id="pencils-per-click"&gt;+1&lt;/span&gt;
+		&lt;img src="pencil.png" width="64" height="64"&gt;
+	&lt;/button&gt;
+
+	&lt;p&gt;Make more pencils&lt;br&gt;Cost: Free!&lt;/p&gt;&lt;br&gt;
+
+	&lt;!-- Pencil Makers --&gt;
+	&lt;button onclick="buyPencilMaker()"&gt;+1
+		&lt;img src="pencil-maker.png" width="64" height="64"&gt;
+	&lt;/button&gt;
+
+	&lt;p&gt;Buy a pencil maker
+		&lt;br&gt;+0.50 &lt;img src="pencil.png" width="12" height="12"&gt; per second
+		&lt;br&gt;Cost: &lt;span id="maker-cost"&gt;10&lt;/span&gt; &lt;img src="pencil.png" width="12" height="12"&gt;
 	&lt;/p&gt;&lt;br&gt;
 
-	&lt;!-- Buttons for making pencils and buying things --&gt;
-	&lt;div&gt;
-		&lt;!-- Pencils --&gt;
-		&lt;button onclick="makePencils()"&gt;
-			&lt;span id="pencils-per-click"&gt;+1&lt;/span&gt;
-			&lt;img src="pencil.png" width="64" height="64"&gt;
-		&lt;/button&gt;
+	&lt;!-- Pencil Sharpeners --&gt;
+	&lt;button onclick="buyPencilSharpener()"&gt;+1
+		&lt;img src="pencil-sharpener.png" width="64" height="64"&gt;
+	&lt;/button&gt;
 
-		&lt;p&gt;Make more pencils&lt;br&gt;Cost: Free!&lt;/p&gt;&lt;br&gt;
+	&lt;p&gt;Buy a pencil sharpener
+		&lt;br&gt;+1 &lt;img src="pencil.png" width="12" height="12"&gt; per click
+		&lt;br&gt;Cost: &lt;span id="sharpener-cost"&gt;10&lt;/span&gt; &lt;img src="pencil.png" width="12" height="12"&gt;
+	&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				</div>
 
-		&lt;!-- Pencil Makers --&gt;
-		&lt;button onclick="buyPencilMaker()"&gt;+1
-			&lt;img src="pencil-maker.png" width="64" height="64"&gt;
-		&lt;/button&gt;
+				<div class="row">
+					<div class="col-sm">
+						<br><p>Even if you find the code to be intimidating or confusing, try to analyze the HTML presented and figure out what goes where.</p>
 
-		&lt;p&gt;Buy a pencil maker
-			&lt;br&gt;+0.25 &lt;img src="pencil.png" width="12" height="12"&gt; per second
-			&lt;br&gt;Cost: &lt;span id="maker-cost"&gt;10&lt;/span&gt; &lt;img src="pencil.png" width="12" height="12"&gt;
-		&lt;/p&gt;&lt;br&gt;
+						<p>Fortunately, we are more-or-less finished with page content now. If you open <code>index.html</code> in your web browser, you should see this below the resource bar:</p>
 
-		&lt;!-- Pencil Sharpeners --&gt;
-		&lt;button onclick="buyPencilSharpener()"&gt;+1
-			&lt;img src="pencil-sharpener.png" width="64" height="64"&gt;
-		&lt;/button&gt;
-
-		&lt;p&gt;Buy a pencil sharpener
-			&lt;br&gt;+1 &lt;img src="pencil.png" width="12" height="12"&gt; per click
-			&lt;br&gt;Cost: &lt;span id="sharpener-cost"&gt;10&lt;/span&gt; &lt;img src="pencil.png" width="12" height="12"&gt;
-		&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/body&gt;</code></pre>
-				</div><br>
+						<p>This is pretty decent in and of itself, but it doesn't look as great as it could. We will be fixing that in the next section.</p>
+					</div>
+					<div class="col-sm">
+						<br><img src="js-incremental-assets/html-only.png" class="center">
+					</div>
+				</div>
 
 				<h2 id="css-aesthetics" class="my-5">CSS Aesthetics</h2>
 
-				<p>Insert the following text into <code>&lt;style&gt;</code> of <code>index.html</code>:</p>
+				<p>As mentioned previously, CSS will greatly improve the look of your website or web application. For this workshop, all you will have to do is insert the following code into <code>&lt;style&gt;</code> of <code>index.html</code>.</p>
 
 				<div class="codeheader" id="codeheader_html">&lt;style&gt; in index.html</div>
 				<div id="codebox">
@@ -260,9 +292,7 @@ p {
 	font-size: 14px;
 }
 
-div#resource-counts span:not(:last-child) {
-	margin-right: 30px;
-}
+div#resource-bar span:not(:last-child) { margin-right: 30px; }
 
 /* Modifying button properties to suit our needs */
 
@@ -281,44 +311,56 @@ button {
 button:hover { background-color: #ddd; }
 
 button:active { background-color: #bbb; }</code></pre>
-				</div><br>
+				</div>
+
+				<br><p><code>index.html</code> will now look identical to the page presented in the demo above (although the buttons won't work). If you are already familiar with CSS, then you are more than welcome to change around the properties to suit your needs.</p>
 
 				<h2 id="js-functionality" class="my-5">JS Functionality</h2>
 
-				<p>Insert the following text into <code>&lt;script&gt;</code> of <code>index.html</code>:</p>
+				<p>Finally, we have arrived at the JavaScript section of the workshop. Read through the following code (the comments are there to help) before inserting it into <code>&lt;script&gt;</code> of <code>index.html</code>. </p>
 
 				<div class="codeheader" id="codeheader_html">&lt;script&gt; in index.html</div>
 				<div id="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="javascript">// Initializing the variables that we will need
+// Feel free to adjust the values to suit your preferences
 let pencils = 0.0,
 	pencilMakers = 0,
+	pencilsPerSec = 0.5, // number of pencils per second per pencil maker
 	pencilSharpeners = 1,
-	pencilMakerPrice = 10,
-	pencilSharpenerPrice = 10;
+	pencilMakerPrice = 10, // the initial price in pencils
+	pencilSharpenerPrice = 10; // the initial price in pencils
 
 // The methods that are called whan the player presses the corresponding buttons
 
 function makePencils() {
+	// Adding pencils to the player's inventory each time the button is pressed
 	pencils += pencilSharpeners;
 
-	updateResources();
+	// Updating document HTML after each button press
+	// (x).toFixed denotes the number of digits to the right of the decimal that are represented
+	document.getElementById("pencil-count").innerHTML = pencils.toFixed(0);
 }
 
 function buyPencilMaker() {
-	// checking whether the player can buy a pencil maker
+	// Checking whether the player can buy a pencil maker
 	if(pencils >= pencilMakerPrice) {
-		// buying a pencil maker - note the order in which the statements are called
+		// Buying a pencil maker - note the order in which the statements are called
 		pencils -= pencilMakerPrice;
+
+		// Incrementing the price of successive pencil makers after each purchase
 		pencilMakerPrice += 3;
+
+		// Adding a pencil maker to they player's inventory
 		pencilMakers++;
 
+		// Updating document HTML after each successful purchase
 		updateResources();
 	}
 }
 
 function buyPencilSharpener() {
 	if(pencils >= pencilSharpenerPrice) {
-		// buying a pencil sharpener - see corresponding comments above
+		// Buying a pencil sharpener - see corresponding comments above
 		pencils -= pencilSharpenerPrice;
 		pencilSharpenerPrice += (10 + pencilSharpeners);
 		pencilSharpeners++;
@@ -327,31 +369,34 @@ function buyPencilSharpener() {
 	}
 }
 
-// Adding the pencils created by the pencil makers
-var tickPencils = setInterval(addPencils, 100);
+// Creating a looping timer that invokes addPencils() every 1/10th* of a second 
+let ticksPerSecond = 10;
+let tickPencils = setInterval(addPencils, 1000 / ticksPerSecond);
 
+// Adding the pencils created by the pencil makers
 function addPencils() {
-	pencils += pencilMakers / 40;
-	document.getElementById("pencil-count").innerHTML = "" + pencils.toFixed(0);
+	// Adding pencils created by pencil makers (it's not as complex as it may seem at first)
+	pencils += pencilMakers * pencilsPerSec / ticksPerSecond;
+	document.getElementById("pencil-count").innerHTML = pencils.toFixed(0);
 }
 
 // Updating the document HTML to match the game code
 // Note that this is not the most efficient way to sync the page
-
 function updateResources() {
-	document.getElementById("pencil-count").innerHTML = "" + pencils.toFixed(0);
-	document.getElementById("maker-count").innerHTML = "" + pencilMakers;
-	document.getElementById("sharpener-count").innerHTML = "" + pencilSharpeners;
+	// Retrieving an element by ID ( &lt;[e] id="..."&gt; ) and modifying the text stored within
+	document.getElementById("pencil-count").innerHTML = pencils.toFixed(0);
+	document.getElementById("maker-count").innerHTML = pencilMakers;
+	document.getElementById("sharpener-count").innerHTML = pencilSharpeners;
 
-	document.getElementById("pencils-per-click").innerHTML = "+" + pencilSharpeners;
-	document.getElementById("pencils-per-second").innerHTML = "+" + (pencilMakers / 4).toFixed(2);
+	document.getElementById("pencils-per-click").innerHTML = pencilSharpeners;
+	document.getElementById("pencils-per-second").innerHTML = (pencilMakers * pencilsPerSec).toFixed(2);
 
-	document.getElementById("maker-cost").innerHTML = "" + pencilMakerPrice;
-	document.getElementById("sharpener-cost").innerHTML = "" + pencilSharpenerPrice;
+	document.getElementById("maker-cost").innerHTML = pencilMakerPrice;
+	document.getElementById("sharpener-cost").innerHTML = pencilSharpenerPrice;
 }</code></pre>
-				</div><br>
+				</div>
 
-				<p>Congratulations! You have successfully created an incremental game in JavaScript. Be sure to take some time to analyze the code and experiment with it before moving on to the next tutorial!</p>
+				<br><p>Congratulations! You have successfully created a web-based incremental game using HTML, CSS, and JavaScript. Be sure to take some time to analyze the code and experiment with it before moving on to the next tutorial!</p>
 
 				<br><br>
 				<p class="text-center"><a href="https://github.com/thebitspud/js-incremental-game/blob/master/example-3.html" target="_blank" rel="noopener" class="btn btn-primary py-3 mr-5">Full Source Code</a> <a href="../workshops.html" class="btn btn-primary py-3">Back to Workshops</a></p>
