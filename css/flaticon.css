@@ -36,9 +36,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-clock:before { content: "\f100"; }
+.flaticon-gaming:before { content: "\f100"; }
 .flaticon-location:before { content: "\f101"; }
-.flaticon-question-mark:before { content: "\f102"; }
-.flaticon-code:before { content: "\f103"; }
-    .flaticon-people:before { content: "\f104"; }
+.flaticon-clock:before { content: "\f102"; }
+.flaticon-people:before { content: "\f103"; }
+    .flaticon-question-mark:before { content: "\f104"; }
+    .flaticon-code:before { content: "\f105"; }
+
 
