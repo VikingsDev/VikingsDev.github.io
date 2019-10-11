@@ -76,7 +76,8 @@
                     <p><u>Submit a link to your project:</u>
                         <br><b>Python projects</b>: Share your Google Colab by link, and enter it here.
                         <br><b>Websites</b>: Drop a link to your website!
-                        <br><b>GameMaker Projects</b>: Convert your project to an executable, upload them to Google Drive, share them to us using a link.
+                        <br><b>GameMaker Projects</b>: Convert your project to an executable, upload them to Google
+                        Drive, share them to us using a link.
                         <br></p>
                     <input type="text" class="form-control" id="link" placeholder="Link to Project">
                 </div>
@@ -203,52 +204,99 @@
     firebase.analytics();
 
     var db = firebase.firestore();
+    var date = (new Date()).toString().split(' ').splice(1,3).join(' ');
 
-    $('#submissionForm').submit(function(evt) {
+    $('#submissionForm').submit(function (evt) {
         evt.preventDefault(); //Prevent the default form submit action
-        var x = document.getElementById("submissionForm");
-
-        db.collection("projects").add({
-            name: x.elements[0].value,
-            link: x.elements[1].value,
-            date: formatDate(new Date())
+        var form = document.getElementById("submissionForm");
+        var formdata = {
+            name: form.elements[0].value,
+            link: form.elements[1].value,
+            date: new Date().toLocaleString()
+        };
+        db.collection(date).doc(formdata.name).set({
+            name: formdata.name,
+            link: formdata.link,
+            date: formdata.date
         })
-            .then(function (docRef) {
-                console.log("Document written with ID: ", docRef.id);
+            .then(function () {
+                console.log("Project Document successfully written!");
                 show_success();
             })
             .catch(function (error) {
-                console.error("Error adding document: ", error);
+                console.error("Error writing document: ", error);
                 show_error();
             });
-        x.reset();
-    })
 
-    function formatDate(date) {
-        var monthNames = [
-            "January", "February", "March",
-            "April", "May", "June", "July",
-            "August", "September", "October",
-            "November", "December"
-        ];
+        var user = db.collection("users").doc(formdata.name);
+        user.get().then(function (doc) {
+            if (doc.exists) {
+                var points = doc.data().points;
+                console.log("User has " + points + " points");
+                points += 10;
+                return user.update({
+                    points: points
+                })
+                    .then(function () {
+                        console.log("User Document successfully updated!");
+                    })
+                    .catch(function (error) {
+                        // The document probably doesn't exist.
+                        console.error("Error updating document: ", error);
+                        show_error()
+                    });
+            } else {
+                console.log(formdata.name);
+                db.collection("users").doc(formdata.name).set({
+                    name: formdata.name,
+                    points: 10,
+                    date_created: formdata.date
+                })
+                    .then(function () {
+                        console.log("A new account as been created.");
+                        show_success_new_user();
+                    })
+                    .catch(function (error) {
+                        console.error("Error writing document: ", error);
+                        show_error_new_user();
+                    });
+            }
+        }).catch(function (error) {
+            console.log("Error getting document:", error);
+            show_error();
+        });
+        form.reset();
+    });
 
-        var day = date.getDate();
-        var monthIndex = date.getMonth();
-        var year = date.getFullYear();
 
-        return day + ' ' + monthNames[monthIndex] + ' ' + year;
-    }
-
-    function show_success(){
+    function show_success() {
         Swal.fire({
             type: 'success',
-            title: 'Submission complete!',
+            title: 'Submission received!',
+            text: '10 points added to your account.',
             showConfirmButton: false,
             timer: 1500
         })
     }
 
-    function show_error(){
+    function show_success_new_user() {
+        Swal.fire({
+            type: 'success',
+            title: 'New user created!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+
+    function show_error_new_user() {
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong when creating new user!',
+        })
+    }
+
+    function show_error() {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
