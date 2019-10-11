@@ -50,18 +50,40 @@
     </div>
 </nav>
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url('images/about.png');" data-stellar-background-ratio="0.5">
+<div class="hero-wrap hero-wrap-2" style="background-image: url('images/about.png');"
+     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
             <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-                <h1 class="mb-3 bread">Demo</h1>
+                <h1 class="mb-3 bread">Submit your Project</h1>
             </div>
         </div>
     </div>
 </div>
 <br><br>
-<iframe src="https://feedback.feedier.com/oRHBUa" width="100%" height="1000px" frameBorder="0"></iframe>
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="col-lg-10 d-inline-block">
+            <form id="submissionForm">
+                <div class="form-group">
+                    <h3 for="exampleInputEmail1">Full Name</h3>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                           placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <h3 for="exampleInputPassword1">Submission Link</h3>
+                    <p><u>Submit a link to your project:</u>
+                        <br><b>Python projects</b>: Share your Google Colab by link, and enter it here.
+                        <br><b>Websites</b>: Drop a link to your website!
+                        <br></p>
+                    <input type="text" class="form-control" id="link" placeholder="Link to Project">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
 <br><br>
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
@@ -73,7 +95,8 @@
                 </div>
             </div>
             <div class="col-md-3 ftco-animate">
-                <p class="mb-0"><a href="signup.html" class="btn btn-primary py-3 px-4" style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+                <p class="mb-0"><a href="signup.html" class="btn btn-primary py-3 px-4"
+                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
             </div>
         </div>
         <div class="row mb-5">
@@ -82,9 +105,12 @@
                     <h2 class="ftco-heading-2">VikingsDev</h2>
                     <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
                     <ul class="ftco-footer-social list-unstyled mb-0">
-                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/362209544233564/"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+                                class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/362209544233564/"><span
+                                class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
+                                class="icon-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -117,7 +143,8 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a href="https://github.com/FrankWhoee">Frank Hui</a></p>
+                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
                 <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
             </div>
         </div>
@@ -133,8 +160,13 @@
                 stroke="#F96D00"/>
     </svg>
 </div>
-
-
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+<script src="js/leaderboard.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -152,6 +184,62 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBFClHN1J6zpKYrGSJy1a1JkfB8nwD9tqg",
+        authDomain: "vikingsdev-leaderboard.firebaseapp.com",
+        databaseURL: "https://vikingsdev-leaderboard.firebaseio.com",
+        projectId: "vikingsdev-leaderboard",
+        storageBucket: "vikingsdev-leaderboard.appspot.com",
+        messagingSenderId: "921607080843",
+        appId: "1:921607080843:web:41275b1e1c4d7db6d03d8e",
+        measurementId: "G-YNLBEQFJFN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    var db = firebase.firestore();
+
+    $('#submissionForm').submit(function(evt) {
+        evt.preventDefault(); //Prevent the default form submit action
+        var x = document.getElementById("submissionForm");
+
+        db.collection("projects").add({
+            name: x.elements[0].value,
+            link: x.elements[1].value
+        })
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                show_success();
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+                show_error();
+            });
+        x.reset();
+    })
+
+    function show_success(){
+        Swal.fire({
+            type: 'success',
+            title: 'Submission complete!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+
+    function show_error(){
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+        })
+    }
+</script>
+
 
 </body>
 </html>
