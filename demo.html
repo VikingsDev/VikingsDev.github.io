@@ -76,6 +76,7 @@
                     <p><u>Submit a link to your project:</u>
                         <br><b>Python projects</b>: Share your Google Colab by link, and enter it here.
                         <br><b>Websites</b>: Drop a link to your website!
+                        <br><b>GameMaker Projects: Convert your project to an executable, upload them to Google Drive, share them to us using a link.</b>
                         <br></p>
                     <input type="text" class="form-control" id="link" placeholder="Link to Project">
                 </div>
@@ -209,7 +210,8 @@
 
         db.collection("projects").add({
             name: x.elements[0].value,
-            link: x.elements[1].value
+            link: x.elements[1].value,
+            date: formatDate(new Date())
         })
             .then(function (docRef) {
                 console.log("Document written with ID: ", docRef.id);
@@ -221,6 +223,21 @@
             });
         x.reset();
     })
+
+    function formatDate(date) {
+        var monthNames = [
+            "January", "February", "March",
+            "April", "May", "June", "July",
+            "August", "September", "October",
+            "November", "December"
+        ];
+
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return day + ' ' + monthNames[monthIndex] + ' ' + year;
+    }
 
     function show_success(){
         Swal.fire({
