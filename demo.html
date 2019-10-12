@@ -204,24 +204,24 @@
     firebase.analytics();
 
     var db = firebase.firestore();
-    var date = (new Date()).toString().split(' ').splice(1,3).join(' ');
-
+    var english_date = (new Date()).toString().split(' ').splice(1,3).join(' ');
+    var date = new Date().getTime();
     $('#submissionForm').submit(function (evt) {
         evt.preventDefault(); //Prevent the default form submit action
         var form = document.getElementById("submissionForm");
         var formdata = {
             name: form.elements[0].value,
             link: form.elements[1].value,
-            date: new Date().toLocaleString()
+            date: date
         };
         var invalidSubmit = false;
-        var proj = db.collection(date).doc(formdata.name);
+        var proj = db.collection(english_date).doc(formdata.name);
         proj.get().then(function (doc) {
             if (doc.exists) {
                 show_error("You've already submitted a project for today!");
                 invalidSubmit = true;
             } else {
-                db.collection(date).doc(formdata.name).set({
+                db.collection(english_date).doc(formdata.name).set({
                     name: formdata.name,
                     link: formdata.link,
                     date: formdata.date

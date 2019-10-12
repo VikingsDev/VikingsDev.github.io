@@ -199,13 +199,20 @@
                 scores.push(user);
             });
         }).then(function(){
-            console.log(scores);
-
             let leaderboard = document.getElementById("leaderboard");
             leaderboard.innerHTML = "";
 
             scores.sort(function (a, b) {
-                return b.points - a.points
+                if(b.points - a.points == 0){
+                    if(b.projects - a.projects == 0){
+                        return b.last_submitted - a.last_submitted
+                    }else{
+                        return b.projects - a.projects
+                    }
+                }else{
+                    return b.points - a.points
+                }
+
             });
             let elements = []; // we'll need created elements to update colors later on
             // create elements for each player
@@ -224,7 +231,7 @@
                 name.innerText = scores[i].name;
                 score.innerText = scores[i].points;
                 projects.innerText = scores[i].projects;
-                last_submitted.innerText = scores[i].last_submitted;
+                last_submitted.innerText = new Date(scores[i].last_submitted).toString().split(' ').splice(1,3).join(' ');
                 var link = formatUrl(scores[i].last_submit_link);
                 last_submit_link.innerHTML = '<a href="'+link+'"><button class="btn btn-primary">See Project</button></a>';
                 let scoreRow = document.createElement("div");
