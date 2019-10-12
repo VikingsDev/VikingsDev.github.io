@@ -62,6 +62,16 @@
     </div>
 </div>
 <br><br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <b>Member</b>
+        </div>
+        <div class="col">
+            <b>Points</b>
+        </div>
+    </div>
+</div>
 <div id="leaderboard" class="container">
     <!-- scores will be inserted by the script here -->
 </div>
@@ -191,8 +201,8 @@
             for (let i = 0; i < scores.length; i++) {
                 let name = document.createElement("div");
                 let score = document.createElement("div");
-                name.classList.add("name");
-                score.classList.add("score");
+                name.classList.add("col");
+                score.classList.add("col");
                 name.innerText = scores[i].name;
                 score.innerText = scores[i].points;
 
@@ -204,6 +214,10 @@
 
                 elements.push(scoreRow);
 
+            }
+            let colors = ["gold", "silver", "#cd7f32"];
+            for(let i=0; i < 3; i++) {
+                elements[i].style.backgroundColor = colors[i];
             }
         });
 

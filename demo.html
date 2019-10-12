@@ -214,11 +214,12 @@
             link: form.elements[1].value,
             date: new Date().toLocaleString()
         };
-
+        var invalidSubmit = false;
         var proj = db.collection(date).doc(formdata.name);
         proj.get().then(function (doc) {
             if (doc.exists) {
                 show_error("You've already submitted a project for today!");
+                invalidSubmit = true;
             } else {
                 db.collection(date).doc(formdata.name).set({
                     name: formdata.name,
@@ -241,7 +242,7 @@
 
         var user = db.collection("users").doc(formdata.name);
         user.get().then(function (doc) {
-            if (doc.exists) {
+            if (doc.exists && !invalidSubmit) {
                 var points = doc.data().points;
                 console.log("User has " + points + " points");
                 points += 10;
