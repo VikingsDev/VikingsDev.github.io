@@ -244,10 +244,14 @@
         user.get().then(function (doc) {
             if (doc.exists && !invalidSubmit) {
                 var points = doc.data().points;
-                console.log("User has " + points + " points");
+                var points = doc.data().projects;
                 points += 10;
+                projects += 1;
                 return user.update({
-                    points: points
+                    points: points,
+                    projects: projects,
+                    last_submit_link: formdata.link,
+                    last_submit: date
                 })
                     .then(function () {
                         console.log("User Document successfully updated!");
@@ -262,6 +266,9 @@
                 db.collection("users").doc(formdata.name).set({
                     name: formdata.name,
                     points: 10,
+                    projects: 1,
+                    last_submit: date,
+                    last_submit_link: formdata.link,
                     date_created: formdata.date
                 })
                     .then(function () {

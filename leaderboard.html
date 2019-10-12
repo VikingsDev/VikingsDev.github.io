@@ -70,6 +70,15 @@
         <div class="col">
             <b>Points</b>
         </div>
+        <div class="col">
+            <b>Projects</b>
+        </div>
+        <div class="col">
+            <b>Last Submitted</b>
+        </div>
+        <div class="col">
+            <b></b>
+        </div>
     </div>
 </div>
 <div id="leaderboard" class="container">
@@ -184,6 +193,9 @@
                 var user = {};
                 user.name = doc.id;
                 user.points = doc.data().points;
+                user.projects = doc.data().projects;
+                user.last_submitted = doc.data().last_submit;
+                user.last_submit_link = doc.data().last_submit_link;
                 scores.push(user);
             });
         }).then(function(){
@@ -201,28 +213,51 @@
             for (let i = 0; i < scores.length; i++) {
                 let name = document.createElement("div");
                 let score = document.createElement("div");
+                let projects = document.createElement("div");
+                let last_submitted = document.createElement("div");
+                let last_submit_link = document.createElement("div");
                 name.classList.add("col");
                 score.classList.add("col");
+                projects.classList.add("col");
+                last_submitted.classList.add("col");
+                last_submit_link.classList.add("col");
                 name.innerText = scores[i].name;
                 score.innerText = scores[i].points;
-
+                projects.innerText = scores[i].projects;
+                last_submitted.innerText = scores[i].last_submitted;
+                var link = formatUrl(scores[i].last_submit_link);
+                last_submit_link.innerHTML = '<a href="'+link+'"><button class="btn btn-primary">See Project</button></a>';
                 let scoreRow = document.createElement("div");
                 scoreRow.classList.add("row");
+                scoreRow.classList.add("py-3");
                 scoreRow.appendChild(name);
                 scoreRow.appendChild(score);
+                scoreRow.appendChild(projects);
+                scoreRow.appendChild(last_submitted);
+                scoreRow.appendChild(last_submit_link);
                 leaderboard.appendChild(scoreRow);
+                scoreRow.style.backgroundColor = "#e3f4ff";
 
                 elements.push(scoreRow);
 
             }
-            let colors = ["gold", "silver", "#cd7f32"];
+            let colors = ["#ffeeb4", "#e6e6e6", "#f0ccb3"];
             for(let i=0; i < 3; i++) {
                 elements[i].style.backgroundColor = colors[i];
             }
         });
 
     }
+    function formatUrl(url){
+        var httpString = 'http://'
+            , httpsString = 'https://'
+        ;
 
+        if (url.substr(0, httpString.length) !== httpString && url.substr(0, httpsString.length) !== httpsString)
+            url = httpString + url;
+
+        return url;
+    }
     updateLeaderboardView();
 </script>
 <script src="js/jquery.min.js"></script>
