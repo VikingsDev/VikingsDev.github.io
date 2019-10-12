@@ -214,19 +214,30 @@
             link: form.elements[1].value,
             date: new Date().toLocaleString()
         };
-        db.collection(date).doc(formdata.name).set({
-            name: formdata.name,
-            link: formdata.link,
-            date: formdata.date
-        })
-            .then(function () {
-                console.log("Project Document successfully written!");
-                show_success();
-            })
-            .catch(function (error) {
-                console.error("Error writing document: ", error);
-                show_error();
-            });
+
+        var proj = db.collection(date).doc(formdata.name);
+        proj.get().then(function (doc) {
+            if (doc.exists) {
+                show_error("You've already submitted a project for today!");
+            } else {
+                db.collection(date).doc(formdata.name).set({
+                    name: formdata.name,
+                    link: formdata.link,
+                    date: formdata.date
+                })
+                    .then(function () {
+                        console.log("Project Document successfully written!");
+                        show_success();
+                    })
+                    .catch(function (error) {
+                        console.error("Error writing document: ", error);
+                        show_error("Something went wrong while submitting your submission!");
+                    });
+            }
+        }).catch(function (error) {
+            console.log("Error getting document:", error);
+            show_error("Something went wrong retrieving your information.");
+        });
 
         var user = db.collection("users").doc(formdata.name);
         user.get().then(function (doc) {
@@ -243,7 +254,7 @@
                     .catch(function (error) {
                         // The document probably doesn't exist.
                         console.error("Error updating document: ", error);
-                        show_error()
+                        show_error("Something went wrong updating your project. Most likely, your account does not exist.")
                     });
             } else {
                 console.log(formdata.name);
@@ -263,7 +274,7 @@
             }
         }).catch(function (error) {
             console.log("Error getting document:", error);
-            show_error();
+            show_error("Something went wrong!");
         });
         form.reset();
     });
@@ -296,11 +307,11 @@
         })
     }
 
-    function show_error() {
+    function show_error(error) {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
+            text: error,
         })
     }
 </script>
