@@ -205,7 +205,7 @@
             scores.sort(function (a, b) {
                 if(b.points - a.points == 0){
                     if(b.projects - a.projects == 0){
-                        return b.last_submitted - a.last_submitted
+                        return a.last_submitted - b.last_submitted
                     }else{
                         return b.projects - a.projects
                     }
