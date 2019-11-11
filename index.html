@@ -70,7 +70,8 @@
 <div class="hero-wrap js-fullheight" style="overflow:hidden">
     <div class="overlay"></div>
     <div class="container-fluid px-0">
-        <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-end" style="overflow: hidden">
+        <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-end"
+             style="overflow: hidden">
             <img class="one-third js-fullheight align-self-end order-md-last img-fluid"
                  src="images/vikingsdev-banner.svg" style="overflow: hidden" alt="">
             <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
@@ -87,7 +88,7 @@
     </div>
 </div>
 
-<section class="ftco-section services-section bg-light">
+<section class="ftco-section services-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-10 text-center heading-section ftco-animate">
@@ -100,6 +101,72 @@
         </div>
     </div>
 </section>
+
+<section class="ftco-section services-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-10 text-center heading-section ftco-animate">
+                <h2>Recent</h2>
+                <p>See what's going on at VikingsDev.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-event">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-left heading-section card" style="padding: 20px; border-color: #c69249;">
+                            <h4 class="mb-2">LocalHost Day</h4>
+                            <div class=""
+                                 style="padding: 20px; border-color: #c69249; position: absolute; top: 0px; right: 0px;">
+                                <img class="d-inline-block"
+                                     src="https://s3.amazonaws.com/static.mlh.io/brand-assets/logos/svg/mlh-localhost-logo-dark.svg"
+                                     width="100px" alt="">
+                            </div>
+                            <br>
+                            <a href="#localhost"></a>
+                            <p>
+                            <h5>Take our survey!</h5>
+                            <b>Tell us how we did and which LocalHost workshop you want to see next! The more workshops
+                                we do, the more support we get from MLH!</b>
+                            Thank you everyone for coming! We weren't able to finish the workshop completely, but
+                            we'll be finishing up next meeting, Nov. 15. If you can't wait however,
+                            you can finish it on your own time by clicking the 'Slideshow' button below.
+                            <br><br>
+                            If you finish the workshop, make sure to fill out the quiz! It takes 5min and helps MLH
+                            know that we actually did the workshop.
+                            <br><br>
+                            </p>
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="text-center px-4" data-toggle="tooltip"
+                                         title="Goes to Google Slides">
+                                        <p><a href="https://bit.ly/2WWQ2m4" class="btn btn-outline-secondary px-4 py-3">Slideshow</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="text-center" data-toggle="tooltip" title="Goes to vikingsdev.ca/localhost">
+                                        <p><a href="localhost.html"
+                                              class="btn btn-primary px-4 py-3">Survey</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="text-center" data-toggle="tooltip" title="Goes to mlhlocal.host/quiz">
+                                        <p><a href="http://mlhlocal.host/quiz"
+                                              class="btn btn-outline-secondary px-4 py-3">Quiz</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="ftco-section ftco-no-pt ftc-no-pb">
     <div class="container">
@@ -465,6 +532,10 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
-
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 </body>
 </html>
