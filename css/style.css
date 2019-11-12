@@ -10217,3 +10217,10 @@ hr { display: block; height: 1px;
   height: 50px !important;;
 }
 
+.paid{
+  color:red;
+}
+
+.free{
+  color:green
+}
