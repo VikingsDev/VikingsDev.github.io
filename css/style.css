@@ -10202,3 +10202,18 @@ hr { display: block; height: 1px;
   margin-top: -115px; /*same height as header*/
   visibility: hidden;
 }
+
+.assets-top{
+  height: 100px;
+}
+
+.rcorners{
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.rcorners .palette{
+  width: 50px !important;
+  height: 50px !important;;
+}
+
