@@ -175,15 +175,30 @@
                     <img style="width:100%" src="gamemaker-assets/createevent.png">
                     <p>
                         <br>
-                        In the newly opened code block, we need to make some variables, which are our speed, gravity, horizontal and vertical speed, and jump speed variables.
+                        In the newly opened code block, we need to make some variables, which are our speed, gravity, horizontal and vertical speed, and jump speed variables. These are
+                        values that our code uses to set the speed of our player when we are moving. We set them as variables here so we can change the value in one place to uniformly change
+                        it throughout the player object, rather than having to change each individual number later on.
                         <br>
                         <br>
                         <b>Tip:</b> End all your lines of code with a semicolon (<code>;</code>). While Gamemaker doesn't require it, most other programming languages do, so
                         it's a good habit to get into.
                     </p>
-                    <pre style="width:100%">
-                        <code> hsp = 0; <br> vsp = 0; <br> movespeed = 5; <br> jumpspeed = 7; <br> grav = 0.2;</code>
+                </div>
+                <div class="codeheader" id="codeheader_bash">obj_player: Create Event</div>
+                    <div id="codebox">
+                    <pre>
+<code style="color: #fff;"><code style="color:grey"> // hi! I'm a comment! Comments are pieces of text that don't actually convert to code
+ // In this create event, we create our variables, which store values that we will use later on!
+ // You can use "//" to write a comment. Comments are not necessary to write in your game,
+ // so you don't need to copy this down</code>
+ hsp = 0;
+ vsp = 0;
+ movespeed = 5;
+ jumpspeed = 7;
+ grav = 0.2;</code>
                     </pre>
+                    </div>
+                <div class="row">
                     <p>
                         (<b>Note:</b> Use <code>hsp</code> and <code>vsp</code>, as <code>hspeed</code> and <code>vspeed</code> are variables already built in, which do
                         not work with our code)
@@ -207,11 +222,22 @@
                         <br>
                         Write the following code.
                     </p>
+                </div>
+                <div class="codeheader" id="codeheader_bash">obj_player: Step Event</div>
+                <div id="codebox">
                     <pre>
-                        <code> key_left = keyboard_check(ord("A"));<br> key_right = keyboard_check(ord("D"));<br> key_jump = keyboard_check_pressed(ord("W"));</code>
+<code style="color: #fff;"><code style="color:grey"> // We are using the built in "keyboard_check" functions in GameMaker, which give us either 1 or 0.
+ // If it is 1, that means the key is being pressed.
+ // We make our own variables so we can use them later.
+ // That way, we can type "key_left" every time we need to check the left key, instead of typing
+ // keyboard_checK(blah blah blah, you get the idea).</code>
+ key_left = keyboard_check(ord("A"));<br> key_right = keyboard_check(ord("D"));<br> key_jump = keyboard_check_pressed(ord("W"));</code>
                     </pre>
+                </div>
+                <div class="row">
                     <p>
-                        This stores our keyboard inputs into 3 variables which we can easily use in our code. Notice that <code>key_jump</code> uses
+                        This stores our keyboard inputs into 3 variables which we can easily use in our code. They use the built in GameMaker <code>keyboard_check</code> functions,
+                        but we simplify them to variables so it is easier to access later. Notice that <code>key_jump</code> uses
                         <code>keyboard_check_pressed</code> rather than <code>keyboard_check</code>. This is because when we hit the jump key, we
                         want to jump once, not float infinitely into the sky. That's the input completed!
                     </p>
@@ -220,34 +246,54 @@
                         Time to get movement and collisions written! This code gets a bit more complicated, so take your time and ask questions if you don't understand (both in person at meetings, or
                         in our Discord server! There's a handy <code>Get Help</code> button in the bottom right corner)
                     </p>
+                </div>
+                <div class="codeheader" id="codeheader_bash">obj_player: Step Event</div>
+                <div id="codebox">
                     <pre>
-                        <code>hsp = movespeed * (key_right - key_left);
-
+                        <code style="color: #fff;">
+<code style="color:grey">// we get our direction by using both the key_right and key_left variables.
+// remember how they store either 0 or 1?
+// This means that (key_right - key left) will:
+// give +1 when key_right is pressed and key_left isn't (1 - 0 = 1) and we will move right
+// give -1 when key_left is pressed and key_right isn't (0 - 1 = -1) and we will move left
+// give 0 when both or neither key is pressed (0 - 0 and 1 - 1 are both 0) and we will not move</code>
+hsp = movespeed * (key_right - key_left);
+<code style="color:grey">
+// Our collision code checks if the player is about to hit a wall.
+// If we are, run the code below</code>
 if(place_meeting(x + hsp, y, obj_wall)) {
+<code style="color:grey">   // while we are still not going to hit the wall, move as close as we can to it</code>
     while(!place_meeting(x + sign(hsp), y, obj_wall)) {
         x += sign(hsp);
     }
+<code style="color:grey">   // STOP! We've touched the wall, let's not move any further</code>
     hsp = 0;
 }
+<code style="color:grey">// Oh hey, we aren't touching a wall, let's move forwards</code>
 x += hsp;
 
+// Jumping time! If we're touching the ground, we want to jump
 if(place_meeting(x,y + 1, obj_wall)) {
+<code style="color:grey">   // Our vertical speed is equal to our jump speed * key_jump
+    // (either 1 or 0, so vsp will be either -jumpspeed or 0)
+    // Jump speed is negative because in computer code, up is negative, down is positive</code>
     vsp = -jumpspeed * key_jump;
 }
 
 if(vsp <= 12) {
     vsp += grav;
 }
-
+<code style="color:grey">// The same logic applies for vertical collisions</code>
 if(place_meeting(x,y + vsp, obj_wall)) {
     while(!place_meeting(x, y + sign(vsp), obj_wall)) {
         y += sign(vsp);
     }
     vsp = 0;
 }
-y += vsp;
-                        </code>
+y += vsp;</code>
                     </pre>
+                </div>
+                <div class="row">
                     <p>
                         And that's it! That's your player object done, and you can move now! Except... there's no level to move in yet. Let's design a level!
                     </p>
@@ -257,14 +303,15 @@ y += vsp;
                     <h2 ><br>Setting Up Your Level</h2>
                     <p>
                         <br>
-                        In Gamemaker, your level assets are called <code>rooms</code>. Make a room by right clicking on the room folder and selecting <code>create room</code>.
+                        In Gamemaker, levels in your game are called <code>rooms</code>. Make a room by right clicking on the room folder and selecting <code>create room</code>.
                         You should be greeted by a window that looks like this.
                     </p>
                     <img style="width:100%" src="gamemaker-assets/roomeditor.png">
                     <p>
                         <br>
                         The first step you want to take is to change the speed. Default room speed is at <code>30</code>, but we're going to change it to <code>60</code>, which
-                        means our game is running at 60 frames per second. The game speed is located here.
+                        means our game is running at 60 frames per second. The game speed is located here. 60 frames per second is preferable as it is generally smoother. Depending on your code,
+                        you can change this value to fit, but <code>60</code> works for our purposes.
                     </p>
                     <img style="width:100%" src="gamemaker-assets/changespeed.png">
                     <p>
