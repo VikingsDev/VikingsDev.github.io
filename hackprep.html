@@ -50,8 +50,10 @@
         animation-play-state: paused !important;
     }
     </style>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/common.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
     <style>
         @font-face {
             font-family: "Kulim Park";
@@ -108,7 +110,7 @@
             display: table-cell;
         }
 
-        .row-height-fill{
+        .row-height-fill {
             margin-top: 0.4vh;
             margin-bottom: 0.4vh;
         }
@@ -119,14 +121,23 @@
 
         @media screen and (max-width: 700px) {
             .mobile-unfriendly {
-                display:none; !important;
+                display: none;
+            !important;
             }
+        }
+
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 2vh;
         }
     </style>
 </head>
 <body style="background-color: black; text-align: center">
 <div class="container">
-    <a href="index.html"><img src="images/vikingsdev-logo-highres.png" class="transparent-transition" style="padding-top: 2vh; width: 30%; display: inline"></a>
+    <a href="index.html"><img src="images/vikingsdev-logo-highres.png" class="transparent-transition"
+                              style="padding-top: 2vh; width: 30%; display: inline"></a>
 </div>
 
 
@@ -143,9 +154,11 @@
 <br>
 <br>
 <br>
-<p><a href="localhost.html"
-      class="btn kulim-park bold btn-primary px-5 py-3">REGISTER NOW</a>
-</p>
+<div class="sticky" >
+    <p><a href="localhost.html"
+          class="btn kulim-park bold btn-primary px-5 py-3">REGISTER NOW</a>
+    </p>
+</div>
 <br>
 <br>
 <br>
@@ -154,11 +167,12 @@
 </div>
 <br>
 <div class="container" style="padding: 3vw;">
-    <div class="row align-items-center" >
+    <div class="row align-items-center">
         <div class="col-sm-auto mobile-unfriendly" style="flex-flow: column; ">
             <div class="row flex-grow-1 align-items-center row-height-fill">
                 <div class="col align-items-center">
-                    <a href="events.html#hp1"><span class="main-dot transparent-transition"><h2 class="white bold kulim-park">1</h2></span></a>
+                    <a href="events.html#hp1"><span class="main-dot transparent-transition"><h2
+                            class="white bold kulim-park">1</h2></span></a>
                 </div>
             </div>
             <div class="row align-items-center row-height-fill">
@@ -183,7 +197,8 @@
             </div>
             <div class="row align-items-center row-height-fill">
                 <div class="col">
-                    <a href="events.html#hp2"><span class="main-dot transparent-transition"><h2 class="white bold kulim-park">2</h2></span></a>
+                    <a href="events.html#hp2"><span class="main-dot transparent-transition"><h2
+                            class="white bold kulim-park">2</h2></span></a>
                 </div>
             </div>
             <div class="row align-items-center row-height-fill">
@@ -208,7 +223,8 @@
             </div>
             <div class="row align-items-center row-height-fill">
                 <div class="col">
-                    <a href="events.html#hp3"><span class="main-dot transparent-transition"><h2 class="white bold kulim-park">3</h2></span></a>
+                    <a href="events.html#hp3"><span class="main-dot transparent-transition"><h2
+                            class="white bold kulim-park">3</h2></span></a>
                 </div>
             </div>
         </div>
