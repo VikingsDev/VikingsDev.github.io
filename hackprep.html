@@ -65,16 +65,12 @@
             font-family: 'Kulim Park', serif;
         }
 
-        .col{
-            z-index: -999;
+        .col {
+            z-index: -2;
         }
 
         .bold {
             font-weight: bold;
-        }
-
-        * {
-            /*outline: 1px solid green;*/
         }
 
         .fontfit {
@@ -99,6 +95,17 @@
             background-color: #c69249;
             border-radius: 50%;
             display: inline-block;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+
+        .main-dot-parent{
+            position:relative;
+            z-index: 0;
         }
 
         .dot {
@@ -152,14 +159,15 @@
 <br>
 <br>
 <div class="container" style="text-align: center">
-    <p class="kulim-park" style="letter-spacing: 10px; font-size: 30px"><span class="white">SERIES</span> <span class="gold">ONE</span></p>
+    <p class="kulim-park" style="letter-spacing: 10px; font-size: 30px"><span class="white">SERIES</span> <span
+            class="gold">ONE</span></p>
     <h3 class="white fontfit kulim-park bold">Become a Hackathon Pro</h3>
     <h3 class="gold fontfit kulim-park bold">in just 3 workshops.</h3>
 </div>
 <br>
 <br>
 <br>
-<div class="sticky" >
+<div class="sticky">
     <p><a href="localhost.html"
           class="btn kulim-park bold btn-primary px-5 py-3" style="z-index: 9999">REGISTER NOW</a>
     </p>
@@ -175,7 +183,7 @@
     <div class="row align-items-center">
         <div class="col-sm-auto mobile-unfriendly" style="flex-flow: column; ">
             <div class="row flex-grow-1 align-items-center row-height-fill">
-                <div class="col align-items-center">
+                <div class="col main-dot-parent" >
                     <a href="events.html#hp1"><span class="main-dot transparent-transition"><h2
                             class="white bold kulim-park">1</h2></span></a>
                 </div>
@@ -201,7 +209,7 @@
                 </div>
             </div>
             <div class="row align-items-center row-height-fill">
-                <div class="col">
+                <div class="col main-dot-parent">
                     <a href="events.html#hp2"><span class="main-dot transparent-transition"><h2
                             class="white bold kulim-park">2</h2></span></a>
                 </div>
@@ -227,7 +235,7 @@
                 </div>
             </div>
             <div class="row align-items-center row-height-fill">
-                <div class="col">
+                <div class="col main-dot-parent">
                     <a href="events.html#hp3"><span class="main-dot transparent-transition"><h2
                             class="white bold kulim-park">3</h2></span></a>
                 </div>
@@ -241,7 +249,8 @@
                 <div class="col" style="text-align: left">
                     <h6 class="kulim-park white bold">DECEMBER 13TH</h6>
                     <h2 class="kulim-park white bold">#1 - How to Collaborate with Github</h2>
-                    <p class="white kulim-park">Learn how to collaborate with other developers using Github, an essential tool for teamwork at hackathons.</p>
+                    <p class="white kulim-park">Learn how to collaborate with other developers using Github, an
+                        essential tool for teamwork at hackathons.</p>
                 </div>
             </div>
             <br><br>
@@ -252,7 +261,8 @@
                 <div class="col" style="text-align: left;display:block; margin-bottom: auto; margin-top: auto">
                     <h6 class="kulim-park white bold">DECEMBER 20TH</h6>
                     <h2 class="kulim-park white bold">#2 - Intro to Python Skills for AI</h2>
-                    <p class="white kulim-park">Despite its intimidating name, this workshop is awesome for beginners! Learn how to get information from websites using code and make some basic AI functions.</p>
+                    <p class="white kulim-park">Despite its intimidating name, this workshop is awesome for beginners!
+                        Learn how to get information from websites using code and make some basic AI functions.</p>
                 </div>
             </div>
             <br><br>
@@ -263,7 +273,8 @@
                 <div class="col" style="text-align: left;display:block; margin-bottom: auto; margin-top: auto">
                     <h6 class="kulim-park white bold">JANUARY 10TH</h6>
                     <h2 class="kulim-park white bold">#3 - Twilio 101</h2>
-                    <p class="white kulim-park">Learn how to use a professional API to build SMS, voice, authentication, and other awesome functionalities into your apps!</p>
+                    <p class="white kulim-park">Learn how to use a professional API to build SMS, voice, authentication,
+                        and other awesome functionalities into your apps!</p>
                 </div>
             </div>
         </div>
