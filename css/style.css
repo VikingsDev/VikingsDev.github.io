@@ -8430,7 +8430,6 @@ h1, h2, h3, h4, h5,
       font-size: 14px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      display: inline-block;
       color: #c69249; }
     .hero-wrap .slider-text .text {
       position: relative;
@@ -10248,3 +10247,17 @@ hr { display: block; height: 1px;
 .transparent-transition:hover {
   opacity: 1;
 }
+
+.mobile-friendly{
+  display: none;
+}
+
+@media screen and (max-width: 1207px) {
+  .mobile-unfriendly {
+    display: none; !important;
+  }
+  .mobile-friendly {
+    display: block; !important;
+  }
+}
+
