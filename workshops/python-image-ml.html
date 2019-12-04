@@ -207,14 +207,14 @@ from keras.optimizers import Adam</p>
                 <div id="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">import pandas as pd
-base_model=MobileNet(weights='imagenet',include_top=False
+base_model=MobileNet(weights='imagenet',include_top=False)
 
 x=base_model.output
 x=GlobalAveragePooling2D()(x)
 x=Dense(1024,activation='relu')(x)
 x=Dense(1024,activation='relu')(x)
 x=Dense(512,activation='relu')(x)
-preds=Dense(3,activation='softmax')(x)/p>
+preds=Dense(3,activation='softmax')(x)</p>
                     </code></pre>
                 </div>
                 <p>Next, we put the output layer into this model class and lock the first 20 layers because we don't
