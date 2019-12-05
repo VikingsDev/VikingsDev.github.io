@@ -54,7 +54,7 @@
 
 
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/934931664793124225/D9861E4A35F464C8EE9E5B3B58BA2E02B352B743/');"
+<div class="hero-wrap hero-wrap-2" style="background-image: url('https://i.imgur.com/Fi0juhS.png');"
      data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -119,118 +119,101 @@
 				<p>Let's start with the variables. Click the "Source" tab beside the "Design" tab to begin.</p>
                 <p>Underneath the line that says <code>public class Blackjack extends javax.swing.JFrame {</code> , variables can be added. For this project, we need 4 variables. Name the variables as follows:</p>
 				<br>
-				<code>
-				int dealer = 0;
-				<br>
-				int player = 0;
-				<br>
-				int card = 0;
-				<br>
-				int blackjack = 21;
-				</code>
+				<div class="codeheader" id="codeheader_bash">JAVA</div>
+                <div id="codebox">
+                    <pre><code data-language="java">
+                    <p style="color: #fff;">
+int dealer = 0;
+int player = 0;
+int card = 0;
+int blackjack = 21;
+                    </code></pre>
+                </div>
 				<br>
 				<p>Now, our variables are ready for use. Go back to the design tab and double click the "Deal" button. When the "Deal" button is clicked while our program is running, we want to start a new round of Blackjack.</p>
 				<br>
 				<p>Under <code>private void buttonDealActionPerformed(java.awt.event.ActionEvent evt) {</code> , type this code:</p>
-				<code>
-				buttonStand.setEnabled(true);
-				<br>
-				buttonHit.setEnabled (true);
-				<br>
-				textStatus.setText("");
-				<br>
-				textDealer.setText("");
-				<br>
-				player = 0;
-				<br>
-				textPlayer.setText("" + player);
-				<br>
-				for (int k=0; k<2; k++) {
-				<br>
-					card = (int)(Math.random()*13)+1;
-					<br>
-					if (card > 10) {
-					<br>
-						card = 10;
-						<br>
-						player += card;
-						<br>
-						textPlayer.setText("" + player);
-						<br>
-					}
-					<br>
-				}
-				</code>
+				<div class="codeheader" id="codeheader_bash">JAVA</div>
+                <div id="codebox">
+                    <pre><code data-language="java">
+                    <p style="color: #fff;">
+buttonStand.setEnabled(true);
+buttonHit.setEnabled (true);
+<br>
+textStatus.setText("");
+textDealer.setText("");
+<br>
+player = 0;
+textPlayer.setText("" + player);
+<br>
+for (int k=0; k<2; k++) {
+	card = (int)(Math.random()*13)+1;
+	if (card > 10) {
+		card = 10;
+		player += card;
+		textPlayer.setText("" + player);
+	}
+}
+                    </code></pre>
+                </div>
 				<br>
                 <p>This code allows for the player to be "dealt" 2 cards, and the total is added up and shown in the <code>textPlayer</code> text box. There is no deck coded for this project, but it is simulated using the probability of being dealt a card.</p>
 				<br>
 				<p>Once the code for "Deal" is complete, we can move onto the code for "Hit". Go back to the "Design" tab again and double click the "Hit" button. Under <code>private void buttonHitActionPerformed(java.awt.event.ActionEvent evt) {</code> , type in this code:</p>
-				<code>
-				player += card;
+				<div class="codeheader" id="codeheader_bash">JAVA</div>
+                <div id="codebox">
+                    <pre><code data-language="java">
+                    <p style="color: #fff;">
+player += card;
+textPlayer.setText("" + player);
+<br>
+if (player > blackjack) {
+	textStatus.setText("Bust!");
+	buttonHit.setEnabled(false);
+	buttonStand.setEnabled(false);
+}
+                </code></pre>
+                </div>
 				<br>
-				textPlayer.setText("" + player);
-				<br>
-				if (player > blackjack) {
-				<br>
-					textStatus.setText("Bust!");
-					<br>
-					buttonHit.setEnabled(false);
-					<br>
-					buttonStand.setEnabled(false);
-					<br>
-				}
-				</code>
 				<p>This code means that a card will be added to the player's total. If the player's total is higher than 21, the status box will say "Bust!", and the game must reset.</p>
 				<br>
 				<p>Finally, the code for the stand button is the final part before the game is complete. Once again, go back to the "Design" tab, but this time double click the "Stand" button.</p>
 				<br>
 				<p>Type in this code under <code>private void buttonStandActionPerformed(java.awt.event.ActionEvent evt) {</code>. This code will first let the dealer add value to his total. In this case, the dealer will only hit if their total is below or equal to 16.</p>
 				<p>This section also shows the dealer's total (which should be hidden up until this point) and changes the message in the status text box.</p>
-				<code>
-				for (int k=0; k<2; k++) {
-				<br>
-				card = (int)(Math.random()*13)+1;
-				<br>
-				if (card > 10) {
-				<br>
-					card = 10;
-					<br>
-					dealer += card;
-					<br>
-				}
-				<br>
-				if (dealer < 16) {
-				<br>
-					dealer += card;
-					<br>
-				}
-				<br>
-				}
-				<br>
-				textDealer.setText("" + dealer);
-				<br>
-				if (player > dealer) {
-				<br>
-					textStatus.setText("Push! It's a tie!");
-					<br>
-				}
-				<br>
-				else if (player == dealer) {
-				<br>
-					textStatus.setText("You win!");
-					<br>
-				}
-				<br>
-				else {
-				<br>
-				textStatus.setText("You lost!");
-				<br>
-				}
-				<br>
-				buttonHit.setEnabled(false);
-				<br>
-				buttonStand.setEnabled(false);
-				</code>
+				<div class="codeheader" id="codeheader_bash">JAVA</div>
+                <div id="codebox">
+                    <pre><code data-language="java">
+                    <p style="color: #fff;">
+for (int k=0; k<2; k++) {
+	card = (int)(Math.random()*13)+1;
+	if (card > 10) {
+		card = 10;
+		dealer += card;
+	}
+	<br>
+	if (dealer < 16) {
+		dealer += card;
+	}
+}
+<br>
+textDealer.setText("" + dealer);
+if (player > dealer) {
+	textStatus.setText("Push! It's a tie!");
+}
+<br>
+else if (player == dealer) {
+	textStatus.setText("You win!");
+}
+<br>
+else {
+	textStatus.setText("You lost!");
+}
+<br>
+buttonHit.setEnabled(false);
+buttonStand.setEnabled(false);
+                    </code></pre>
+                </div>
 				<br>
 				<p>Your code is now finished!</p>
 				<h2 id="fourth" class="text-center">Running the Project</h2>
@@ -269,7 +252,7 @@
                                 class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="https://www.facebook.com/groups/vikingsdev"><span
                                 class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.instagram.com/vikingsdev/"><span
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikings_dev/"><span
                                 class="icon-instagram"></span></a></li>
                     </ul>
                 </div>
