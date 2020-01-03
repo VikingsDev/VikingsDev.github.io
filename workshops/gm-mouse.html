@@ -53,7 +53,7 @@
 
 
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url(https://i.imgur.com/L0BaUFy.png); background-position: 100% 560px;"
+<div class="hero-wrap hero-wrap-2" style="background-image: url(https://i.imgur.com/PoH3Uie.png); background-position: 100% 560px;"
      data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -120,31 +120,40 @@
 				<br>
 				<p>In the interface that pops out, type out this code:</p>
 				<br>
-				<code>
-				mouseDistance = point_distance(x, y, mouse_x, mouse_y);<br>
-				if (mouseDistance < 8) {<br>
-					speed = 0;<br>
-					exit;<br>
-				}<br>
-				<br>
-				else {<br>
-					image_angle = direction;<br>
-					direction = point_direction(x, y, mouse_x, mouse_y);<br>
-					speed = 12;<br>
-				}
-				</code>
+				<div class="codeheader" id="codeheader_bash">obj_player: Step Event</div>
+                <div id="codebox">
+                    <pre><code>
+                    <p style="color: #fff;">
+mouseDistance = point_distance(x, y, mouse_x, mouse_y);
+if (mouseDistance < 8) {
+	speed = 0;
+	exit;
+}
+
+else {
+	image_angle = direction;
+	direction = point_direction(x, y, mouse_x, mouse_y);
+	speed = 12;
+}
+                    </code></pre>
+                </div>
+                <br>
 				<p>This block of code checks if the player object is touching the mouse. If the statement is false, then the player object will locate and move towards the mouse at a speed of 12.</p>
 				<br>
 				<p>Next, we want to make use the mouse buttons! Under the code you just wrote, add this:</p>
 				<br>
-				<code>
-				buttonLeft = mouse_check_button_pressed(mb_left);<br>
-				if (buttonLeft) {<br>
-					var missile = instance_create(x, y, obj_missile);<br>
-					missile.direction = point_direction(x, y, mouse_x, mouse_y);<br>
-					missile.speed = 16;<br>
-				}
-				</code>
+				<div class="codeheader" id="codeheader_bash">obj_player: Step Event</div>
+                <div id="codebox">
+                    <pre><code>
+                    <p style="color: #fff;">
+buttonLeft = mouse_check_button_pressed(mb_left);
+if (buttonLeft) {
+	var missile = instance_create(x, y, obj_missile);
+	missile.direction = point_direction(x, y, mouse_x, mouse_y);
+	missile.speed = 16;
+}
+                    </code></pre>
+                    </div>
 				<br>
 				<p>This code checks if the left mouse button has been pressed. If the user has pressed the left mouse button, then the player object will shoot a missile in the direction of the mouse.</p>
 				<p>Altogether, the code in the Step Event of the <code>obj_player</code> should look like this:</p>
@@ -158,7 +167,13 @@
 				<br>
 				<p>Similar to coding the player object, go to the control tab on the right side of the object properties. Drag the document into the <code>Actions</code> area. In the interface that pops up, type this code:</p>
 				<br>
-				<code>instance_destroy();</code>
+				<div class="codeheader" id="codeheader_bash">obj_missile: Outside Room</div>
+                <div id="codebox">
+                    <pre><code>
+                    <p style="color: #fff;">
+instance_destroy();
+				</code></pre>
+                </div>
 				<br>
 				<p>This line of code tells the program to destroy a missiles spawned by the player if the missile leaves the game screen.</p>
 				<br>
