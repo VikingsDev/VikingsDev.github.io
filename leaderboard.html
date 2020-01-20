@@ -203,7 +203,8 @@
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 var user = {};
-                user.name = doc.id;
+                user.name = doc.id
+                user.link = "https://github.com/" + doc.id;
                 user.points = doc.data().points;
                 user.projects = doc.data().projects.length;
                 user.last_submitted = doc.data().last_submit;
@@ -240,7 +241,7 @@
                 projects.classList.add("col");
                 last_submitted.classList.add("col");
                 last_submit_link.classList.add("col");
-                name.innerText = scores[i].name;
+                name.innerHTML = "<a href='"+scores[i].link+"'>" + scores[i].name + "</a>";
                 score.innerText = scores[i].points;
                 projects.innerText = scores[i].projects;
                 last_submitted.innerText = new Date(scores[i].last_submitted).toString().split(' ').splice(1,3).join(' ');
