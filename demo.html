@@ -66,27 +66,28 @@
         </div>
     </div>
 </div>
-<br><br>
-<section class="ftco-section testimony-section">
-    <div class="container">
-        <div class="col-lg-10 d-inline-block">
-            <form id="submissionForm">
-                <div class="form-group">
-                    <h3 for="exampleInputEmail1">Github Username</h3>
-                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
-                           placeholder="VikingsDev">
-                </div>
-                <div class="form-group">
-                    <h3 for="exampleInputPassword1">Issue Link</h3>
-                    <p>Submit a link to the issue you resolved or pull request you merged.<br></p>
-                    <input type="text" class="form-control" id="link"
-                           placeholder="https://github.com/VikingsDev/Dentaku/issues/8">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+<div class="container">
+    <div class="text-center py-5">
+        <img src="images/bounties/bounties-logo.svg" style="height: 15vh">
     </div>
-</section>
+    <div class="col-lg-10 d-inline-block">
+        <h1 class="mb-3 bread font-weight-bold">Hello, <span class="gold" >Bounty Hunter </span><span class="gold" id="hunter-name"></span></h1>
+        <form id="submissionForm">
+            <div class="form-group">
+                <h3 for="exampleInputEmail1">Github Username</h3>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                       placeholder="BountyHunter" name="hunter" required>
+            </div>
+            <div class="form-group">
+                <h3 for="exampleInputPassword1">Issue/Pull Request Link</h3>
+                <p>Submit a link to the issue you resolved or pull request you merged.<br></p>
+                <input type="text" class="form-control" id="link"
+                       placeholder="https://github.com/VikingsDev/Dentaku/issues/8" required>
+            </div>
+            <button type="submit" class="btn btn-primary py-3 px-4">Claim Your Prize</button>
+        </form>
+    </div>
+</div>
 <br><br>
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
@@ -191,6 +192,10 @@
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script>
+    $('input[name=hunter]').blur(function(){
+        $('#hunter-name').text( this.value );
+    });
+
     // Your web app's Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyBRGz_gdO906f2EkOA_bXL0qyBtAwCAmh4",
@@ -221,11 +226,11 @@
         var proj = db.collection(english_date).doc(formdata.name);
         proj.get().then(function (doc) {
             type = "";
-            if(formdata.link.contains("issues")){
+            if (formdata.link.contains("issues")) {
                 type = "issue";
-            }else if(formdata.link.contains("pull")){
+            } else if (formdata.link.contains("pull")) {
                 type = "pull";
-            }else{
+            } else {
                 show_error("Invalid link! Must be a pull request or issue.");
                 invalidSubmit = true;
                 return
@@ -235,41 +240,41 @@
             repo = formdata.link.split("/")[4];
 
             url = ""
-            if(type === "issue"){
+            if (type === "issue") {
                 url = "https://api.github.com/repos/" + owner + "/" + repo + "/issues/" + num + "/events"
-            }else if(type === "pull"){
+            } else if (type === "pull") {
                 url = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls/" + num
             }
 
             info = fetch(url).then(res => res.json())
                 .then((out) => {
-                    if(type === "issue"){
+                    if (type === "issue") {
                         assignee = ""
                         closed = false
-                        for (const event in out){
-                            if(event.event === "assigned" && event.assignee.login === name){
+                        for (const event in out) {
+                            if (event.event === "assigned" && event.assignee.login === name) {
                                 assignee = event.assignee.login;
-                            }else if(event.event === "unassigned" && event.assignee.login === name){
+                            } else if (event.event === "unassigned" && event.assignee.login === name) {
                                 assignee = "";
-                            }else if(event.event === "closed"){
+                            } else if (event.event === "closed") {
                                 closed = true;
-                            }else if(event.event === "reopened"){
+                            } else if (event.event === "reopened") {
                                 closed = false
                             }
                         }
                         if (assignee == "") {
                             show_error("You were not assigned this issue!");
                             invalidSubmit = true;
-                        } else if(closed = false){
+                        } else if (closed = false) {
                             show_error("This issue has not been closed yet!");
                             invalidSubmit = true
                         }
-                    }else if(type === "pull"){
+                    } else if (type === "pull") {
                         invalidSubmit = out.state === "open" || out.user.login !== name;
                     }
 
 
-                    if(!invalidSubmit){
+                    if (!invalidSubmit) {
                         db.collection(english_date).doc(formdata.name).set({
                             name: formdata.name,
                             link: formdata.link,
