@@ -14322,6 +14322,10 @@ hr {
     display: none;
 }
 
+.mobile-friendly-col {
+    display: none;
+}
+
 @media screen and (max-width: 1207px) {
     .mobile-unfriendly {
         display: none;
@@ -14332,7 +14336,13 @@ hr {
         display: block;
     !important;
     }
+
+    .mobile-friendly-col {
+        display: flex; !important;
+    }
 }
+
+
 
 body {
     overflow: overlay;

@@ -77,7 +77,9 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row mobile-unfriendly">
+        <div style="width: 50px">
+        </div>
         <div class="col">
             <b>Hunter</b>
         </div>
@@ -92,6 +94,20 @@
         </div>
         <div class="col">
             <b></b>
+        </div>
+    </div>
+    <div class="row no-gutters mobile-friendly-col">
+        <div class="col">
+            <b>H.</b>
+        </div>
+        <div class="col">
+            <b>Pts.</b>
+        </div>
+        <div class="col">
+            <b>Bts.</b>
+        </div>
+        <div class="col">
+            <b>Last S.</b>
         </div>
     </div>
 </div>
@@ -246,16 +262,19 @@
             console.log("Loading data into html...");
             for (let i = 0; i < scores.length; i++) {
                 let name = document.createElement("div");
+                let pic = document.createElement("div");
                 let score = document.createElement("div");
                 let projects = document.createElement("div");
                 let last_submitted = document.createElement("div");
                 let last_submit_link = document.createElement("div");
                 name.classList.add("col");
+                pic.classList.add("col-sm-auto");
                 score.classList.add("col");
                 projects.classList.add("col");
                 last_submitted.classList.add("col");
                 last_submit_link.classList.add("col");
                 name.innerHTML = "<a href='"+scores[i].link+"'>" + scores[i].name + "</a>";
+                pic.innerHTML = "<img class='mobile-unfriendly' src='"+scores[i].link+".png' style='height: 50px'>";
                 score.innerText = getTotalPoints(scores[i]);
                 projects.innerText = Object.keys(scores[i].projects).length;
                 last_submitted.innerText = new Date(scores[i].last_submitted).toString().split(' ').splice(1,3).join(' ');
@@ -264,6 +283,7 @@
                 let scoreRow = document.createElement("div");
                 scoreRow.classList.add("row");
                 scoreRow.classList.add("py-3");
+                scoreRow.appendChild(pic);
                 scoreRow.appendChild(name);
                 scoreRow.appendChild(score);
                 scoreRow.appendChild(projects);
