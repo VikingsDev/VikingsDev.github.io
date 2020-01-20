@@ -74,13 +74,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <b>Member</b>
+            <b>Hunter</b>
         </div>
         <div class="col">
             <b>Points</b>
         </div>
         <div class="col">
-            <b>Projects</b>
+            <b>Bounties</b>
         </div>
         <div class="col">
             <b>Last Submitted</b>
@@ -205,7 +205,7 @@
                 var user = {};
                 user.name = doc.id;
                 user.points = doc.data().points;
-                user.projects = doc.data().projects;
+                user.projects = doc.data().projects.length;
                 user.last_submitted = doc.data().last_submit;
                 user.last_submit_link = doc.data().last_submit_link;
                 scores.push(user);

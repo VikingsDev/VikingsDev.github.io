@@ -288,15 +288,18 @@
                     user.get().then(function (doc) {
                         if (doc.exists && !invalidSubmit) {
                             var points = doc.data().points;
+                            var stickers = doc.data().stickers;
                             var projects = doc.data().projects;
                             if(projects.indexOf(formdata.link) > -1){
                                 show_error("You can't submit a bounty twice!");
                             }else{
                                 points += 5;
+                                stickers += 5;
                                 projects.push(formdata.link);
                                 return user.update({
                                     points: points,
                                     projects: projects,
+                                    stickers: stickers,
                                     last_submit_link: formdata.link,
                                     last_submit: date
                                 })
