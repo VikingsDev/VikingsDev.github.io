@@ -71,7 +71,8 @@
         <img src="images/bounties/bounties-logo.svg" style="height: 15vh">
     </div>
     <div class="col-lg-10 d-inline-block">
-        <h1 class="mb-3 bread font-weight-bold">Hello, <span class="gold" >Bounty Hunter </span><span class="gold" id="hunter-name"></span></h1>
+        <h1 class="mb-3 bread font-weight-bold">Hello, Bounty Hunter <span class="gold" id="hunter-name"></span></h1>
+        <h5 style="">Leave your weapons at the door.</h5><br>
         <form id="submissionForm">
             <div class="form-group">
                 <h3 for="exampleInputEmail1">Github Username</h3>
@@ -258,22 +259,14 @@
                             event = out[event];
                             if (event['event'] === "assigned" && event.assignee.login === formdata.name) {
                                 assignee = event.assignee.login;
-                                console.log("Assignee set to " +assignee)
                             } else if (event['event'] === "unassigned" && event.assignee.login === formdata.name) {
                                 assignee = "";
-                                console.log("Assignee set to empty")
                             } else if (event['event'] === "closed") {
                                 closed = true;
-                                console.log("Issue closed set to " + closed)
                             } else if (event['event'] === "reopened") {
                                 closed = false;
-                                console.log("Issue closed set to " + closed)
                             }
-                            console.log("event is closed: " + String(event.event === "closed"));
-                            console.log("event is reopened: " + String(event.event === "reopened"))
                         }
-                        console.log("Assignee: " + assignee);
-                        console.log("Issue Closed: " + closed);
                         if (assignee === "") {
                             error_message = "You were not assigned this issue!";
                             invalidSubmit = true;
@@ -291,50 +284,39 @@
                         }
                     }
 
-
-                    if (!invalidSubmit) {
-                        db.collection(english_date).doc(formdata.name).set({
-                            name: formdata.name,
-                            link: formdata.link,
-                            date: formdata.date
-                        })
-                            .then(function () {
-                                console.log("Project Document successfully written!");
-                                show_success();
-                            })
-                            .catch(function (error) {
-                                console.error("Error writing document: ", error);
-                                show_error("Something went wrong while submitting your submission!");
-                            });
-                    }
                     var user = db.collection("users").doc(formdata.name);
                     user.get().then(function (doc) {
-                        console.log("invalidSubmit = " + invalidSubmit);
                         if (doc.exists && !invalidSubmit) {
                             var points = doc.data().points;
                             var projects = doc.data().projects;
-                            points += 5;
-                            projects += 1;
-                            return user.update({
-                                points: points,
-                                projects: projects,
-                                last_submit_link: formdata.link,
-                                last_submit: date
-                            })
-                                .then(function () {
-                                    console.log("User Document successfully updated!");
+                            if(projects.indexOf(formdata.link) > -1){
+                                show_error("You can't submit a bounty twice!");
+                            }else{
+                                points += 5;
+                                projects.push(formdata.link);
+                                return user.update({
+                                    points: points,
+                                    projects: projects,
+                                    last_submit_link: formdata.link,
+                                    last_submit: date
                                 })
-                                .catch(function (error) {
-                                    // The document probably doesn't exist.
-                                    console.error("Error updating document: ", error);
-                                    show_error("Something went wrong updating your project. Most likely, your account does not exist.")
-                                });
+                                    .then(function () {
+                                        show_success();
+                                        console.log("User Document successfully updated!");
+                                    })
+                                    .catch(function (error) {
+                                        // The document probably doesn't exist.
+                                        console.error("Error updating document: ", error);
+                                        show_error("Something went wrong updating your project. Most likely, your account does not exist.")
+                                    });
+                            }
                         } else if(!invalidSubmit){
                             console.log(formdata.name);
                             db.collection("users").doc(formdata.name).set({
                                 name: formdata.name,
-                                points: 10,
-                                projects: 1,
+                                points: 5,
+                                stickers: 5,
+                                projects: [formdata.link],
                                 last_submit: date,
                                 last_submit_link: formdata.link,
                                 date_created: formdata.date
