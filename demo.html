@@ -85,7 +85,7 @@
                 <h3 for="exampleInputPassword1">Issue/Pull Request Link</h3>
                 <p>Submit a link to the issue you resolved or pull request you merged.<br></p>
                 <input type="text" class="form-control" id="link"
-                       placeholder="https://github.com/VikingsDev/Dentaku/issues/8" required>
+                       placeholder="https://github.com/VikingsDev/Dentaku/pull/17" required>
             </div>
             <button type="submit" class="btn btn-primary py-3 px-4">Claim Your Prize</button>
         </form>
@@ -230,12 +230,14 @@
         proj.get().then(function (doc) {
             var invalidSubmit = false;
             var type = "";
-            if (formdata.link.includes("issues")) {
-                type = "issue";
-            } else if (formdata.link.includes("pull")) {
+            if (formdata.link.includes("pull")) {
                 type = "pull";
-            } else {
-                show_error("Invalid link! Must be a pull request or issue.");
+            }
+            // else if (formdata.link.includes("issues")) {
+            //     type = "issue";
+            // }
+            else {
+                show_error("Invalid link! Must be a pull request.");
                 invalidSubmit = true;
                 return
             }
