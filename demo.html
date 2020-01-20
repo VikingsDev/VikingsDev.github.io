@@ -225,10 +225,11 @@
         var invalidSubmit = false;
         var proj = db.collection(english_date).doc(formdata.name);
         proj.get().then(function (doc) {
+            invalidSubmit = false;
             type = "";
-            if (formdata.link.contains("issues")) {
+            if (formdata.link.includes("issues")) {
                 type = "issue";
-            } else if (formdata.link.contains("pull")) {
+            } else if (formdata.link.includes("pull")) {
                 type = "pull";
             } else {
                 show_error("Invalid link! Must be a pull request or issue.");
@@ -248,13 +249,14 @@
 
             info = fetch(url).then(res => res.json())
                 .then((out) => {
+                    error_message = "";
                     if (type === "issue") {
                         assignee = ""
                         closed = false
                         for (const event in out) {
-                            if (event.event === "assigned" && event.assignee.login === name) {
+                            if (event.event === "assigned" && event.assignee.login === formdata.name) {
                                 assignee = event.assignee.login;
-                            } else if (event.event === "unassigned" && event.assignee.login === name) {
+                            } else if (event.event === "unassigned" && event.assignee.login === formdata.name) {
                                 assignee = "";
                             } else if (event.event === "closed") {
                                 closed = true;
@@ -262,15 +264,23 @@
                                 closed = false
                             }
                         }
-                        if (assignee == "") {
-                            show_error("You were not assigned this issue!");
+                        console.log("Assignee: " + assignee);
+                        console.log("Issue Closed: " + closed);
+                        if (assignee === "") {
+                            error_message = "You were not assigned this issue!";
                             invalidSubmit = true;
-                        } else if (closed = false) {
-                            show_error("This issue has not been closed yet!");
+                        } else if (closed === false) {
+                            error_message = "This issue has not been closed yet!";
                             invalidSubmit = true
                         }
                     } else if (type === "pull") {
-                        invalidSubmit = out.state === "open" || out.user.login !== name;
+                        if(out.state === "open"){
+                            error_message = "Pull request is still opened.";
+                            invalidSubmit = true;
+                        } else if(out.user.login !== formdata.name){
+                            error_message = "This is not your pull request!";
+                            invalidSubmit = true;
+                        }
                     }
 
 
@@ -289,6 +299,54 @@
                                 show_error("Something went wrong while submitting your submission!");
                             });
                     }
+                    var user = db.collection("users").doc(formdata.name);
+                    user.get().then(function (doc) {
+                        console.log("invalidSubmit = " + invalidSubmit);
+                        if (doc.exists && !invalidSubmit) {
+                            var points = doc.data().points;
+                            var projects = doc.data().projects;
+                            points += 5;
+                            projects += 1;
+                            return user.update({
+                                points: points,
+                                projects: projects,
+                                last_submit_link: formdata.link,
+                                last_submit: date
+                            })
+                                .then(function () {
+                                    console.log("User Document successfully updated!");
+                                })
+                                .catch(function (error) {
+                                    // The document probably doesn't exist.
+                                    console.error("Error updating document: ", error);
+                                    show_error("Something went wrong updating your project. Most likely, your account does not exist.")
+                                });
+                        } else if(!invalidSubmit){
+                            console.log(formdata.name);
+                            db.collection("users").doc(formdata.name).set({
+                                name: formdata.name,
+                                points: 10,
+                                projects: 1,
+                                last_submit: date,
+                                last_submit_link: formdata.link,
+                                date_created: formdata.date
+                            })
+                                .then(function () {
+                                    console.log("A new account as been created.");
+                                    show_success_new_user();
+                                })
+                                .catch(function (error) {
+                                    console.error("Error writing document: ", error);
+                                    show_error_new_user();
+                                });
+                        }else{
+                            show_error(error_message);
+                        }
+                    }).catch(function (error) {
+                        console.log("Error getting document:", error);
+                        show_error("Something went wrong!");
+                    });
+                    form.reset();
                 })
                 .catch(err => {
                     throw err
@@ -297,52 +355,6 @@
             console.log("Error getting document:", error);
             show_error("Something went wrong retrieving your information.");
         });
-
-        var user = db.collection("users").doc(formdata.name);
-        user.get().then(function (doc) {
-            if (doc.exists && !invalidSubmit) {
-                var points = doc.data().points;
-                var projects = doc.data().projects;
-                points += 5;
-                projects += 1;
-                return user.update({
-                    points: points,
-                    projects: projects,
-                    last_submit_link: formdata.link,
-                    last_submit: date
-                })
-                    .then(function () {
-                        console.log("User Document successfully updated!");
-                    })
-                    .catch(function (error) {
-                        // The document probably doesn't exist.
-                        console.error("Error updating document: ", error);
-                        show_error("Something went wrong updating your project. Most likely, your account does not exist.")
-                    });
-            } else {
-                console.log(formdata.name);
-                db.collection("users").doc(formdata.name).set({
-                    name: formdata.name,
-                    points: 10,
-                    projects: 1,
-                    last_submit: date,
-                    last_submit_link: formdata.link,
-                    date_created: formdata.date
-                })
-                    .then(function () {
-                        console.log("A new account as been created.");
-                        show_success_new_user();
-                    })
-                    .catch(function (error) {
-                        console.error("Error writing document: ", error);
-                        show_error_new_user();
-                    });
-            }
-        }).catch(function (error) {
-            console.log("Error getting document:", error);
-            show_error("Something went wrong!");
-        });
-        form.reset();
     });
 
 
