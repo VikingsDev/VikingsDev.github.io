@@ -296,7 +296,7 @@
                         if (doc.exists && !invalidSubmit) {
                             var stickers = doc.data().stickers;
                             var projects = doc.data().projects;
-                            if(projects.indexOf(formdata.link) > -1){
+                            if(projects.hasOwnProperty(formdata.link)){
                                 show_error("You can't submit a bounty twice!");
                             }else{
                                 stickers += 2;
