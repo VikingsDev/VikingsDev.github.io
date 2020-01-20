@@ -225,8 +225,8 @@
         var invalidSubmit = false;
         var proj = db.collection(english_date).doc(formdata.name);
         proj.get().then(function (doc) {
-            invalidSubmit = false;
-            type = "";
+            var invalidSubmit = false;
+            var type = "";
             if (formdata.link.includes("issues")) {
                 type = "issue";
             } else if (formdata.link.includes("pull")) {
@@ -246,23 +246,31 @@
             } else if (type === "pull") {
                 url = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls/" + num
             }
-
+            console.log(url);
             info = fetch(url).then(res => res.json())
                 .then((out) => {
-                    error_message = "";
+                    console.log(out)
+                    var error_message = "";
                     if (type === "issue") {
-                        assignee = ""
-                        closed = false
-                        for (const event in out) {
-                            if (event.event === "assigned" && event.assignee.login === formdata.name) {
+                        var assignee = "";
+                        var closed = false;
+                        for (var event in out) {
+                            event = out[event];
+                            if (event['event'] === "assigned" && event.assignee.login === formdata.name) {
                                 assignee = event.assignee.login;
-                            } else if (event.event === "unassigned" && event.assignee.login === formdata.name) {
+                                console.log("Assignee set to " +assignee)
+                            } else if (event['event'] === "unassigned" && event.assignee.login === formdata.name) {
                                 assignee = "";
-                            } else if (event.event === "closed") {
+                                console.log("Assignee set to empty")
+                            } else if (event['event'] === "closed") {
                                 closed = true;
-                            } else if (event.event === "reopened") {
-                                closed = false
+                                console.log("Issue closed set to " + closed)
+                            } else if (event['event'] === "reopened") {
+                                closed = false;
+                                console.log("Issue closed set to " + closed)
                             }
+                            console.log("event is closed: " + String(event.event === "closed"));
+                            console.log("event is reopened: " + String(event.event === "reopened"))
                         }
                         console.log("Assignee: " + assignee);
                         console.log("Issue Closed: " + closed);
@@ -362,7 +370,7 @@
         Swal.fire({
             type: 'success',
             title: 'Submission received!',
-            text: '10 points added to your account.',
+            text: '5 points added to your account.',
             showConfirmButton: false,
             timer: 1500
         })
