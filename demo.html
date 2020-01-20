@@ -282,7 +282,10 @@
                         if(out.state === "open"){
                             error_message = "Pull request is still opened.";
                             invalidSubmit = true;
-                        } else if(out.user.login !== formdata.name){
+                        } else if(!out.merged){
+                            error_message = "Pull request was closed but not merged.";
+                            invalidSubmit = true;
+                        }else if(out.user.login !== formdata.name){
                             error_message = "This is not your pull request!";
                             invalidSubmit = true;
                         }
