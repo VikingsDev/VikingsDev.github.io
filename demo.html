@@ -294,17 +294,17 @@
                     var user = db.collection("users").doc(formdata.name);
                     user.get().then(function (doc) {
                         if (doc.exists && !invalidSubmit) {
-                            var points = doc.data().points;
                             var stickers = doc.data().stickers;
                             var projects = doc.data().projects;
                             if(projects.indexOf(formdata.link) > -1){
                                 show_error("You can't submit a bounty twice!");
                             }else{
-                                points += 5;
                                 stickers += 2;
-                                projects.push(formdata.link);
+                                projects[formdata.link] = {
+                                    points: 5,
+                                    date: Date.now()
+                                };
                                 return user.update({
-                                    points: points,
                                     projects: projects,
                                     stickers: stickers,
                                     last_submit_link: formdata.link,
@@ -322,11 +322,15 @@
                             }
                         } else if(!invalidSubmit){
                             console.log(formdata.name);
+                            var project = {};
+                            project[formdata.link] = {
+                                points: 5,
+                                date: Date.now()
+                            };
                             db.collection("users").doc(formdata.name).set({
                                 name: formdata.name,
-                                points: 5,
                                 stickers: 5,
-                                projects: [formdata.link],
+                                projects: project,
                                 last_submit: date,
                                 last_submit_link: formdata.link,
                                 date_created: formdata.date

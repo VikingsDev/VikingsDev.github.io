@@ -201,6 +201,15 @@
     firebase.analytics();
     var db = firebase.firestore();
 
+    function getTotalPoints(user){
+        points = 0;
+        for(var proj in user.projects){
+            console.log(proj)
+            points += user.projects[proj].points
+        }
+        return points
+    }
+
     function updateLeaderboardView() {
         var scores =[];
         db.collection("users").get().then(function(querySnapshot) {
@@ -210,8 +219,7 @@
                 var user = {};
                 user.name = doc.id
                 user.link = "https://github.com/" + doc.id;
-                user.points = doc.data().points;
-                user.projects = doc.data().projects.length;
+                user.projects = doc.data().projects;
                 user.last_submitted = doc.data().last_submit;
                 user.last_submit_link = doc.data().last_submit_link;
                 scores.push(user);
@@ -221,16 +229,17 @@
             leaderboard.innerHTML = "";
 
             scores.sort(function (a, b) {
-                if(b.points - a.points == 0){
-                    if(b.projects - a.projects == 0){
+                aPoints = getTotalPoints(a);
+                bPoints = getTotalPoints(b);
+                if(aPoints - bPoints === 0){
+                    if(Object.keys(b.projects).length - Object.keys(a.projects).length === 0){
                         return a.last_submitted - b.last_submitted
                     }else{
-                        return b.projects - a.projects
+                        return Object.keys(b.projects).length - Object.keys(a.projects).length
                     }
                 }else{
-                    return b.points - a.points
+                    return bPoints - aPoints
                 }
-
             });
             let elements = []; // we'll need created elements to update colors later on
             // create elements for each player
@@ -247,8 +256,8 @@
                 last_submitted.classList.add("col");
                 last_submit_link.classList.add("col");
                 name.innerHTML = "<a href='"+scores[i].link+"'>" + scores[i].name + "</a>";
-                score.innerText = scores[i].points;
-                projects.innerText = scores[i].projects;
+                score.innerText = getTotalPoints(scores[i]);
+                projects.innerText = Object.keys(scores[i].projects).length;
                 last_submitted.innerText = new Date(scores[i].last_submitted).toString().split(' ').splice(1,3).join(' ');
                 var link = formatUrl(scores[i].last_submit_link);
                 last_submit_link.innerHTML = '<a href="'+link+'"><button class="btn btn-primary">See Project</button></a>';
