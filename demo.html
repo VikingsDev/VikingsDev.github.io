@@ -28,8 +28,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<script>
+    window.onload = function() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        console.log(vars['from'])
+        document.getElementById("bringback").setAttribute("href",vars['from']);
+        if(!("from" in vars)) {
+            document.getElementById("bringback").setAttribute("href","leaderboard.html");
+        }
+    }
+</script>
 <div class="container text-center pt-5 pb-2">
-    <a href="leaderboard.html"><img src="images/misc-icons/left-arrow.svg" style="width: 25px"></a>
+    <a id="bringback" href="leaderboard.html"><img src="images/misc-icons/left-arrow.svg" style="width: 25px"></a>
 </div>
 
 
