@@ -34,7 +34,6 @@
         var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
             vars[key] = value;
         });
-        console.log(vars['from'])
         document.getElementById("bringback").setAttribute("href",vars['from']);
         if(!("from" in vars)) {
             document.getElementById("bringback").setAttribute("href","leaderboard.html");
