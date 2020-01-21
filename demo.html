@@ -41,7 +41,7 @@
     }
 </script>
 <div class="container text-center pt-5 pb-2">
-    <a id="bringback" href="leaderboard.html"><img src="images/misc-icons/left-arrow.svg" style="width: 25px"></a>
+    <a id="bringback" href="leaderboard.html"><img class="arrow-bounce" src="images/misc-icons/left-arrow.svg" style="width: 25px"></a>
 </div>
 
 
@@ -113,6 +113,8 @@
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
 <script>
     $('input[name=hunter]').blur(function(){
         $('#hunter-name').text( this.value );
@@ -325,6 +327,15 @@
             text: error,
         })
     }
+
+
+    anime({
+        targets: '.arrow-bounce',
+        translateX: 20,
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutSine'
+    });
 </script>
 
 
