@@ -75,10 +75,10 @@
         <br>
         <div class="row justify-content-center">
             <div class="col-sm-auto">
-                <p><a href="demo.html" class="btn btn-primary px-4 py-3">Submit a Bounty</a></p>
+                <p><a class="btn btn-primary px-4 py-3 fly-demo">Submit a Bounty</a></p>
             </div>
             <div class="col-sm-auto">
-                <p><a href="bounties.html" class="btn btn-outline-primary px-4 py-3">What's a Bounty?</a></p>
+                <p><a class="btn btn-outline-primary px-4 py-3 fly-bounty">What's a Bounty?</a></p>
             </div>
         </div>
     </div>
@@ -337,6 +337,25 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"
+        integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"
+        integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
+<script>
+    $('.fly-demo').click(function () {
+        var elements = document.getElementsByTagName("*");
 
+        var animation = anime({
+            target: elements,
+            translateY: 1000
+        });
+        console.log("Fly!")
+
+    });
+
+    function redirectToDemo() {
+        window.location.replace("demo.html");
+    }
+</script>
 </body>
 </html>
