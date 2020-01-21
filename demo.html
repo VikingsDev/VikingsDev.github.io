@@ -280,6 +280,16 @@
                             invalidSubmit = true
                         }
                     } else if (type === "pull") {
+                        for(var i in out.labels){
+                            var label = out.labels[i];
+                            console.log(label)
+                            if(label.name === "invalid"){
+                                error_message = "This pull request was marked as invalid.";
+                                show_error(error_message)
+                                invalidSubmit = true;
+                                return;
+                            }
+                        }
                         if(out.state === "open"){
                             error_message = "Pull request is still opened.";
                             invalidSubmit = true;
