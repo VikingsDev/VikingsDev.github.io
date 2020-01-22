@@ -74,7 +74,7 @@
             font-weight: bold;
         }
         .fontfit {
-            font-size: 75px;
+            font-size: 100px;
         }
         u{
             color: #3de3a6;
@@ -94,16 +94,16 @@
         }
 
         #arrow {
-            animation: arrowAnim 20s infinite;
+            animation: arrowAnim 20s infinite ease-in;
             width: 500px;
 
             position: absolute;
-            top: 240px;
+            top: 237px;
             left: 290px;
         }
 
         #target {
-            animation: targetAnim 20s infinite;
+            animation: targetAnim 20s infinite ease-in;
             width: 750px;
             position: absolute;
             top: 115px;
@@ -150,25 +150,28 @@
             85% {
 
             }
-            100% {
+            95% {
                 transform: translateX(-1500px);
+            }
+            100% {
+                transform: translateX(0px);
             }
 
         }
         @keyframes arrowAnim {
               0% {
                   transform: translateX(0px) scale(1);
-                  opacity: 100%;
+                  opacity: 0%;
               }
-              10% {
-                  transform: scale(1);
-              }
-              25% {
-                  transform: translateX(300px) scale(1.5);
+            2% {
+                opacity: 100%
+            }
+              24% {
+                  transform: translateX(340px) scale(1.5);
                   opacity: 100%;
 
               }
-              35% {
+              25% {
                   opacity: 0%;
 
               }
@@ -176,53 +179,97 @@
 
               }
               60% {
-                  transform: translateX(300px) scale(1.5) rotate(0deg);
-                  opacity: 0%;
+                  transform: translateX(340px) scale(1.5) rotate(0deg);
 
               }
                 90% {
-                    transform: translateX(300px) scale(1.5) rotate(180deg);
+                    transform: translateX(340px) scale(1.5) rotate(180deg);
+                    opacity: 0%;
 
                 }
-              100% {
-                  transform: translateX(300px) scale(1.5);
+              95% {
+                  transform: translateX(340px) scale(1.5);
+                  opacity: 0%;
               }
+            100% {
+                translateX(0) scale(1);
+                opacity: 0%;
+            }
 
           }
         @keyframes targetAnim {
             10% {
                 opacity: 100%;
             }
-            10% {
+            20% {
                 transform: translateX(0px) rotate(-135deg);
             }
-            25% {
-                transform: translateX(-2200px) rotate(-135deg);
+            24% {
+                transform: translateX(-2165px) rotate(-135deg);
+            }
+            26% {
                 opacity: 100%;
+            }
+            27% {
+                opacity: 0%;
             }
             35% {
                 opacity: 0%;
-                transform: translateX(-2200px) rotate(-135deg);
+                transform: translateX(-2165px) rotate(-135deg);
+
+            }
+
+
+            100% {
+                opacity: 0%;
+            }
+
+        }
+        @keyframes bAnim {
+            10% {
+                opacity: 0%;
+            }
+            10% {
+                transform: translateX(0px) rotate(-135deg);
+            }
+            24% {
+                transform: translateX(-2165px) rotate(-135deg);
+                opacity: 0%;
+            }
+            25% {
+                opacity: 100%;
+            }
+            26% {
+                transform: translateX(-2165px) rotate(-135deg);
+
+            }
+            45% {
+                transform: translateX(-2165px) rotate(0deg);
 
             }
             50% {
-                opacity: 0%;
+                transform: translateX(-2165px) rotate(0deg);
+                opacity: 100%;
 
             }
             60% {
+                opacity: 100%;
+                transform: translateX(-2165px) rotate(-45deg);
+
+            }
+            75% {
+                transform: translateX(-2165px) rotate(-45deg);
                 opacity: 0%;
-                transform: translateX(-2200px) rotate(0deg);
 
             }
             90% {
-                transform: translateX(-2200px) rotate(45deg);
+                transform: translateX(-2165px) rotate(-45deg);
 
             }
-            100% {
-                transform: translateX(-2200px) rotate(45deg);
+            95% {
+                transform: translateX(0px) rotate(-45deg);
                 opacity: 0%;
             }
-
         }
         @keyframes onAnim {
             10% {
@@ -232,71 +279,43 @@
                 transform: translateX(0px) rotate(-135deg);
             }
             25% {
-                transform: translateX(-2200px) rotate(-135deg);
-                opacity: 0%;
+                transform: translateX(-2165px) rotate(-135deg);
             }
             35% {
-                transform: translateX(-2200px) rotate(-135deg);
-                opacity: 100%;
+                opacity: 0%;
+                transform: translateX(-2165px) rotate(-135deg);
 
             }
             50% {
-                transform: translateX(-2200px) rotate(0deg);
-                opacity: 100%;
+                transform: translateX(-2165px) rotate(0deg);
+                opacity: 0%;
 
             }
             60% {
                 opacity: 0%;
-                transform: translateX(-2200px) rotate(0deg);
-
-            }
-            90% {
-                transform: translateX(-2200px) rotate(45deg);
-
-            }
-            100% {
-                transform: translateX(-2200px) rotate(45deg);
-                opacity: 0%;
-            }
-        }
-        @keyframes bAnim {
-            10% {
-                opacity: 0%;
-            }
-            10% {
-                transform: translateX(0px) rotate(-135deg);
-            }
-            25% {
-                transform: translateX(-2200px) rotate(-135deg);
-            }
-            35% {
-                opacity: 0%;
-                transform: translateX(-2200px) rotate(-135deg);
-
-            }
-            50% {
-                transform: translateX(-2200px) rotate(0deg);
-                opacity: 0%;
-
-            }
-            60% {
-                opacity: 100%;
-                transform: translateX(-2200px) rotate(0deg);
+                transform: translateX(-2165px) rotate(-45deg);
 
             }
             75% {
-                transform: translateX(-2200px) rotate(45deg);
+                transform: translateX(-2165px) rotate(-45deg);
                 opacity: 100%;
 
             }
-            100% {
-                transform: translateX(-2200px) rotate(45deg);
-                opacity: 0%;
+            85% {
+                transform: translateX(-2165px) rotate(-45deg) scale(1);
+                opacity: 100%;
             }
-        }
+            93% {
+                transform: translateX(-2165px) rotate(-45deg) scale(10);
+            }
+            98% {
+                transform: translateX(-2165px) rotate(-45deg) scale(10);
+            }
+            100% {
+                transform: translateX(-2165px) rotate(-45deg);
+                opacity: 0%;
 
-        rotate225 {
-            transform: rotate(-135deg);
+            }
         }
 
 
@@ -307,13 +326,13 @@
 <div class="container cap-height" style="text-align: left;">
     <img src="images/the-hunt/arrow.png" id="arrow">
     <img src="images/the-hunt/archer.png" id="archer">
-    <img class="rotate225" src="images/the-hunt/target.png" id="target">
-    <img class="rotate225" src="images/the-hunt/on.png" id="on">
-    <img class="rotate225" src="images/the-hunt/bounties.png" id="bounties">
+    <img src="images/the-hunt/target.png" id="target">
+    <img src="images/the-hunt/bounties.png" id="bounties">
+    <img src="images/the-hunt/on.png" id="on">
 </div>
 <div class="container" style="text-align: center">
     <br><br>
-    <h3 class="fontfit kulim-park bold" style="padding-top:750px">the hunt is <u>on.</u></h3>
+    <h3 class="fontfit kulim-park bold" style="padding-top:800px">the hunt is <u>on.</u></h3>
 </div>
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen" style="background-color: white;text-align: center">
