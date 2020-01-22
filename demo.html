@@ -127,7 +127,7 @@
             var animationtimeline = anime.timeline()
                 .add({
                     targets: elements,
-                    duration: 0.0001,
+                    duration: 0,
                     translateY: '100vh'
                 })
                 .add({
@@ -136,6 +136,7 @@
                     translateY: 0,
                     easing: "easeInOutCubic"
                 })
+            history.pushState(null, null, "demo.html");
         }
     });
 
