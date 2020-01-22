@@ -57,7 +57,9 @@
         </a>
     </div>
     <div class="container text-center">
-        <a href="https://github.com/VikingsDev/bounties/blob/master/README.md">Full Bounties Documentation</a><br><br>
+        <a href="https://github.com/VikingsDev/bounties/blob/master/README.md">Full Bounties Documentation</a><br>
+        <span>You can make <span id="remaining-claims"></span> more claims this hour. This will reset to 60 at <span id="reset-time"></span>. <a>Why?</a></span>
+        <br><br>
     </div>
     <div class="col-lg-10 d-inline-block">
         <form id="submissionForm">
@@ -138,6 +140,18 @@
                 })
             history.pushState(null, null, "demo.html");
         }
+        info = fetch("https://api.github.com/rate_limit").then(res => res.json())
+            .then((out) => {
+                console.log(out)
+                var remaining = out.rate.remaining;
+                var d = new Date(0);
+                d.setUTCSeconds(out.rate.reset);
+                var dateString = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+
+                $('#remaining-claims').text(remaining);
+                $('#reset-time').text(dateString);
+            });
+
     });
 
     $('input[name=hunter]').blur(function () {
