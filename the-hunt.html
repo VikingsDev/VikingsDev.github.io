@@ -75,7 +75,7 @@
             font-weight: bold;
         }
         .fontfit {
-            font-size: 100px;
+            font-size: 80px;
         }
         u{
             color: #3de3a6;
@@ -133,24 +133,6 @@
             10% {
                 transform: translateX(-1500px);
             }
-            25% {
-
-            }
-            30% {
-
-            }
-            35% {
-
-            }
-            40% {
-
-            }
-            70% {
-
-            }
-            85% {
-
-            }
             95% {
                 transform: translateX(-1500px);
             }
@@ -174,9 +156,6 @@
               }
               25% {
                   opacity: 0%;
-
-              }
-              50% {
 
               }
               60% {
@@ -214,13 +193,6 @@
             27% {
                 opacity: 0%;
             }
-            35% {
-                opacity: 0%;
-                transform: translateX(-2165px) rotate(-135deg);
-
-            }
-
-
             100% {
                 opacity: 0%;
             }
@@ -323,16 +295,20 @@
     </style>
 </head>
 <body style="text-align: left">
+<div class="container" style="text-align: center">
+    <div id="countdown"style="padding-top:800px">
+        <a href="#"
+           class="btn kulim-park bold btn-outline-light px-5 py-3 fontfit" style="color: #000000; margin-top:50px"onclick="start()">Start the <u>Hunt</u></a>
+    </div>
+    <h3 class="fontfit kulim-park bold" id="hunt"></h3>
+</div>
 <div class="container cap-height" style="text-align: left;">
     <img src="images/the-hunt/arrow.png" id="arrow">
     <img src="images/the-hunt/archer.png" id="archer">
     <img src="images/the-hunt/target.png" id="target">
     <img src="images/the-hunt/bounties.png" id="bounties">
     <img src="images/the-hunt/on.png" id="on">
-</div>
-<div class="container" style="text-align: center">
-    <br><br>
-    <h3 class="fontfit kulim-park bold" style="padding-top:800px">the hunt is <u>on.</u></h3>
+
 </div>
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen" style="background-color: white;text-align: center">
@@ -340,6 +316,30 @@
     <img src="images/bounties/bounties-logo.svg" style="vertical-align: middle;">
 </div>
 
+<script>
+    var cdd = new Date().getTime() + 60 * 70 * 1000;
+
+    function start(){
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+
+            var distance = cdd - now;
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+            document.getElementById("countdown").innerHTML = "<h3 class=\"fontfit kulim-park bold\"><u>" + hours + "h " + minutes + "m " + seconds + "s </u></h3>";
+            document.getElementById("hunt").innerHTML = "the Hunt is <u>on.</u>";
+
+            if(distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "";
+                document.getElementById("hunt").innerHTML = "the Hunt is <u>over.</u>";
+            }
+        }, 1000);
+    }
+</script>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
