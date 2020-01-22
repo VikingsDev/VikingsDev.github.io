@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Primary Meta Tags -->
+    <title>VikingsDev</title>
+    <meta name="title" content="We are VikingsDev">
+    <meta name="description" content="We are a club dedicated to inspiring the next generation of software developers.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vikingsdev.ca/">
+    <meta property="og:title" content="We are VikingsDev">
+    <meta property="og:description"
+          content="We are a club dedicated to inspiring the next generation of software developers.">
+    <meta property="og:image" content="images/icon--bg.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vikingsdev.ca/">
+    <meta property="twitter:title" content="We are VikingsDev">
+    <meta property="twitter:description"
+          content="We are a club dedicated to inspiring the next generation of software developers.">
+    <meta property="twitter:image" content="images/icon--bg.png">
+    <link rel="icon" href="images/bounties/bounties-icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">.scrollax-performance, .scrollax-performance *, .scrollax-performance *:before, .scrollax-performance *:after {
+        pointer-events: none !important;
+        -webkit-animation-play-state: paused !important;
+        animation-play-state: paused !important;
+    }
+    </style>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
+    <style>
+        body {
+            max-height: 100vh;
+            max-width: 100vw;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        @font-face {
+            font-family: "Kulim Park";
+            src: url("fonts/KulimPark-Regular.ttf");
+            src: url("fonts/KulimPark-Bold.ttf");
+        }
+
+        .kulim-park {
+            font-family: 'Kulim Park', serif;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .fontfit {
+            font-size: 75px;
+        }
+        u{
+            color: #3de3a6;
+        }
+
+        .gold {
+            color: #c69249;
+        }
+
+        #archer {
+            animation: archerAnim 20s infinite;
+            width: 1000px;
+
+            position: absolute;
+            top: 0px;
+            left: 100px;
+        }
+
+        #arrow {
+            animation: arrowAnim 20s infinite;
+            width: 500px;
+
+            position: absolute;
+            top: 240px;
+            left: 290px;
+        }
+
+        #target {
+            animation: targetAnim 20s infinite;
+            width: 750px;
+            position: absolute;
+            top: 115px;
+            left: 2750px;
+        }
+
+        #on {
+            animation: onAnim 20s infinite;
+            width: 750px;
+            position: absolute;
+            top: 115px;
+            left: 2750px;
+        }
+        #bounties {
+            animation: bAnim 20s infinite;
+            width: 750px;
+            position: absolute;
+            top: 115px;
+            left: 2750px;
+        }
+
+        @keyframes archerAnim {
+            0% {
+                transform: translateX(0px);
+            }
+            10% {
+                transform: translateX(-1500px);
+            }
+            25% {
+
+            }
+            30% {
+
+            }
+            35% {
+
+            }
+            40% {
+
+            }
+            70% {
+
+            }
+            85% {
+
+            }
+            100% {
+                transform: translateX(-1500px);
+            }
+
+        }
+        @keyframes arrowAnim {
+              0% {
+                  transform: translateX(0px) scale(1);
+                  opacity: 100%;
+              }
+              10% {
+                  transform: scale(1);
+              }
+              25% {
+                  transform: translateX(300px) scale(1.5);
+                  opacity: 100%;
+
+              }
+              35% {
+                  opacity: 0%;
+
+              }
+              50% {
+
+              }
+              60% {
+                  transform: translateX(300px) scale(1.5) rotate(0deg);
+                  opacity: 0%;
+
+              }
+                90% {
+                    transform: translateX(300px) scale(1.5) rotate(180deg);
+
+                }
+              100% {
+                  transform: translateX(300px) scale(1.5);
+              }
+
+          }
+        @keyframes targetAnim {
+            10% {
+                opacity: 100%;
+            }
+            10% {
+                transform: translateX(0px) rotate(-135deg);
+            }
+            25% {
+                transform: translateX(-2200px) rotate(-135deg);
+                opacity: 100%;
+            }
+            35% {
+                opacity: 0%;
+                transform: translateX(-2200px) rotate(-135deg);
+
+            }
+            50% {
+                opacity: 0%;
+
+            }
+            60% {
+                opacity: 0%;
+                transform: translateX(-2200px) rotate(0deg);
+
+            }
+            90% {
+                transform: translateX(-2200px) rotate(45deg);
+
+            }
+            100% {
+                transform: translateX(-2200px) rotate(45deg);
+                opacity: 0%;
+            }
+
+        }
+        @keyframes onAnim {
+            10% {
+                opacity: 0%;
+            }
+            10% {
+                transform: translateX(0px) rotate(-135deg);
+            }
+            25% {
+                transform: translateX(-2200px) rotate(-135deg);
+                opacity: 0%;
+            }
+            35% {
+                transform: translateX(-2200px) rotate(-135deg);
+                opacity: 100%;
+
+            }
+            50% {
+                transform: translateX(-2200px) rotate(0deg);
+                opacity: 100%;
+
+            }
+            60% {
+                opacity: 0%;
+                transform: translateX(-2200px) rotate(0deg);
+
+            }
+            90% {
+                transform: translateX(-2200px) rotate(45deg);
+
+            }
+            100% {
+                transform: translateX(-2200px) rotate(45deg);
+                opacity: 0%;
+            }
+        }
+        @keyframes bAnim {
+            10% {
+                opacity: 0%;
+            }
+            10% {
+                transform: translateX(0px) rotate(-135deg);
+            }
+            25% {
+                transform: translateX(-2200px) rotate(-135deg);
+            }
+            35% {
+                opacity: 0%;
+                transform: translateX(-2200px) rotate(-135deg);
+
+            }
+            50% {
+                transform: translateX(-2200px) rotate(0deg);
+                opacity: 0%;
+
+            }
+            60% {
+                opacity: 100%;
+                transform: translateX(-2200px) rotate(0deg);
+
+            }
+            75% {
+                transform: translateX(-2200px) rotate(45deg);
+                opacity: 100%;
+
+            }
+            100% {
+                transform: translateX(-2200px) rotate(45deg);
+                opacity: 0%;
+            }
+        }
+
+        rotate225 {
+            transform: rotate(-135deg);
+        }
+
+
+    </style>
+</head>
+<body style="text-align: left">
+
+<div class="container cap-height" style="text-align: left;">
+    <img src="images/the-hunt/arrow.png" id="arrow">
+    <img src="images/the-hunt/archer.png" id="archer">
+    <img class="rotate225" src="images/the-hunt/target.png" id="target">
+    <img class="rotate225" src="images/the-hunt/on.png" id="on">
+    <img class="rotate225" src="images/the-hunt/bounties.png" id="bounties">
+</div>
+<div class="container" style="text-align: center">
+    <br><br>
+    <h3 class="fontfit kulim-park bold" style="padding-top:750px">the hunt is <u>on.</u></h3>
+</div>
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen" style="background-color: white;text-align: center">
+    <span style="display: inline-block;height: 100%;vertical-align: middle;"></span>
+    <img src="images/bounties/bounties-logo.svg" style="vertical-align: middle;">
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+</body>
+</html>
