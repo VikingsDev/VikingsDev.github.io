@@ -29,19 +29,20 @@
 </head>
 <body>
 <script>
-    window.onload = function() {
+    window.onload = function () {
         var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
             vars[key] = value;
         });
-        document.getElementById("bringback").setAttribute("href",vars['from']);
-        if(!("from" in vars)) {
-            document.getElementById("bringback").setAttribute("href","leaderboard.html");
+        document.getElementById("bringback").setAttribute("href", vars['from']);
+        if (!("from" in vars)) {
+            document.getElementById("bringback").setAttribute("href", "leaderboard.html");
         }
     }
 </script>
 <div class="container text-center pt-5 pb-2">
-    <a id="bringback" href="leaderboard.html"><img class="arrow-bounce" src="images/misc-icons/left-arrow.svg" style="width: 25px"></a>
+    <a id="bringback" href="leaderboard.html"><img class="arrow-bounce" src="images/misc-icons/left-arrow.svg"
+                                                   style="width: 25px"></a>
 </div>
 
 
@@ -50,7 +51,8 @@
         <a href="bounties.html">
             <img class="transparent-transition" src="images/bounties/bounties-logo.svg" style="height: 15vh">
             <br><br><br>
-            <h1 class="mb-3 bread font-weight-bold" style="color: #503821">Hello, <span style="color: #9c6d41">Bounty Hunter </span> <span class="gold" id="hunter-name"></span></h1>
+            <h1 class="mb-3 bread font-weight-bold" style="color: #503821">Hello, <span style="color: #9c6d41">Bounty Hunter </span>
+                <span class="gold" id="hunter-name"></span></h1>
             <h5>Leave your weapons at the door.</h5><br>
         </a>
     </div>
@@ -113,11 +115,32 @@
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
 <script>
-    $('input[name=hunter]').blur(function(){
-        $('#hunter-name').text( this.value );
+    $(document).ready(function(){
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        if (("from" in vars) && vars['from'] === "leaderboard.html") {
+            var elements = document.querySelectorAll('*');
+            var animationtimeline = anime.timeline()
+                .add({
+                    targets: elements,
+                    duration: 0.0001,
+                    translateY: '100vh'
+                })
+                .add({
+                    targets: elements,
+                    duration: 4000,
+                    translateY: 0,
+                    easing: "easeInOutCubic"
+                })
+        }
+    });
+
+    $('input[name=hunter]').blur(function () {
+        $('#hunter-name').text(this.value);
     });
 
     // Your web app's Firebase configuration
@@ -154,8 +177,8 @@
             if (formdata.link.includes("pull")) {
                 type = "pull";
             }
-            // else if (formdata.link.includes("issues")) {
-            //     type = "issue";
+                // else if (formdata.link.includes("issues")) {
+                //     type = "issue";
             // }
             else {
                 show_error("Invalid link! Must be a pull request.");
@@ -200,23 +223,23 @@
                             invalidSubmit = true
                         }
                     } else if (type === "pull") {
-                        for(var i in out.labels){
+                        for (var i in out.labels) {
                             var label = out.labels[i];
                             console.log(label)
-                            if(label.name === "invalid"){
+                            if (label.name === "invalid") {
                                 error_message = "This pull request was marked as invalid.";
                                 show_error(error_message)
                                 invalidSubmit = true;
                                 return;
                             }
                         }
-                        if(out.state === "open"){
+                        if (out.state === "open") {
                             error_message = "Pull request is still opened.";
                             invalidSubmit = true;
-                        } else if(!out.merged){
+                        } else if (!out.merged) {
                             error_message = "Pull request was closed but not merged.";
                             invalidSubmit = true;
-                        }else if(out.user.login !== formdata.name){
+                        } else if (out.user.login !== formdata.name) {
                             error_message = "This is not your pull request!";
                             invalidSubmit = true;
                         }
@@ -227,9 +250,9 @@
                         if (doc.exists && !invalidSubmit) {
                             var stickers = doc.data().stickers;
                             var projects = doc.data().projects;
-                            if(projects.hasOwnProperty(formdata.link)){
+                            if (projects.hasOwnProperty(formdata.link)) {
                                 show_error("You can't submit a bounty twice!");
-                            }else{
+                            } else {
                                 stickers += 2;
                                 projects[formdata.link] = {
                                     points: 5,
@@ -251,7 +274,7 @@
                                         show_error("Something went wrong updating your project. Most likely, your account does not exist.")
                                     });
                             }
-                        } else if(!invalidSubmit){
+                        } else if (!invalidSubmit) {
                             console.log(formdata.name);
                             var project = {};
                             project[formdata.link] = {
@@ -274,7 +297,7 @@
                                     console.error("Error writing document: ", error);
                                     show_error_new_user();
                                 });
-                        }else{
+                        } else {
                             show_error(error_message);
                         }
                     }).catch(function (error) {
