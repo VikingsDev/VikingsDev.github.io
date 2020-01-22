@@ -66,14 +66,20 @@
 <div class="row justify-content-center mb-5 pb-3">
     <div class="col-md-7 text-center heading-section ftco-animate">
         <div class="text-center py-5">
-            <img src="images/bounties/bounties-logo.svg" style="height: 15vh; padding-bottom:25px">
-            <h1 class="subheading" style="padding-bottom:25px;"><b>Learn about what VikingsDev Bounties are below!</b></h1>
-            <p><a href="bounties.html" class="btn btn-outline-primary px-4 py-3">What are Bounties?</a></p>
+                <img class="transparent-transition fly-bounty" src="images/bounties/bounties-logo.svg"
+                     style="height: 15vh">
         </div>
         <h2 class="mb-4">See who's leading.</h2>
         <h1 class="subheading">Want to see your name here?</h1>
         <br>
-        <p><a href="demo.html" class="btn btn-primary px-4 py-3">SUBMIT A BOUNTY</a></p>
+        <div class="row justify-content-center">
+            <div class="col-sm-auto">
+                <p><span class="btn btn-primary px-4 py-3 fly-demo">Submit a Bounty</span></p>
+            </div>
+            <div class="col-sm-auto">
+                <p><span class="btn btn-outline-primary px-4 py-3 fly-bounty">What's a Bounty?</span></p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -217,9 +223,9 @@
     firebase.analytics();
     var db = firebase.firestore();
 
-    function getTotalPoints(user){
+    function getTotalPoints(user) {
         points = 0;
-        for(var proj in user.projects){
+        for (var proj in user.projects) {
             console.log(proj)
             points += user.projects[proj].points
         }
@@ -227,9 +233,9 @@
     }
 
     function updateLeaderboardView() {
-        var scores =[];
-        db.collection("users").get().then(function(querySnapshot) {
-            querySnapshot.forEach(function(doc) {
+        var scores = [];
+        db.collection("users").get().then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 var user = {};
@@ -240,20 +246,20 @@
                 user.last_submit_link = doc.data().last_submit_link;
                 scores.push(user);
             });
-        }).then(function(){
+        }).then(function () {
             let leaderboard = document.getElementById("leaderboard");
             leaderboard.innerHTML = "";
 
             scores.sort(function (a, b) {
                 aPoints = getTotalPoints(a);
                 bPoints = getTotalPoints(b);
-                if(aPoints - bPoints === 0){
-                    if(Object.keys(b.projects).length - Object.keys(a.projects).length === 0){
+                if (aPoints - bPoints === 0) {
+                    if (Object.keys(b.projects).length - Object.keys(a.projects).length === 0) {
                         return a.last_submitted - b.last_submitted
-                    }else{
+                    } else {
                         return Object.keys(b.projects).length - Object.keys(a.projects).length
                     }
-                }else{
+                } else {
                     return bPoints - aPoints
                 }
             });
@@ -273,13 +279,13 @@
                 projects.classList.add("col");
                 last_submitted.classList.add("col");
                 last_submit_link.classList.add("col");
-                name.innerHTML = "<a href='"+scores[i].link+"'>" + scores[i].name + "</a>";
-                pic.innerHTML = "<img class='mobile-unfriendly' src='"+scores[i].link+".png' style='height: 50px'>";
+                name.innerHTML = "<a href='" + scores[i].link + "'>" + scores[i].name + "</a>";
+                pic.innerHTML = "<img class='mobile-unfriendly' src='" + scores[i].link + ".png' style='height: 50px'>";
                 score.innerText = getTotalPoints(scores[i]);
                 projects.innerText = Object.keys(scores[i].projects).length;
-                last_submitted.innerText = new Date(scores[i].last_submitted).toString().split(' ').splice(1,3).join(' ');
+                last_submitted.innerText = new Date(scores[i].last_submitted).toString().split(' ').splice(1, 3).join(' ');
                 var link = formatUrl(scores[i].last_submit_link);
-                last_submit_link.innerHTML = '<a href="'+link+'"><button class="btn btn-primary px-3 py-2">See Bounty</button></a>';
+                last_submit_link.innerHTML = '<a href="' + link + '"><button class="btn btn-primary px-3 py-2">See Bounty</button></a>';
                 let scoreRow = document.createElement("div");
                 scoreRow.classList.add("row");
                 scoreRow.classList.add("py-3");
@@ -296,13 +302,14 @@
 
             }
             let colors = ["#ffeeb4", "#e6e6e6", "#f0ccb3"];
-            for(let i=0; i < 3; i++) {
+            for (let i = 0; i < 3; i++) {
                 elements[i].style.backgroundColor = colors[i];
             }
         });
 
     }
-    function formatUrl(url){
+
+    function formatUrl(url) {
         var httpString = 'http://'
             , httpsString = 'https://'
         ;
@@ -312,6 +319,7 @@
 
         return url;
     }
+
     updateLeaderboardView();
 </script>
 <script src="js/jquery.min.js"></script>
@@ -326,10 +334,37 @@
 <script src="js/aos.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
 <script src="js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+<script>
+    $('.fly-demo').click(function() {
+        fly("demo.html?from=leaderboard.html");
+    });
+    $('.fly-bounty').click(function() {
+        redirect("bounties.html")
+    });
 
+    async function fly (redirect_loc) {
+        var elements = document.querySelectorAll('*');
+
+        await anime.timeline()
+            .add({
+                targets: elements,
+                duration: 1000,
+                translateY: "-100vh",
+                easing: "easeInOutCubic"
+            }).finished;
+        redirect(redirect_loc)
+    }
+
+    function redirect(url) {
+        window.location.href = url;
+    }
+</script>
 </body>
 </html>

@@ -28,54 +28,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-        <a href="index.html"><img src="images/logos/vikingsdev-logo.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-                <li class="nav-item active"><a class="nav-link" href="leaderboard.html">🎯 Bounties</a></li>
-                <li class="nav-item"><a class="nav-link" href="workshops.html">Workshops</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a href="signup.html" class="nav-link"><span>Sign Up</span></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="hero-wrap hero-wrap-2" style="background-image: url('images/headers/bounties-bg.png');"
-     data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-start">
-            <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i
-                        class="ion-ios-arrow-forward"></i></a></span><a href="leaderboard.html">
-                    <span>Leaderboard </span><i
-                        class="ion-ios-arrow-forward"></i></a><span> Submit</span></p>
-                <h1 class="mb-3 bread">Submit your Bounty</h1>
-            </div>
-        </div>
-    </div>
+<script>
+    window.onload = function () {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        document.getElementById("bringback").setAttribute("href", vars['from']);
+        if (!("from" in vars)) {
+            document.getElementById("bringback").setAttribute("href", "leaderboard.html");
+        }
+    }
+</script>
+<div class="container text-center pt-5 pb-2">
+    <a id="bringback" href="leaderboard.html"><img class="arrow-bounce" src="images/misc-icons/left-arrow.svg"
+                                                   style="width: 25px"></a>
 </div>
-<div class="container">
+
+
+<div class="container" style="padding-bottom: 10vh">
     <div class="text-center py-5">
         <a href="bounties.html">
             <img class="transparent-transition" src="images/bounties/bounties-logo.svg" style="height: 15vh">
+            <br><br><br>
+            <h1 class="mb-3 bread font-weight-bold" style="color: #503821">Hello, <span style="color: #9c6d41">Bounty Hunter </span>
+                <span class="gold" id="hunter-name"></span></h1>
+            <h5>Leave your weapons at the door.</h5><br>
         </a>
     </div>
+    <div class="container text-center">
+        <a href="https://github.com/VikingsDev/bounties/blob/master/README.md">Full Bounties Documentation</a><br>
+        <span>You can make <span id="remaining-claims"></span> more claims this hour. This will reset to 60 at <span id="reset-time"></span>. <a href="https://github.com/VikingsDev/bounties/blob/master/README.md#rate-limits">Why?</a></span>
+        <br><br>
+    </div>
     <div class="col-lg-10 d-inline-block">
-        <h1 class="mb-3 bread font-weight-bold" style="color: #503821">Hello, <span style="color: #9c6d41">Bounty Hunter </span> <span class="gold" id="hunter-name"></span></h1>
-        <h5>Leave your weapons at the door.</h5>
-        <a href="https://github.com/VikingsDev/bounties/blob/master/README.md">Full Bounties Documentation</a><br><br>
         <form id="submissionForm">
             <div class="form-group">
                 <h3 for="exampleInputEmail1">Github Username</h3>
@@ -92,83 +78,15 @@
         </form>
     </div>
 </div>
-<br><br>
-<footer class="ftco-footer ftco-bg-dark ftco-section">
-    <div class="container">
-        <div class="row mb-5 pb-5 align-items-center d-flex">
-            <div class="col-md-6">
-                <div class="heading-section heading-section-white ftco-animate">
-                    <span class="subheading">Get Inspired</span>
-                    <h2 style="font-size: 30px;">Join VikingsDev Today!</h2>
-                </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <p class="mb-0"><a href="signup.html" class="btn btn-primary py-3 px-4"
-                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4 bg-primary p-4">
-                    <h2 class="ftco-heading-2">VikingsDev</h2>
-                    <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
-                    <ul class="ftco-footer-social list-unstyled mb-0">
-                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
-                                class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/362209544233564/"><span
-                                class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.instagram.com/vikingsdev/"><span
-                                class="icon-instagram"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Navigational</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="py-2 d-block">Home</a></li>
-                        <li><a href="about.html" class="py-2 d-block">About</a></li>
-                        <li><a href="events.html" class="py-2 d-block">Events</a></li>
-                        <li><a href="workshops.html" class="py-2 d-block">Workshops</a></li>
-                        <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
-                        <li><a href="signup.html" class="py-2 d-block">Sign Up</a></li>
-                        <li><a href="assets.html" class="py-2 d-block">Assets</a></li>
-                        <li><a href="stickers.html.html" class="py-2 d-block">Stickers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Find Us</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">751 Hammarskjold Dr, Burnaby, BC V5B 4A1, Canada</span>
-                            </li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">vikingsdev@gmail.com</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
-                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
-                <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
 
+<div class="container text-center">
+    <a href="index.html"><img src="images/logos/logo-flat-light.svg" class="transparent-transition"
+                              style="padding-top: 2vh; padding-bottom: 5vh; width: 30%; display: inline"></a>
+</div>
 
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                stroke="#F96D00"/>
-    </svg>
+<div id="ftco-loader" class="show fullscreen" style="background-color: white">
+
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
@@ -195,9 +113,45 @@
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
 <script>
-    $('input[name=hunter]').blur(function(){
-        $('#hunter-name').text( this.value );
+    $(document).ready(function(){
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        if (("from" in vars) && vars['from'] === "leaderboard.html") {
+            var elements = document.querySelectorAll('*');
+            var animationtimeline = anime.timeline()
+                .add({
+                    targets: elements,
+                    duration: 0,
+                    translateY: '100vh'
+                })
+                .add({
+                    targets: elements,
+                    duration: 4000,
+                    translateY: 0,
+                    easing: "easeInOutCubic"
+                })
+            history.pushState(null, null, "demo.html");
+        }
+        info = fetch("https://api.github.com/rate_limit").then(res => res.json())
+            .then((out) => {
+                console.log(out)
+                var remaining = out.rate.remaining;
+                var d = new Date(0);
+                d.setUTCSeconds(out.rate.reset);
+                var dateString = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+
+                $('#remaining-claims').text(remaining);
+                $('#reset-time').text(dateString);
+            });
+
+    });
+
+    $('input[name=hunter]').blur(function () {
+        $('#hunter-name').text(this.value);
     });
 
     // Your web app's Firebase configuration
@@ -234,8 +188,8 @@
             if (formdata.link.includes("pull")) {
                 type = "pull";
             }
-            // else if (formdata.link.includes("issues")) {
-            //     type = "issue";
+                // else if (formdata.link.includes("issues")) {
+                //     type = "issue";
             // }
             else {
                 show_error("Invalid link! Must be a pull request.");
@@ -280,13 +234,23 @@
                             invalidSubmit = true
                         }
                     } else if (type === "pull") {
-                        if(out.state === "open"){
+                        for (var i in out.labels) {
+                            var label = out.labels[i];
+                            console.log(label)
+                            if (label.name === "invalid") {
+                                error_message = "This pull request was marked as invalid.";
+                                show_error(error_message)
+                                invalidSubmit = true;
+                                return;
+                            }
+                        }
+                        if (out.state === "open") {
                             error_message = "Pull request is still opened.";
                             invalidSubmit = true;
-                        } else if(!out.merged){
+                        } else if (!out.merged) {
                             error_message = "Pull request was closed but not merged.";
                             invalidSubmit = true;
-                        }else if(out.user.login !== formdata.name){
+                        } else if (out.user.login !== formdata.name) {
                             error_message = "This is not your pull request!";
                             invalidSubmit = true;
                         }
@@ -297,9 +261,9 @@
                         if (doc.exists && !invalidSubmit) {
                             var stickers = doc.data().stickers;
                             var projects = doc.data().projects;
-                            if(projects.hasOwnProperty(formdata.link)){
+                            if (projects.hasOwnProperty(formdata.link)) {
                                 show_error("You can't submit a bounty twice!");
-                            }else{
+                            } else {
                                 stickers += 2;
                                 projects[formdata.link] = {
                                     points: 5,
@@ -321,7 +285,7 @@
                                         show_error("Something went wrong updating your project. Most likely, your account does not exist.")
                                     });
                             }
-                        } else if(!invalidSubmit){
+                        } else if (!invalidSubmit) {
                             console.log(formdata.name);
                             var project = {};
                             project[formdata.link] = {
@@ -344,7 +308,7 @@
                                     console.error("Error writing document: ", error);
                                     show_error_new_user();
                                 });
-                        }else{
+                        } else {
                             show_error(error_message);
                         }
                     }).catch(function (error) {
@@ -397,6 +361,15 @@
             text: error,
         })
     }
+
+
+    anime({
+        targets: '.arrow-bounce',
+        translateX: 20,
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutSine'
+    });
 </script>
 
 
