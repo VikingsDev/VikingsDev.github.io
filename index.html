@@ -748,6 +748,23 @@
             })
     }
 
+    $(".sticker").hover(async function(){
+        await anime.timeline()
+            .add({
+                targets: $(this).get(0),
+                duration: 1000,
+                scale: 1.5,
+                easing: "easeOutElastic(0.05,0.5)"
+            }).finished;
+    }, async function() {
+        await anime.timeline()
+            .add({
+                targets: $(this).get(0),
+                duration: 1000,
+                scale: 1,
+                easing: "easeOutElastic(0.05,0.5)"
+            }).finished;
+    });
 
 </script>
 </body>
