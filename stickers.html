@@ -226,10 +226,30 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    $(".sticker").hover(async function(){
+        await anime.timeline()
+            .add({
+                targets: $(this).get(0),
+                duration: 1000,
+                scale: 1.5,
+                easing: "easeOutElastic(0.05,0.5)"
+            }).finished;
+    }, async function() {
+        await anime.timeline()
+            .add({
+                targets: $(this).get(0),
+                duration: 1000,
+                scale: 1,
+                easing: "easeOutElastic(0.05,0.5)"
+            }).finished;
+    });
+
 </script>
 </body>
 </html>
