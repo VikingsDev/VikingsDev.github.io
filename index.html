@@ -56,6 +56,8 @@
     <script type="text/javascript" charset="UTF-8"
             src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
 </head>
+<script src="//instant.page/3.0.0" type="module" defer
+        integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 <body>
 
 <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light" id="ftco-navbar">
@@ -128,7 +130,7 @@
     </div>
 </div>
 
-<section  id="motivational-quote" class="ftco-section services-section">
+<section id="motivational-quote" class="ftco-section services-section">
     <div class="container">
         <div class="row justify-content-center mb-2">
             <div class="col-md-10 text-center heading-section ftco-animate">
@@ -740,15 +742,15 @@
     function slide() {
         console.log("Throw stickers!");
         anime({
-                targets: ".sticker",
-                duration: 3000,
-                translateX: 0,
-                translateY: 0,
-                easing: "easeInOutExpo"
-            })
+            targets: ".sticker",
+            duration: 3000,
+            translateX: 0,
+            translateY: 0,
+            easing: "easeInOutExpo"
+        })
     }
 
-    $(".sticker").hover(async function(){
+    $(".sticker").hover(async function () {
         await anime.timeline()
             .add({
                 targets: $(this).get(0),
@@ -757,7 +759,7 @@
                 translateY: 25,
                 easing: "easeOutElastic(0.05,0.5)"
             }).finished;
-    }, async function() {
+    }, async function () {
         await anime.timeline()
             .add({
                 targets: $(this).get(0),

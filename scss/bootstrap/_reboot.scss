@@ -277,7 +277,7 @@ caption {
 }
 
 th {
-  // Matches default `<td>` alignment by inheriting from the `<body>`, or the
+  // Matches default `<td>` alignment by inheriting from the `<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script><body>`, or the
   // closest parent with a set `text-align`.
   text-align: inherit;
 }
