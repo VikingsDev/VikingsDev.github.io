@@ -279,6 +279,7 @@
                 projects.classList.add("col");
                 last_submitted.classList.add("col");
                 last_submit_link.classList.add("col");
+                last_submit_link.classList.add("mobile-unfriendly");
                 name.innerHTML = "<a href='" + scores[i].link + "'>" + scores[i].name + "</a>";
                 pic.innerHTML = "<img class='mobile-unfriendly' src='" + scores[i].link + ".png' style='height: 50px'>";
                 score.innerText = getTotalPoints(scores[i]);
