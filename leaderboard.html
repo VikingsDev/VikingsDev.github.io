@@ -274,10 +274,6 @@
                 let last_submitted = document.createElement("div");
                 let last_submit_link = document.createElement("div");
 
-                if(Object.keys(scores[i].projects).length >= 10) {
-                    scores[i].name = scores[i].name + "<img src=\"images/bounties/bounty-hunter.png\" data-toggle=\"tooltip\" title=\"Aeterna Capienda\" style=\"max-height: 30px; padding-left:10px\">";
-                }
-
                 name.classList.add("col");
                 pic.classList.add("col-sm-auto");
                 score.classList.add("col");
@@ -286,6 +282,10 @@
                 last_submit_link.classList.add("col");
                 last_submit_link.classList.add("mobile-unfriendly");
                 name.innerHTML = "<a href='" + scores[i].link + "'>" + scores[i].name + "</a>";
+                if(Object.keys(scores[i].projects).length >= 10) {
+                    name.innerHTML += '<img src="images/bounties/bounties-icon.svg" style="max-height: 20px; padding-left:10px">';
+                }
+
                 pic.innerHTML = "<img class='mobile-unfriendly' src='" + scores[i].link + ".png' style='height: 50px'>";
                 score.innerText = getTotalPoints(scores[i]);
                 projects.innerText = Object.keys(scores[i].projects).length;
@@ -348,6 +348,9 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
 <script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
     $('.fly-demo').click(function() {
         fly("demo.html?from=leaderboard.html");
     });
