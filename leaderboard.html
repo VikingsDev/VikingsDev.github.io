@@ -273,6 +273,11 @@
                 let projects = document.createElement("div");
                 let last_submitted = document.createElement("div");
                 let last_submit_link = document.createElement("div");
+
+                if(Object.keys(scores[i].projects).length >= 10) {
+                    scores[i].name = scores[i].name + "<img src=\"images/bounties/bounty-hunter.png\" data-toggle=\"tooltip\" title=\"Aeterna Capienda\" style=\"max-height: 30px; padding-left:10px\">";
+                }
+
                 name.classList.add("col");
                 pic.classList.add("col-sm-auto");
                 score.classList.add("col");
