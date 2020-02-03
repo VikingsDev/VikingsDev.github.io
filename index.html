@@ -56,11 +56,13 @@
     <script type="text/javascript" charset="UTF-8"
             src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
 </head>
+<script src="//instant.page/3.0.0" type="module" defer
+        integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a href="index.html"><img src="images/logos/vikingsdev-logo.png"></a>
+        <a href="index.html"><img src="images/logos/logo-normal-light.svg" style="height: 5vh"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -128,7 +130,7 @@
     </div>
 </div>
 
-<section class="ftco-section services-section">
+<section id="motivational-quote" class="ftco-section services-section">
     <div class="container">
         <div class="row justify-content-center mb-2">
             <div class="col-md-10 text-center heading-section ftco-animate">
@@ -240,8 +242,10 @@
                     <div class="card-body">
                         <h4 class="mb-2 font-weight-bold">Introducing VikingsDev Bounties</h4>
                         <p><br>
-                            In the spirit of open source, you can now submit issues or pull requests that you have resolved
-                            or merged respectively, and get points for them! You'll also show up on the leaderboard (which
+                            In the spirit of open source, you can now submit issues or pull requests that you have
+                            resolved
+                            or merged respectively, and get points for them! You'll also show up on the leaderboard
+                            (which
                             used to be for project submissions). Points can then be exchanged for stickers.
                         </p>
                     </div>
@@ -254,7 +258,30 @@
                             <p><a href="leaderboard.html" class="btn btn-primary px-4 py-3">Leaderboard</a></p>
                         </div>
                         <div class="col text-center" data-toggle="tooltip" title="Goes to vikingsdev.ca/demo">
-                            <p><a href="demo.html?from=index.html" class="btn btn-primary px-4 py-3">Submit a Bounty</a></p>
+                            <p><a href="demo.html?from=index.html" class="btn btn-primary px-4 py-3">Submit a Bounty</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="column-event">
+                <div class="card heading-section text-left" style="width: 100%; padding: 20px; border-color: #c69249;">
+                    <div class="card-body">
+                        <h4 class="mb-2 font-weight-bold">VikingsDev 2020 Executive Applications Open!</h4>
+                        <p><br>
+                            CRITICAL INFO:<br>
+                            - Rolling Decisions, apply early!<br>
+                            - Final deadline: Feb 15<br>
+                            - The latest we will notify you of our decision: March 1st.<br>
+                        </p>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col text-center px-4" data-toggle="tooltip" title="Goes to vikingsdev.ca/execapp">
+                            <p><a href="execapp.html" class="btn  btn-primary px-4 py-3">Application</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -324,7 +351,8 @@
 <section class="ftco-section ftco-no-pt ftc-no-pb">
     <div class="container">
         <div class="row">
-            <img src="images/sponsor-partner-assets/hack-club-logo.svg" class="img-fluid mobile-unfriendly" alt="" style="width: 30%">
+            <img src="images/sponsor-partner-assets/hack-club-logo.svg" class="img-fluid mobile-unfriendly" alt=""
+                 style="width: 30%">
             <div class="col-lg-auto py-5"></div>
             <div class="col-lg-6 py-5">
                 <div class="heading-section ftco-animate mt-5">
@@ -464,7 +492,7 @@
     </div>
 </section>
 <span class="anchor" id="sponsors"></span>
-<section class="ftco-section bg-light" style="width: 95%;">
+<section class="ftco-section" style="width: 95%;">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -487,7 +515,7 @@
 </section>
 
 <span class="anchor" id="social"></span>
-<section class="ftco-section bg-light">
+<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -701,9 +729,67 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
+
+        var stickers = document.querySelectorAll('.sticker'), i;
+
+        for (i = 0; i < stickers.length; ++i) {
+            anime.set(stickers[i], {
+                translateX: function () {
+                    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+                    return w - $(stickers[i]).offset().left
+                }
+            });
+        }
+
+
+    });
+
+    function isInView(elem) {
+        return $(elem).offset().top - $(window).scrollTop() < $(elem).height();
+    }
+
+    var triggered = 0;
+
+    $(window).scroll(function () {
+        if (isInView($('#motivational-quote')) && triggered === 0) {
+            triggered = 1;
+            slide()
+        }
+    });
+
+    function slide() {
+        console.log("Throw stickers!");
+        anime({
+            targets: ".sticker",
+            duration: 3000,
+            translateX: 0,
+            translateY: 0,
+            easing: "easeInOutExpo"
+        })
+    }
+
+    $(".sticker").hover(async function () {
+        await anime.timeline()
+            .add({
+                targets: $(this).get(0),
+                duration: 1000,
+                scale: 1.5,
+                translateY: 25,
+                easing: "easeOutElastic(0.05,0.5)"
+            }).finished;
+    }, async function () {
+        await anime.timeline()
+            .add({
+                targets: $(this).get(0),
+                duration: 1000,
+                scale: 1,
+                translateY: 0,
+                easing: "easeOutElastic(0.05,0.5)"
+            }).finished;
     });
 </script>
 </body>

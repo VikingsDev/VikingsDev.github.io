@@ -27,11 +27,11 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script><body>
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a href="index.html"><img src="images/logos/vikingsdev-logo.png"></a>
+        <a href="index.html"><img src="images/logos/logo-normal-light.svg" style="height: 5vh"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -63,70 +63,7 @@
 <div class="container text-center align-content-center">
     <h1 class="font-weight-bold">Sticker Showcase</h1>
     <span class="anchor" id="stickers"></span>
-    <div class="container-fluid py-5">
-        <div class="row py-5">
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Collect this by signing up! vikingsdev.ca/signup">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/vikingsdev-hex.svg?sanitize=true">
-                </div>
-            </div>
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Collect this by signing up for HackPrep. vikingsdev.ca/hackprep">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/hackprep-hex.svg?sanitize=true">
-                </div>
-            </div>
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Collect this by finding Frank Hui at meetings or in the hallways!">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/okboomer.svg?sanitize=true"
-                         style="width: 15vw">
-                </div>
-            </div>
-        </div>
-        <div class="row py-5">
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Collect this by finding Frank Hui at meetings or in the hallways!">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/goose.svg?sanitize=true">
-                </div>
-            </div>
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Made by Erika Lieu. Collect this by finding Frank Hui at meetings or in the hallways!">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/kermit-the-froggo.svg?sanitize=true">
-                </div>
-            </div>
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="We've run out! Sorry :(">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/tubbs.svg?sanitize=true">
-                </div>
-            </div>
-        </div>
-        <div class="row py-5">
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Not printed yet.">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/traverse.svg?sanitize=true">
-                </div>
-            </div>
-            <div class="column col d-flex align-items-center justify-content-center">
-                <div class="text-center px-4" data-toggle="tooltip"
-                     title="Collect this by finding Frank Hui at meetings or in the hallways!">
-                    <img class="sticker"
-                         src="https://github.com/VikingsDev/Vikingsdev-art/raw/master/Stickers/thonk.svg?sanitize=true">
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid py-5" id="sticker-parent">
     </div>
 </div>
 
@@ -226,10 +163,86 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    async function loadStuff() {
+        await getStickers();
+        $(".sticker").hover(async function () {
+            await anime.timeline()
+                .add({
+                    targets: $(this).get(0),
+                    duration: 1000,
+                    scale: 1.5,
+                    translateY: 25,
+                    easing: "easeOutElastic(0.05,0.5)"
+                }).finished;
+        }, async function () {
+            await anime.timeline()
+                .add({
+                    targets: $(this).get(0),
+                    duration: 1000,
+                    scale: 1,
+                    translateY: 0,
+                    easing: "easeOutElastic(0.05,0.5)"
+                }).finished;
+        });
+    }
+
+    loadStuff();
+
+
+    async function getStickers() {
+        var commits_response = await fetch("https://api.github.com/repos/vikingsdev/vikingsdev-art/commits");
+        var commits = await commits_response.json();
+        var latest_sha = commits[0]['sha'];
+        var files_response = await fetch("https://api.github.com/repos/vikingsdev/vikingsdev-art/git/trees/" + latest_sha + "?recursive=1");
+        var files_json = await files_response.json();
+        var files = files_json['tree'];
+        row_num = 0;
+        index = 1;
+        row = document.createElement("div");
+        row.classList.add("row");
+        row.classList.add("py-5");
+        row.id = "sticker-row" + row_num;
+
+        let sticker_parent = document.getElementById("sticker-parent");
+        for (var i = files.length - 1; i >= 0; i--) {
+            file = files[i];
+            if (!file['path'].includes("Stickers") || file['path'] === "Stickers") {
+                files.splice(i, 1)
+            }
+        }
+        console.log("sticker count: "+ files.length);
+        for (var i in files) {
+            file = files[i];
+            console.log(index);
+            console.log(file)
+            console.log(row_num);
+            let parentDiv = document.createElement("div");
+            let sticker = document.createElement("img");
+            $(parentDiv).attr("class", "column col d-flex align-items-center justify-content-center")
+            sticker.classList.add("sticker");
+            $(sticker).attr("src", "https://github.com/VikingsDev/Vikingsdev-art/raw/master/" + file['path'] + "?sanitize=true");
+            parentDiv.appendChild(sticker);
+            row.append(parentDiv);
+            if (index === 3 || (Math.ceil(files.length / 3) - 1 === row_num && index === (files.length % 3))) {
+                sticker_parent.appendChild(row);
+                index = 0;
+                row_num++;
+                row = document.createElement("div");
+                row.classList.add("row");
+                row.classList.add("py-5");
+                row.id = "sticker-row" + row_num;
+            }
+            index++;
+        }
+    }
+
+
 </script>
 </body>
 </html>

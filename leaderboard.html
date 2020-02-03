@@ -27,11 +27,11 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script><body>
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a href="index.html"><img src="images/logos/vikingsdev-logo.png"></a>
+        <a href="index.html"><img src="images/logos/logo-normal-light.svg" style="height: 5vh"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -279,6 +279,7 @@
                 projects.classList.add("col");
                 last_submitted.classList.add("col");
                 last_submit_link.classList.add("col");
+                last_submit_link.classList.add("mobile-unfriendly");
                 name.innerHTML = "<a href='" + scores[i].link + "'>" + scores[i].name + "</a>";
                 pic.innerHTML = "<img class='mobile-unfriendly' src='" + scores[i].link + ".png' style='height: 50px'>";
                 score.innerText = getTotalPoints(scores[i]);
@@ -296,7 +297,7 @@
                 scoreRow.appendChild(last_submitted);
                 scoreRow.appendChild(last_submit_link);
                 leaderboard.appendChild(scoreRow);
-                scoreRow.style.backgroundColor = "#e3f4ff";
+                scoreRow.style.bagroundColor = "#e3f4ff";
 
                 elements.push(scoreRow);
 
