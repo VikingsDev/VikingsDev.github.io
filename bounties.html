@@ -55,6 +55,13 @@
     <script type="text/javascript" charset="UTF-8"
             src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
     <style>
+        .box {
+            width: 25vw;
+            display:inline-flex;
+            vertical-align:top;
+            justify-content:center;
+            align-items:center;
+        }
         @font-face {
             font-family: "Kulim Park";
             src: url("fonts/KulimPark-Regular.ttf");
@@ -158,7 +165,7 @@
                               style="padding-top: 2vh; width: 30%; display: inline"></a>
 </div>
 
-<div class="line-drawing py-5">
+<div class="box line-drawing py-5" style="height: 90vh">
     <svg
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:cc="http://creativecommons.org/ns#"
@@ -167,8 +174,7 @@
             xmlns="http://www.w3.org/2000/svg"
             xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
             xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-            width="50%"
-            height="129.36076mm"
+            width="50vw"
             viewBox="0 0 137.02383 129.36076"
             version="1.1"
             id="svg2673"
@@ -336,10 +342,9 @@
 </div>
 
 <br>
-<div class="container" style="text-align: center">
-    <br><br>
-    <h3 class="fontfit kulim-park bold">Contribute to Open Source.</h3>
-    <h3 class="gold fontfit kulim-park bold">Get Rewards.</h3>
+<div class="container px-lg-5" style="text-align: center;">
+    <div><h3 class="kulim-park bold" id="responsive-fit-text1">Contribute to Open Source.</h3></div>
+    <div><h3 class="gold kulim-park bold" id="responsive-fit-text2">Get Rewards.</h3></div>
 </div>
 <br>
 <br>
@@ -733,7 +738,15 @@
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+<script src="js/fitty.min.js"></script>
 <script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    fitty('#responsive-fit-text1');
+    fitty('#responsive-fit-text2');
+
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
