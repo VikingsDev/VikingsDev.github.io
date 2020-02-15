@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 html {
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 :root {
     --blue: #007bff;
