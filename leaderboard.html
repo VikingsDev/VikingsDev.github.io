@@ -282,7 +282,7 @@
                 last_submit_link.classList.add("col");
                 last_submit_link.classList.add("mobile-unfriendly");
                 name.innerHTML = "<a href='" + scores[i].link + "'>" + scores[i].name + "</a>";
-                if(Object.keys(scores[i].projects).length >= 10) {
+                if(getTotalPoints(scores[i]) >= 50) {
                     name.innerHTML += '<img src="images/bounties/bounties-icon.svg" style="max-height: 20px; padding-left:10px">';
                 }
 
