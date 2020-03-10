@@ -127,8 +127,8 @@
 
                 <p>We'll now <b>query</b> the API using Python. <b style="color:lightcoral">It's important that you do NOT copy and paste. You will learn better if you type it all out by hand!</b></p>
                 <p>First, we'll import the libraries urllib and json.  Open up the new notebook you created in Google Colab, and type the following code:</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 from urllib.request import urlopen
@@ -138,8 +138,8 @@ import json
                 <p>
                     Then we'll query the API and parse the text into a JSON and print it.
                 </p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 url = "http://api.open-notify.org/iss-now.json"
@@ -155,8 +155,8 @@ print(info)
                     the info variable. Now try running the code! By clicking the play button on the left.</p>
 
                 <p>You should get some JSON code that looks something like this: </p>
-                <div class="codeheader" id="codeheader_output">OUTPUT</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-output">OUTPUT</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 {
@@ -185,8 +185,8 @@ print(info)
                 <p>For now, all we have to know is how to read this dictionary. In python, square brackets allow you
                     to access elements within a variable. So to get the latitude and longitude of the International
                     Space Station, all we have to type is:</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 longitude = info['iss_position']['longitude']
@@ -215,8 +215,8 @@ print(latitude)
                 <h2 id="implement-api" class="text-center">Implementing an API</h2>
                 <p>Since we'll need two other libraries for this implementation, click the '+ Code' button on the top
                     left corner of the page to create a new code box, and type in the newly created code box:</p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 !sudo apt-get install libgeos-dev
@@ -225,8 +225,8 @@ print(latitude)
                 </div>
                 <p>Run this code by clicking the play button on the left. Now we'll add the <a style="color:blue">imports</a>
                     to the main code box:</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 from urllib.request import urlopen
@@ -253,8 +253,8 @@ import numpy as np</a>
                     numpy, a python math library to help with some more cosmetic stuff.</p>
 
                 <p>Now we'll generate the actual map:</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 m = Basemap(projection='robin',lon_0=0,resolution='c')
@@ -264,15 +264,15 @@ m = Basemap(projection='robin',lon_0=0,resolution='c')
                     the map made by NASA called Blue Marble, or a <a style="color:coral">drawn cartoony version</a>
                     of the map. I'll leave both options with the corresponding colours, but you can only use either one:
                 </p>
-                <div class="codeheader" id="codeheader_python">PYTHON - OPTION 1</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON - OPTION 1</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: dodgerblue">
 m.bluemarble()
                     </code></pre>
                 </div>
-                <div class="codeheader" id="codeheader_python">PYTHON - OPTION 2</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON - OPTION 2</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: coral">
 m.drawcoastlines()
@@ -283,8 +283,8 @@ m.drawmapboundary(fill_color='aqua')
                     </code></pre>
                 </div>
                 <p>Finally we plot where the ISS is and show the map:</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 x,y = m(longitude, latitude)
