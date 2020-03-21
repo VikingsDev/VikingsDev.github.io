@@ -157,6 +157,18 @@ def run(self):
   response_text = response_text = "@" + self.author.first_name + " Hello!"
                     </code></pre>
                 </div>
+                <p>We still need to add the code to send the message. Add the following at the end of all of your run methods.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+self.client.send(
+  Message(text = response_text, mentions = mentions),
+  thread_id=self.thread_id,
+  thread_type=self.thread_type
+)
+                    </code></pre>
+                </div>
                 <h2 id="third" class="text-center">Running the bot</h2>
 
                 <p>Here's some <i>fancy</i> code blocks</p>
