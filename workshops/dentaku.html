@@ -169,6 +169,21 @@ self.client.send(
 )
                     </code></pre>
                 </div>
+                <p>There's one last thing we need to do. To help others understand how to use a command, we can create a method
+                  named define_documentation. For our command, there are no parameters and the command says hello. This information
+                  will be shown automatically if someone uses the !help command.</p>
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                  <pre><code data-language="python">
+                  <p style="color: #fff;">
+def define_documentation(self):
+  self.documentation = {
+    "parameters": "NONE",
+    "function": "Greets the user with a friendly hello."
+  }
+                  </code></pre>
+                </div>
+                <p>Now our command is complete! Let's try running the bot so that we can test it out.</p>
                 <h2 id="third" class="text-center">Running the bot</h2>
 
                 <p>Here's some <i>fancy</i> code blocks</p>
