@@ -106,7 +106,7 @@
                     if you have not used it before.</p>
                 <p class="text-center"><a href="./googlecolab.html" class="btn btn-primary py-3">Learn Google Colab</a></p>
                 <h2 id="first" class="text-center">Setting up the environment</h2>
-                <p>First, login to GitHub and find the <a href="https://github.com/VikingsDev/Dentaku">VikingsDev Dentaku repository</a>.
+                <p>First, login to GitHub and find the <a target="_blank" href="https://github.com/VikingsDev/Dentaku">VikingsDev Dentaku repository</a>.
                     Fork the VikingsDev bot by clicking the "Fork" button on the top right.</p>
                 <img style="width:100%" src="dentaku-assets/fork-repo.png">
                 <br><br>
@@ -114,8 +114,8 @@
                 <p>Now we can start making out first command! Locate the commands folder inside Dentaku. There should already be many
                     pre-made commands inside. This folder will be where we add our command's code.
                 <img style="width:100%" src="https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/07/RICK_ROLL-920x584.jpg">
-                <p>Right-click the commands folder and create a new file. Name the file <b>greet.py</b>. Double-click the file to
-                    open it. At the beginning of every file, you will need to add the following code. Add it to greet.py!</p>
+                <p>Right-click the commands folder and create a new file. Name the file <b>greet.py</b>. This file will run when the user sends !greet on messenger.
+                    Double-click the file to open it. At the beginning of every file, you will need to add the following code. Try adding it to greet.py right now!</p>
                 <div class="codeheader" id="codeheader_python">PYTHON</div>
                 <div id="codebox">
                     <pre><code data-language="python">
@@ -126,8 +126,37 @@ from fbchat import Mention
                     </code></pre>
                 </div>
                 <p>As your commands get more complicated, you may have to import other modules as well. For now, this will do.
-                    Now, we can move onto </p>
-                <br>
+                    Now, we can move onto the actual command itself. We now have to make a class and a run method to code our command in.
+                    (To keep things consistent, have the same name for your file and class. It should be the word that
+                    triggers the command.) Your code should now look like this:</p>
+                    <div class="codeheader" id="codeheader_python">PYTHON</div>
+                    <div id="codebox">
+                        <pre><code data-language="python">
+                        <p style="color: #fff;">
+from command import Command
+from fbchat import Message
+from fbchat import Mention
+
+
+class greet(command):
+
+  def run(self):
+                        </code></pre>
+                    </div>
+                <p>The code inside the method will be the code that is run when the command is called. Make two variables,
+                  response_text and mentions. We will only concern ourselves with changing the response_text variable. It is
+                  the text that will be sent by the bot after the command is called. To be clear with who the bot is replying
+                  to, responses from the bot will always start with @user where 'user' is the person that triggered the command.
+                  Make the variables with the following code inside the run method:
+                <div class="codeheader" id="codeheader_python">PYTHON</div>
+                <div id="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">
+def run(self):
+  mentions = [Mention(self.author_id, length=len(self.author.first_name) + 1)]
+  response_text = response_text = "@" + self.author.first_name + " Hello!"
+                    </code></pre>
+                </div>
                 <h2 id="third" class="text-center">Running the bot</h2>
 
                 <p>Here's some <i>fancy</i> code blocks</p>
