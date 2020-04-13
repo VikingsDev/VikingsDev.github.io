@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!--TODO: fix inconsistencies when using italics and quotation marks-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>VikingsDev</title>
@@ -83,8 +83,8 @@
                 <!--            </ul>-->
             </li>
             <li><a href="#project-setup">Project Setup</a></li>
-            <li><a href="#coding-the-app">Coding the App</a></li>
-            <li><a href="#coding-the-app-2">Coding the App 2</a></li>
+            <li><a href="#coding-the-app-1">Coding the App (Part 1)</a></li>
+            <li><a href="#coding-the-app-2">Coding the App (Part 2)</a></li>
             <li><a href="#extras">Extras</a></li>
         </ul>
     </div>
@@ -93,40 +93,37 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate">
-                    <p>In this workshop, you will learn how to setup a basic Flask web app. Some experience with Python and HTML is helpful
-                        but not required.</b></p>
+                    <p>In this workshop, you will learn how to setup a basic Flask web app. Some experience with Python and HTML is helpful but not required.</b></p>
                     <br>
 
                     <!--What is Flask?-->
                     <h2 class="text-center" id="what-is-flask">What is Flask?</h2>
-                    <p>Flask is a web framework. This means Flask provides you with tools, libraries and technologies that allow you to build a web application. This web application can be a set of
-                        web
+                    <p>Flask is a web framework. This means Flask provides you with tools, libraries and technologies that allow you to build a web application. This web app can be a set of web
                         pages, a blog, a wiki or even a web-based calendar application. (<a href="https://pymbook.readthedocs.io/en/latest/flask.html" target="_blank">Source</a>)</p>
                     <br>
 
                     <h2 class="text-center" id="project-setup">Project Setup</h2>
-                    <p>In this workshop we will be using an online environment called <i>Repl.it</i>. <i>Repl.it</i> is useful because it is cloud-based and lets you host your web app on their
-                        servers. Head there and login or sign up using the button below.</p>
+                    <p>In this workshop we will be using an online environment called <i>Repl.it</i>. <i>Repl.it</i> is useful because it is cloud-based, meaning it lets you host your code and web
+                        app on their servers rather than locally on your computer. Head there and login or sign up using the button below (if you'd prefer not to use an account you can just select
+                        the "start coding" button).</p>
                     <p class="text-center"><a class="btn btn-primary py-3" href="https://repl.it" target="_blank">Repl.it</a></p>
-                    <p>Once you're logged in and on the homepage hit the button in the top right that says <i>new repl</i> (a <i>repl</i> is essentially what <i>Repl.it</i> calls a
-                        project). For the language choose <i>Python</i> and then hit <i>Create Repl</i>. When the project loads hit the box icon on the left side as shown below.</p>
+                    <p>Once you're logged in and on the homepage hit the button in the top right that says "new repl" (a <i>repl</i> is essentially what <i>Repl.it</i> calls a
+                        project). For the language choose Python and then hit "Create Repl". When the project loads hit the box icon on the left side as shown below.</p>
                     <img align="middle" alt="packages button" src="python-flask-assets/packages-1.png" style="width:55%">
                     <br>
                     <br>
                     <p>This will bring you to the packages menu where you'll be adding Flask to the project. Type "flask" into the search bar and select the same package as highlighted below. Hit the
-                        plus
-                        button to add the package. Once the button turns into a minus symbol and it allows you to remove the package, that means the package has successfully installed.</p>
+                        plus button to add the package. Once the button turns into a minus symbol and it allows you to remove the package, that means the package has successfully installed.</p>
                     <img alt="packages selection" src="python-flask-assets/packages-2.png" style="width:100%">
                     <br>
                     <br>
                     <p>The project is now setup and you're ready to start coding!</p>
                     <br>
 
-                    <!--Coding the App-->
-                    <h2 class="text-center" id="coding-the-app">Coding the App</h2>
+                    <!--Coding the App (Part 1)-->
+                    <h2 class="text-center" id="coding-the-app-1">Coding the App (Part 1)</h2>
                     <p>The following will walk you through setting up a basic Flask app that will output "Hello World!" to your webpage. To start off, some setup code is required. Type or copy the
-                        code
-                        below into your project's <code>main.py</code> file.</p>
+                        code below into your project's <code>main.py</code> file. <b><i>(Note: Make sure to read the comments in the code to understand how things work.)</i></b></p>
                     <div class="codeheader codeheader-python">main.py</div>
                     <div class="codebox">
                         <pre><code data-language="python">
@@ -142,29 +139,28 @@ app = Flask(__name__)  # Creates the application object</p>
                         <pre><code data-language="python">
                         <p style="color: #fff;">
 @app.route('/')  # Creates a new webpage
-def index():  # Defines function for route
+def index():  # Defines what route "index" will do
     return "Hello World!"
 
 app.run(host='0.0.0.0', port = 8080)</p>
                         </code></pre>
                     </div>
                     <p><i>Repl.it</i> should automatically bring up a preview of your web app in the top right area of your screen. You can also click the arrow icon to open your app in a new tab.</p>
-                    <img alt="webpage preview" src="python-flask-assets/webpage-preview-1.png" style="width:100%">
+                    <img alt="webpage preview 1" src="python-flask-assets/webpage-preview-1.png" style="width:100%">
                     <br>
                     <br>
                     <p>You can choose to stop here or continue on to see another more in-depth example of what Flask is capable of.</p>
                     <br>
 
-                    <!--Coding the App 2-->
-                    <h2 class="text-center" id="coding-the-app-2">Coding the App 2</h2>
-                    <p>This next example will gather a user input from the website and send back a processed result. This time we'll need to add our own custom webpage (HTML file). For Flask to find
-                        the
-                        file properly we need to setup a "templates" folder where we will store the webpage. Do this by hitting the "Add folder" button and naming it "templates" (make sure it's all
-                        lower case). Also, go ahead and create a file within the folder called "index.html".</p>
+                    <!--Coding the App (Part 2)-->
+                    <h2 class="text-center" id="coding-the-app-2">Coding the App (Part 2)</h2>
+                    <p>This next example will gather a user input from the webpage and send back a processed result. This time we'll need to add our own custom webpage (HTML file). For Flask to find
+                        the file properly we need to setup a "templates" folder where we will store the webpage. Do this by hitting the "Add folder" button and naming it "templates" (make sure it's
+                        all lower case). Also, go ahead and create a file within the folder called <code>index.html</code>.</p>
                     <img alt="" src="python-flask-assets/templates-folder.png" style="width:55%">
                     <br>
                     <br>
-                    <p>Next, we need to setup how the webpage will look. The following code will setup a basic webpage that displays two text areas and a button.</p>
+                    <p>Next, we need to setup how the webpage will look. The following code will setup a basic webpage has displays two text areas and a button.</p>
                     <div class="codeheader codeheader-website">index.html</div>
                     <div class="codebox">
                         <pre><code data-language="html">
@@ -183,8 +179,12 @@ app.run(host='0.0.0.0', port = 8080)</p>
 &lt;/head&gt;
 &lt;body&gt;
     &lt;h1&gt;Input&lt;/h1&gt;
-    &lt;form method="POST" action=""&gt; &lt;!--Sets up a form that will send data when the submit button is pressed--&gt;
-        &lt;textarea id="text-input" name="text_input"&gt;{{input_text}}&lt;/textarea&gt; &lt;!--This is how the variables are formatted--&gt;
+    &lt;!--Sets up a form that will send data when the submit button is pressed--&gt;
+    &lt;form method="POST" action=""&gt;
+        &lt;!--Below is how the variables are formatted: {{example}}--&gt;
+        &lt;!--When calling this text area we use the attribute "name" rather than
+            the "id" which is used for styling--&gt;
+        &lt;textarea id="text-input" name="text_input"&gt;{{input_text}}&lt;/textarea&gt;
         &lt;br&gt;
         &lt;br&gt;
         &lt;input type="submit" value="Submit"&gt;
@@ -208,23 +208,26 @@ from flask import Flask, render_template, request  # Import the necessary things
 app = Flask(__name__)  # Creates the application object
 
 @app.route('/')  # Creates a new webpage
-def index():  # Defines function for route
+def index():  # Defines what route "index" will do
     return render_template('index.html')  # Renders index.html
 
 @app.route('/', methods=['POST'])  # Notice how this is similar to the code in the index.html file. When the form is submitted this method is triggered.
-def submit():
-    test_text = request.form['text_input']  # Grabs text from text area
-    test_text = test_text.upper()  # Makes the input text uppercase
+def submit():  # Defines what route "index" will do, but this time the route with another parameter
+    example_text = request.form['text_input']  # Grabs text from input text area
+    example_text = example_text.upper()  # Makes the input text uppercase
 
-    return render_template('index.html', output_text = test_text)  # Renders index.html again, but this time also returning a variable with it
+    return render_template('index.html', output_text = example_text)  # Renders index.html again, but this time also returning a variable with it
 
 app.run(host='0.0.0.0', port = 8080)
 </p>
                         </code></pre>
                     </div>
-                    <p>Once you've copied over all the code you should be able to enter text into the input text area and hit the submit button. This should refresh the webpage and display the same
-                        text in all uppercase in the output text area. If things aren't working properly feel free to join the VikingsDev discord using the "Get Help" button and we'll do our best to
-                        answer your questions.</p>
+                    <p>Once you've copied over all the code you should be able to enter text into the input text area and hit the submit button. This should rerender the webpage and display the same
+                        text in all uppercase in the output text area. It should look like this:</p>
+                    <img alt="webpage preview 2" src="python-flask-assets/webpage-preview-2.png" style="width:100%">
+                    <br>
+                    <br>
+                    <p>You can see a working example at <a href="https://repl.it/@Wgesh/pythonflaskworkshopexample" target="_blank">my <i>repl</i></a>.</p>
                     <br>
 
                     <!--Extras-->
