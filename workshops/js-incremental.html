@@ -163,16 +163,16 @@ data-stellar-background-ratio="0.5">
 				
 				<p>First, we will changing the title of our web page. This can be done via the <code>&lt;title&gt;</code> element in <code>index.html</code>. Once you have located <code>&lt;title&gt;</code>, modify the internal text as seen below.</p>
 
-				<div class="codeheader" id="codeheader_html"><code style="color: #fff;">&lt;title&gt; in index.html</code></div>
-				<div id="codebox">
+				<div class="codeheader codeheader-website"><code style="color: #fff;">&lt;title&gt; in index.html</code></div>
+				<div class="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;title&gt;Pencil Clicker&lt;/title&gt;</code></pre>
 				</div>
 
 				<br><p>If you run <code>index.html</code> now, you should see that the page title has been changed.</p>
 				<p>The second change we need to make is one that will not affect us until the JS portion of this workshop. Find the <code>&lt;body&gt;</code> tag in <code>index.html</code> and change its properties as seen below.</p>
 
-				<div class="codeheader" id="codeheader_html"><code style="color: #fff;">&lt;body&gt; in index.html</code></div>
-				<div id="codebox">
+				<div class="codeheader codeheader-website"><code style="color: #fff;">&lt;body&gt; in index.html</code></div>
+				<div class="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;body onload="updateResources()"&gt;</code></pre>
 				</div>
 
@@ -182,8 +182,8 @@ data-stellar-background-ratio="0.5">
 
 				<p>First, we will be creating the resource bar that is present at the top of the page. Read through and then insert the following lines into <code>&lt;body&gt;</code> of <code>index.html</code> above <code>&lt;script&gt;</code>.</p>
 
-				<div class="codeheader" id="codeheader_html"><code style="color: #fff;">&lt;body&gt; in index.html</code></div>
-				<div id="codebox">
+				<div class="codeheader codeheader-website"><code style="color: #fff;">&lt;body&gt; in index.html</code></div>
+				<div class="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;!-- The number of pencils, pencil makers, and pencil sharpeners you currently have --&gt;
 &lt;div id="resource-bar"&gt;
 	&lt;img src="pencil.png" width="32" height="32"&gt; &amp;times; &lt;span id="pencil-count"&gt;0&lt;/span&gt;
@@ -204,8 +204,8 @@ data-stellar-background-ratio="0.5">
 
 				<br><p>We will now add in the buttons that the player uses to interact with the game. Insert the following lines into <code>&lt;body&gt;</code> below the resource bar.</p>
 
-				<div class="codeheader" id="codeheader_html"><code style="color: #fff;">&lt;body&gt; in index.html</code></div>
-				<div id="codebox">
+				<div class="codeheader codeheader-website"><code style="color: #fff;">&lt;body&gt; in index.html</code></div>
+				<div class="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="html">&lt;!-- Buttons for making pencils and buying things --&gt;
 &lt;!-- Pencils --&gt;
 &lt;button onclick="makePencils()"&gt;
@@ -251,8 +251,8 @@ data-stellar-background-ratio="0.5">
 
 				<p>What we currently have looks already looks decent, but it could be better. We will be fixing that in this section using CSS, which can greatly improve the appearance of your website. For this workshop, all you will have to do is insert the following code into <code>style.css</code>.</p>
 
-				<div class="codeheader" id="codeheader_html"><code style="color: #fff;">style.css</code></div>
-				<div id="codebox">
+				<div class="codeheader codeheader-website"><code style="color: #fff;">style.css</code></div>
+				<div class="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="css">/* Page setup */
 
 body {
@@ -306,8 +306,8 @@ button:active { background-color: #bbb; }</code></pre>
 
 				<p>Finally, we have arrived at the JavaScript section of the workshop. Read through the following code (the comments are there to help) before inserting it into <code>script.js</code>. </p>
 
-				<div class="codeheader" id="codeheader_html"><code style="color: #fff;">script.js</code></div>
-				<div id="codebox">
+				<div class="codeheader codeheader-website"><code style="color: #fff;">script.js</code></div>
+				<div class="codebox">
 					<pre style="color: #fff; tab-size: 4;"><code data-language="javascript">// Initializing the variables that we will need
 // Feel free to adjust the values to suit your preferences
 let pencils = 0.0,
