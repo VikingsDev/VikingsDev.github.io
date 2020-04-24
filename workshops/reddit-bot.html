@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VikingsDev</title>
+    <link rel="icon" href="../images/logos/vikingsdev-icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script><body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="../index.html"><img src="../images/logos/vikingsdev-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../leaderboard.html">Bounties</a></li>
+                <li class="nav-item active"><a class="nav-link" href="../workshops.html">Workshops</a></li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item cta"><a href="../signup.html" class="nav-link"><span>Sign Up</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+
+
+<div class="hero-wrap hero-wrap-2" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/934931664793124225/D9861E4A35F464C8EE9E5B3B58BA2E02B352B743/');"
+     data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a href="../index.html">Home <i
+                        class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops <i
+                        class="ion-ios-arrow-forward"></i></a></span> <span>Python Reddit Bot</span></p>
+                <h1 class="mb-3 bread">Python Reddit Bot</h1>
+                <h3 class="mb-3 bread">ur mum</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<p class="text-center sticky-top float-right" style="top:90vh; right:20px;"><a href="https://discord.gg/JTRFMx2" class="btn btn-primary py-3">Get Help</a></p>
+
+<div class="card" style="margin: 0 auto; display: block; max-width: 500px; padding:20px">
+    <p class="toc_title">Table of Contents</p>
+    <ul class="toc_list">
+        <li><a href="#first">Set up</a>
+            <!--            <ul>-->
+            <!--                <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>-->
+            <!--                <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>-->
+            <!--            </ul>-->
+        </li>
+        <li><a href="#second">Coding the Bot</a></li>
+          <ul>
+              <li><a href="#Mentions">Mentions</a></li>
+              <li><a href="#Keywords">Keywords</a></li>
+          </ul>
+        <li><a href="#third">Hosting</a></li>
+    </ul>
+</div>
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <p>In this workshop, you can learn how to make an automated Reddit bot that does what you want it to do.
+                I will show you how to make the bot respond to mentions as well as keywords. The possibilities are endless however.
+                If you know your Python, you can make the bot do greater things. But today, we will focus on getting a simple bot up and running.</p>
+
+                <h2 id="first" class="text-center">Set Up</h2>
+                <p>Before you make a bot, you need to do a couple of things.</p>
+                <br>
+                <p>First, you MUST read the bot etiquette. Bots can be a fun venture for new programmers, but Reddit seriously
+                  does NOT need a bunch of bots commenting "urmumgay" whenever someone says "mum". (There are already humans doing that...)
+                  If you do not follow bottiquette, you will get your bot banned and perhaps your IP blacklisted.
+                <p class="text-center"><a href="https://www.reddit.com/wiki/bottiquette" class="btn btn-primary py-3" target="_blank">Bot Etiquette</a></p>
+                <p>Next, you'll need a reddit account. You can link your bot to your usual reddit account, or you can create a new one. I recommend
+                  creating a new one in case your bot gets the account banned. (Note: You do not need to sign up with an email if you do not want.)
+                <p class="text-center"  id="idsecret"><a href="https://www.reddit.com/register/" class="btn btn-primary py-3" target="_blank">Reddit Signup</a></p>
+                <p>You'll also need to create an application "registration" for your bot. Use the link below.</p>
+                <p class="text-center"><a href="  https://www.reddit.com/prefs/apps/" class="btn btn-primary py-3" target="_blank">Create App</a></p>
+                <p>Once you open the link, click "are you a devoloper". It should lead you to a page like this.</p>
+                <img style="width:100%" src="reddit-bot-assets/createapp.png">
+                <p>Give your bot a name. Select script. Enter http://127.0.0.1 into "redirect uri". (This is something stupid Reddit makes you do but...)
+                Click "create app" and a page should pop up that tells you your "personal use script" and "secret". Record these two
+                strings down, and DO NOT SHARE THEM. </p>
+                <br>
+                <p>Finally, you will need to access repl.it to program. With repl.it, you won't need to download anything to your actual
+                  device.</p>
+                <p class="text-center"><a href="repl.it" class="btn btn-primary py-3" target="_blank">repl.it</a></p>
+                <p>After clicking the link, click "start coding" and create a repl.it in Python. You should then have a page opened that looks something like this:<p>
+                <img style="width:100%" src="reddit-bot-assets/replstart.png">
+                <p>Then, you'll have to go the side-bar and click the icon that looks like a cube named packages. Type "praw" in "search for packages",
+                  click the first result, and click the "+" button, which should prompt your command line to start import your package. After the importing
+                is finished, you have completed all the set up requirements! Next, we shall start coding.</p>
+                <br>
+                <h2 id="second" class="text-center">Coding the Bot</h2>
+                <p>Now we can get started on the code! Get on your main.py on repl.it and type or copy the following.<p>
+                <div class="codeheader codeheader-python">Python</div>
+                <div class="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">import praw
+r = praw.Reddit(username = "yourreddituser",
+                password = "yourredditpw",
+                client_id = "yourclientid",
+                client_secret = "yourclientsecret",
+                user_agent = "yourbotname by /u/yourredditaccount")</p>
+                    </code></pre>
+                </div>
+                <p>Let's figure out what we just did. The first line imported our package. The second block of code initiated our
+                  praw instance. It is the reddit object that basically acts as our bot, which we will need to control later to make our bot work.
+                  Fill each line out according to your own information. The client id and secret should have been recorded down if you were following
+                  <a href="#idsecret">the instructions from earlier.</a> Your user_agent basically helps Reddit identify your program in case that is needed. So make sore it's descriptive!</p>
+                <br>
+                <p>Now I will show you two potential things you could make your bot do. First is responding to mentions, and the second is responding to keywords.
+                  These are mutually exclusive since they depend on automated streaming of different things. This means you have to choose one of the two, you cannot do both in one bot. You <i>could</i> use threading
+                  to overcome this, but that is something you will have to figure out yourself.
+                <br>
+                <h3 id="Mentions">Mentions</h3>
+                <p>Many Reddit bots perform an action after being tagged. These sort of bots are preferred, because they only
+                do things when they are <b>called</b>. This will be unlikely to get you banned and blacklisted.
+              To get the basic code down, type or copy the following into your repl.it, BELOW the code that initiates the Reddit object.
+            Please read the comments (words following a #) so you can learn a bit about what the commands actually do.</p>
+                <div class="codeheader codeheader-python">Python</div>
+                <div class="codebox">
+                    <pre><code data-language="python">
+                    <p style="color: #fff;">messages = r.inbox.stream() # creates an iterable for your inbox and streams it
+for message in messages: # iterates through your messages
+  try:
+    if message in r.inbox.mentions() and message in r.inbox.unread(): # if this messasge is a mention AND it is unread...
+        message.reply("allhailfrank") # reply with this message
+        message.mark_read() # mark message as read so your bot doesn't respond to it again...
+  except praw.exceptions.APIException: # reddit may have rate limits, this prevents your bot from dying due to rate limits
+    print("probably a rate limit....")
+</p>
+                    </code></pre>
+                </div>
+                <br>
+                <h3 id ="Keywords">Keywords</h3>
+                <p>This bot can check certain comments and, if there is a keyword in the comment, will do an action. Making the keyword something that
+                is commonly said might get you banned. I suggest adding a "!" in front of your keyword so the bot only responds when called on. To get the basic code down,
+              type or copy the following into your repl.it, BELOW the code that initiates your Reddit object. Remember, this code should not be in the same place as
+              the code under the "Mentions" section. Please read the comments (words following a #) so you can learn a bit about what the commands actually do.</p>
+              <div class="codeheader codeheader-python">Python</div>
+              <div class="codebox">
+                  <pre><code data-language="python">
+                  <p style="color: #fff;">subr = r.subreddit('copypasta') # this chooses a subreddit you want to get comments from
+for comment in subr.stream.comments(skip_existing=True): # this iterates through the comments from that subreddit as new ones are coming in
+  try:
+    if "mom" in comment.body: # "mom" is the keyword in this case. replace "mom" with your keyword
+      comment.reply("ur mom is beautiful...") # this is what your bot replies to the comment that has the keyword
+  except praw.exceptions.APIException: # reddit may have rate limits, this prevents your bot from dying due to rate limits
+    print("probably a rate limit...")
+
+</p>
+                  </code></pre>
+              </div>
+              <p>Now your code is all good, and you just have to run it! Since your program will be streaming, it will not stop unless you tell it to.</p>
+              <p>You may have noticed that currently, your bot only runs when your repl.it program is running, which is only for as long as your tab stays open.
+                Many people therefore host their bots on external servers so that the bot is truly automated. I will be showing you how to run your bot on a cloud platform,
+                Heroku.</p>
+                <p>If you are satisfied without hosting your bot, then congratulations, you have completed the workshop!</p>
+                <p>If you would like to take it one step further, stay tuned!</p>
+                <br><br>
+                <p class="text-center"><a href="../workshops.html"
+                                          class="btn btn-primary py-3">Back to Workshops</a></p>
+
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5 pb-5 align-items-center d-flex">
+            <div class="col-md-6">
+                <div class="heading-section heading-section-white ftco-animate">
+                    <span class="subheading">Get Inspired</span>
+                    <h2 style="font-size: 30px;">Join VikingsDev Today!</h2>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <p class="mb-0"><a href="../signup.html" class="btn btn-primary py-3 px-4"
+                                   style="background:#9c6d41; border: 0px;">Sign Up</a></p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 bg-primary p-4">
+                    <h2 class="ftco-heading-2">VikingsDev</h2>
+                    <p>This website was built for the VikingsDev club at Burnaby North Secondary School.</p>
+                    <ul class="ftco-footer-social list-unstyled mb-0">
+                        <li class="ftco-animate"><a href="https://twitter.com/vikings_dev"><span
+                                class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/groups/vikingsdev"><span
+                                class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/vikingsdev/"><span
+                                class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Navigational</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="py-2 d-block">Home</a></li>
+                        <li><a href="../about.html" class="py-2 d-block">About</a></li>
+                        <li><a href="../events.html" class="py-2 d-block">Events</a></li>
+                        <li><a href="../workshops.html" class="py-2 d-block">Workshops</a></li>
+                        <li><a href="../contact.html" class="py-2 d-block">Contact</a></li>
+                        <li><a href="../signup.html" class="py-2 d-block">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Find Us</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">751 Hammarskjold Dr, Burnaby, BC V5B 4A1, Canada</span>
+                            </li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">vikingsdev@gmail.com</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Hosted on <a href="https://github.com/VikingsDev/VikingsDev.github.io">Github</a>. Made by <a
+                        href="https://github.com/FrankWhoee">Frank Hui</a></p>
+                <p>Based on the <a href="https://colorlib.com/wp/template/cohost/">CoHost ColorLib Template</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"/>
+    </svg>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.stellar.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.animateNumber.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery.timepicker.min.js"></script>
+<script src="../js/scrollax.min.js"></script>
+<script src="../js/google-map.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
