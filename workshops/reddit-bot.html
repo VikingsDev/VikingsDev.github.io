@@ -54,7 +54,7 @@
 
 
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/934931664793124225/D9861E4A35F464C8EE9E5B3B58BA2E02B352B743/');"
+<div class="hero-wrap hero-wrap-2" style="background-image: url('reddit-bot-assets/top.jpeg');"
      data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -64,7 +64,7 @@
                         class="ion-ios-arrow-forward"></i></a><a href="../workshops.html"> Workshops <i
                         class="ion-ios-arrow-forward"></i></a></span> <span>Python Reddit Bot</span></p>
                 <h1 class="mb-3 bread">Python Reddit Bot</h1>
-                <h3 class="mb-3 bread">ur mum</h3>
+                <h3 class="mb-3 bread">ur mom</h3>
             </div>
         </div>
     </div>
@@ -98,7 +98,10 @@
                 <p>In this workshop, you can learn how to make an automated Reddit bot that does what you want it to do.
                 I will show you how to make the bot respond to mentions as well as keywords. The possibilities are endless however.
                 If you know your Python, you can make the bot do greater things. But today, we will focus on getting a simple bot up and running.</p>
-
+                <p>This workshop focuses on just making a bot work with browser only resources. This means you will need to use repl.it. Programs you make
+                  on repl.it aren't private though. Since you need to input information that gives access to your bot in your repl.it code, your bot will
+                  be accessible PUBLICLY. If you want to make it private, all you have to do is do everything in a local folder and your computer's shell. However,
+                  since I want this program to work for people without computer permissions, I will be showing you how to do everything on repl.it</p>
                 <h2 id="first" class="text-center">Set Up</h2>
                 <p>Before you make a bot, you need to do a couple of things.</p>
                 <br>
@@ -106,8 +109,8 @@
                   does NOT need a bunch of bots commenting "urmumgay" whenever someone says "mum". (There are already humans doing that...)
                   If you do not follow bottiquette, you will get your bot banned and perhaps your IP blacklisted.
                 <p class="text-center"><a href="https://www.reddit.com/wiki/bottiquette" class="btn btn-primary py-3" target="_blank">Bot Etiquette</a></p>
-                <p>Next, you'll need a reddit account. You can link your bot to your usual reddit account, or you can create a new one. I recommend
-                  creating a new one in case your bot gets the account banned. (Note: You do not need to sign up with an email if you do not want.)
+                <p>Next, you'll need a reddit account. You can link your bot to your usual reddit account, or you can create a new one. If you are using free repl.it,
+                  you will need a new one because you will have to enter your account credentials and these will be visible to the public. (Note: You do not need to sign up with an email if you do not want.)
                 <p class="text-center"  id="idsecret"><a href="https://www.reddit.com/register/" class="btn btn-primary py-3" target="_blank">Reddit Signup</a></p>
                 <p>You'll also need to create an application "registration" for your bot. Use the link below.</p>
                 <p class="text-center"><a href="  https://www.reddit.com/prefs/apps/" class="btn btn-primary py-3" target="_blank">Create App</a></p>
@@ -115,15 +118,22 @@
                 <img style="width:100%" src="reddit-bot-assets/createapp.png">
                 <p>Give your bot a name. Select script. Enter http://127.0.0.1 into "redirect uri". (This is something stupid Reddit makes you do but...)
                 Click "create app" and a page should pop up that tells you your "personal use script" and "secret". Record these two
-                strings down, and DO NOT SHARE THEM. </p>
+                strings down. Remember, if you are using repl.it then these will be public along with your entire file. </p>
                 <br>
                 <p>Finally, you will need to access repl.it to program. With repl.it, you won't need to download anything to your actual
-                  device.</p>
+                  device. You can use repl.it without an account, but if you wish to <a href="#third">host</a> then you will need to signup.</p>
                 <p class="text-center"><a href="repl.it" class="btn btn-primary py-3" target="_blank">repl.it</a></p>
                 <p>After clicking the link, click "start coding" and create a repl.it in Python. You should then have a page opened that looks something like this:<p>
                 <img style="width:100%" src="reddit-bot-assets/replstart.png">
-                <p>Then, you'll have to go the side-bar and click the icon that looks like a cube named packages. Type "praw" in "search for packages",
-                  click the first result, and click the "+" button, which should prompt your command line to start import your package. After the importing
+                <p>Next, you'll have to click control(command on Mac)+shift+p, which should open a command line shell at the bottom right. Copy the following line of code
+                  into the shell and press enter.</p>
+                  <div class="codeheader codeheader-python">Python</div>
+                  <div class="codebox">
+                      <pre><code data-language="python">
+                      <p style="color: #fff;">pip install praw</p>
+                      </code></pre>
+                  </div>
+                  <p>This should prompt your machine to import praw, which is a package neede for the bot. After the importing
                 is finished, you have completed all the set up requirements! Next, we shall start coding.</p>
                 <br>
                 <h2 id="second" class="text-center">Coding the Bot</h2>
@@ -144,7 +154,8 @@ r = praw.Reddit(username = "yourreddituser",
                   Fill each line out according to your own information. The client id and secret should have been recorded down if you were following
                   <a href="#idsecret">the instructions from earlier.</a> Your user_agent basically helps Reddit identify your program in case that is needed. So make sore it's descriptive!</p>
                 <br>
-                <p>Now I will show you two potential things you could make your bot do. First is responding to mentions, and the second is responding to keywords.
+                <p>Now I will show you two potential things you could make your bot do. First is responding to <a href="#Mentions">mentions</a>, and the second is responding to
+                  <a href="#Keywords">keywords</a>.
                   These are mutually exclusive since they depend on automated streaming of different things. This means you have to choose one of the two, you cannot do both in one bot. You <i>could</i> use threading
                   to overcome this, but that is something you will have to figure out yourself.
                 <br>
@@ -179,22 +190,68 @@ for message in messages: # iterates through your messages
                   <p style="color: #fff;">subr = r.subreddit('copypasta') # this chooses a subreddit you want to get comments from
 for comment in subr.stream.comments(skip_existing=True): # this iterates through the comments from that subreddit as new ones are coming in
   try:
-    if "mom" in comment.body: # "mom" is the keyword in this case. replace "mom" with your keyword
+    if "!mom" in comment.body: # "!mom" is the keyword in this case. replace "mom" with your keyword
       comment.reply("ur mom is beautiful...") # this is what your bot replies to the comment that has the keyword
   except praw.exceptions.APIException: # reddit may have rate limits, this prevents your bot from dying due to rate limits
     print("probably a rate limit...")
 
 </p>
                   </code></pre>
-              </div>
+              </div><br>
               <p>Now your code is all good, and you just have to run it! Since your program will be streaming, it will not stop unless you tell it to.</p>
               <p>You may have noticed that currently, your bot only runs when your repl.it program is running, which is only for as long as your tab stays open.
                 Many people therefore host their bots on external servers so that the bot is truly automated. I will be showing you how to run your bot on a cloud platform,
                 Heroku.</p>
                 <p>If you are satisfied without hosting your bot, then congratulations, you have completed the workshop!</p>
-                <p>If you would like to take it one step further, stay tuned!</p>
-                <br><br>
-                <p class="text-center"><a href="../workshops.html"
+                <p>If you would like to take it one step further, keep going!</p>
+                <br>
+                <h2 id="third" class="text-center">Hosting</h2>
+                <p>To host, you will need a GitHub accuont, which I am assuming you have, and a Heroku account, which we will deal with later.</p>
+                <p>Let's go back to our program on repl.it. Remember from earlier that to host you must have a repl.it account. First, let's create a new file and
+                  name it "Procfile" and type into it:
+                  <div class="codeheader codeheader-python">Python</div>
+                  <div class="codebox">
+                      <pre><code data-language="python">
+                      <p style="color: #fff;">worker: python main.py</p>
+                      </code></pre>
+                  </div>
+                <p>This is what it should look like on your repl.it page:</p>
+                <img style="width:100%" src="reddit-bot-assets/proc.png">
+                <p>A Procfile basically tells Heroku what you want it to run.</p>
+                <p>Now we're going to need to create a requirements.txt to tell Heroku what our app's dependencies are.
+                    Creating a requirements.txt is good practice. All we need to do is control+shift+p again and type into the shell:<p>
+                    <div class="codeheader codeheader-python">Python</div>
+                    <div class="codebox">
+                        <pre><code data-language="python">
+                        <p style="color: #fff;">pip freeze > requirements.txt</p>
+                        </code></pre>
+                    </div>
+                <p>A new file should pop up called requirements.txt that looks somewhat like this:<p>
+                <img style="width:70%" src="reddit-bot-assets/requirements.png">
+                <p>Next, you're going to need to go to version control on the side bar and connect your GitHub. It will prompt you to give permissions. You will
+                  need to give repl.it permission to all your GitHub repositories. Once your done, you should be able to see something like this:</p>
+                    <img style="width:100%" src="reddit-bot-assets/creategit.png">
+                <p style="margin-top:10px">Click "Create a Git Repo". You can name it anything you want, but remember this name. It can be public or private, though remember due to repl.it
+                  your bot won't be fully private anyway. However, if you are using your own environment for privacy, make the repository private so people can't see your
+                   credentials. Now, everything should be linked to a repo on GitHub. Next, you'll need to sign up for a Heroku account.</p>
+              <p class="text-center"><a href="https://signup.heroku.com/" class="btn btn-primary py-3" target="_blank">Signup for Heroku</a></p>
+              <p>After you create an account, you will need to "create an app". You can name it anything you want, that's available. Once your app is created,
+                go to the "Deploy" section and click "GitHub".</p>
+              <img style="width:100%" src="reddit-bot-assets/page.png">
+              <p style="margin-top: 10px">Search for the repository that you just created. If you entered the correct name,
+                it will show you your repository. Click "Connect".</p>
+              <img style="width:100%" src="reddit-bot-assets/connectrepo.png">
+              <p>Go to the very bottom, and click "Deploy Branch".</p>
+              <img style="width:100%" src="reddit-bot-assets/deploy.png">
+              <p> A small window will be visible that shows logs. After waiting for a minute or so,
+                you will see the message "... deployed to Heroku". Now, you can go to the "Resources" section, where you will see your free dynos. Dynos
+                are basically the container that will be running your app. Click the pencil icon to edit, turn on your dyno, and click confirm.</p>
+              <img style="width:100%" src="reddit-bot-assets/updatedyno.png">
+              <p>And... that's it! Congratulations, your bot is now automatically run by Heroku and will do what you programmed it to do!</p>
+              <img style="width:100%" src="reddit-bot-assets/finished.png">
+              <p style="margin-top:10px">One thing to note is that free accounts on Heroku can only run apps for a limited amount of time monthly. So using Heroku means your bot will die for a bit of time each month.</p>
+              <br><br>
+              <p class="text-center"><a href="../workshops.html"
                                           class="btn btn-primary py-3">Back to Workshops</a></p>
 
             </div>
