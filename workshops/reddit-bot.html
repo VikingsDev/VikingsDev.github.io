@@ -151,9 +151,9 @@ r = praw.Reddit(username = "yourreddituser",
                     </code></pre>
                 </div>
                 <p>Let's figure out what we just did. The first line imported our package. The second block of code initiated our
-                  praw instance. It is the reddit object that basically acts as our bot, which we will need to control later to make our bot work.
+                  praw instance. It is the Reddit object that basically acts as our bot, which we will need to control later to make our bot work.
                   Fill each line out according to your own information. The client id and secret should have been recorded down if you were following
-                  <a href="#idsecret">the instructions from earlier.</a> Your user_agent basically helps Reddit identify your program in case that is needed. So make sore it's descriptive!</p>
+                  <a href="#idsecret">the instructions from earlier.</a> Your user_agent basically helps Reddit identify your program in case that is needed. So make sure it's descriptive!</p>
                 <br>
                 <p>Now I will show you two potential things you could make your bot do. First is responding to <a href="#Mentions">mentions</a>, and the second is responding to
                   <a href="#Keywords">keywords</a>.
@@ -174,7 +174,7 @@ for message in messages: # iterates through your messages
     if message in r.inbox.mentions() and message in r.inbox.unread(): # if this messasge is a mention AND it is unread...
         message.reply("allhailfrank") # reply with this message
         message.mark_read() # mark message as read so your bot doesn't respond to it again...
-  except praw.exceptions.APIException: # reddit may have rate limits, this prevents your bot from dying due to rate limits
+  except praw.exceptions.APIException: # Reddit may have rate limits, this prevents your bot from dying due to rate limits
     print("probably a rate limit....")
 </p>
                     </code></pre>
@@ -193,7 +193,7 @@ for comment in subr.stream.comments(skip_existing=True): # this iterates through
   try:
     if "!mom" in comment.body: # "!mom" is the keyword in this case. replace "mom" with your keyword
       comment.reply("ur mom is beautiful...") # this is what your bot replies to the comment that has the keyword
-  except praw.exceptions.APIException: # reddit may have rate limits, this prevents your bot from dying due to rate limits
+  except praw.exceptions.APIException: # Reddit may have rate limits, this prevents your bot from dying due to rate limits
     print("probably a rate limit...")
 
 </p>
@@ -230,7 +230,7 @@ for comment in subr.stream.comments(skip_existing=True): # this iterates through
                 <p>A new file should pop up called requirements.txt that looks somewhat like this:<p>
                 <img style="width:70%" src="reddit-bot-assets/requirements.png">
                 <p>Next, you're going to need to go to version control on the side bar and connect your GitHub. It will prompt you to give permissions. You will
-                  need to give repl.it permission to all your GitHub repositories. Once your done, you should be able to see something like this:</p>
+                  need to give repl.it permission to all your GitHub repositories. Once you are done, you should be able to see something like this:</p>
                     <img style="width:100%" src="reddit-bot-assets/creategit.png">
                 <p style="margin-top:10px">Click "Create a Git Repo". You can name it anything you want, but remember this name. It can be public or private, though remember due to repl.it
                   your bot won't be fully private anyway. However, if you are using your own environment for privacy, make the repository private so people can't see your
