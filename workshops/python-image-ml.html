@@ -152,8 +152,8 @@ train
                     navigate to the share tab in the file explorer, and click the Zip button.</p>
                 <p>Once you have compressed the folder into a zip file, upload it to your Google Drive. After, go to
                     google Colab, click '+ Code', and type in the new box:</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">from google.colab import drive
 drive.mount('/content/drive', force_remount=True)</p>
@@ -164,8 +164,8 @@ drive.mount('/content/drive', force_remount=True)</p>
                     can
                     access all the files from your Drive.</p>
                 <p>Now let's decompress the zip file by clicking '+ Code' again, and adding these commands:</p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code>
                     <p style="color: #fff;">!unzip -uq "/content/drive/My Drive/train.zip" -d "/content/"</p>
                     </code></pre>
@@ -178,8 +178,8 @@ drive.mount('/content/drive', force_remount=True)</p>
                     hard workshop, I'm assuming you already know your stuff. Let's start by putting in the imports we'll
                     need. Click the '+ Code' button and add all of the following code in the newly created box.</p>
 
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">import pandas as pd
 import numpy as np
@@ -203,8 +203,8 @@ from keras.optimizers import Adam</p>
                     networks and 3 output neurons, corresponding to our three image categories. In the future, if you
                     want to add more image categories, you will have to modify this last output layer of neurons to
                     however many neurons you will need corresponding to the number of image categories you have.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">import pandas as pd
 base_model=MobileNet(weights='imagenet',include_top=False)
@@ -219,8 +219,8 @@ preds=Dense(3,activation='softmax')(x)</p>
                 </div>
                 <p>Next, we put the output layer into this model class and lock the first 20 layers because we don't
                     want to train those, and unlock the rest for training.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 model=Model(inputs=base_model.input,outputs=preds)
@@ -232,8 +232,8 @@ for layer in model.layers[20:]:
                 </div>
                 <p>In this next piece of code, we let a library process our data for us. Normally, this is done by
                     yourself, which can be a bit tedious.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 train_datagen=ImageDataGenerator(preprocessing_function=preprocess_input)
@@ -248,8 +248,8 @@ train_generator=train_datagen.flow_from_directory('./train/',
                 </div>
 
                 <p>Now, we'll compile the model for training, and "fit" the model, another word for training.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
@@ -280,8 +280,8 @@ model.save('ir-model-v0')
                 <p>
                     Let's start the coding by clicking '+ Code' and making a new code box and put in our imports.
                 </p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 import numpy as np
@@ -295,8 +295,8 @@ from keras.models import load_model
 
                 <p>Now we load a model and define a function that helps us preprocess the image to be compatible with
                     the input of the model.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 model = load_model('ir-model-v0')
@@ -310,8 +310,8 @@ def process_image(img_path):
                     </code></pre>
                 </div>
                 <p>Next, we load the image, process, and predict the image.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 Image('images.jpeg')
@@ -322,8 +322,8 @@ print(prediction)
                 </div>
 
                 <p>Your output should look something like this:</p>
-                <div class="codeheader" id="codeheader_output">OUTPUT</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-output">OUTPUT</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 [[4.0999515e-10 1.0000000e+00 6.0768431e-15]]

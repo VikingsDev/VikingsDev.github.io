@@ -119,8 +119,8 @@
 				<p>Let's start with the variables. Click the "Source" tab beside the "Design" tab to begin.</p>
                 <p>Underneath the line that says <code>public class Blackjack extends javax.swing.JFrame {</code> , variables can be added. For this project, we need 4 variables. Name the variables as follows:</p>
 				<br>
-				<div class="codeheader" id="codeheader_bash">JAVA</div>
-                <div id="codebox">
+				<div class="codeheader codeheader-java">JAVA</div>
+                <div class="codebox">
                     <pre><code data-language="java">
                     <p style="color: #fff;">
 int dealer = 0;
@@ -133,8 +133,8 @@ int blackjack = 21;
 				<p>Now, our variables are ready for use. Go back to the design tab and double click the "Deal" button. When the "Deal" button is clicked while our program is running, we want to start a new round of Blackjack.</p>
 				<br>
 				<p>Under <code>private void buttonDealActionPerformed(java.awt.event.ActionEvent evt) {</code> , type this code:</p>
-				<div class="codeheader" id="codeheader_bash">JAVA</div>
-                <div id="codebox">
+				<div class="codeheader codeheader-java">JAVA</div>
+                <div class="codebox">
                     <pre><code data-language="java">
                     <p style="color: #fff;">
 buttonStand.setEnabled(true);
@@ -160,8 +160,8 @@ for (int k=0; k<2; k++) {
                 <p>This code allows for the player to be "dealt" 2 cards, and the total is added up and shown in the <code>textPlayer</code> text box. There is no deck coded for this project, but it is simulated using the probability of being dealt a card.</p>
 				<br>
 				<p>Once the code for "Deal" is complete, we can move onto the code for "Hit". Go back to the "Design" tab again and double click the "Hit" button. Under <code>private void buttonHitActionPerformed(java.awt.event.ActionEvent evt) {</code> , type in this code:</p>
-				<div class="codeheader" id="codeheader_bash">JAVA</div>
-                <div id="codebox">
+				<div class="codeheader codeheader-java">JAVA</div>
+                <div class="codebox">
                     <pre><code data-language="java">
                     <p style="color: #fff;">
 player += card;
@@ -181,8 +181,8 @@ if (player > blackjack) {
 				<br>
 				<p>Type in this code under <code>private void buttonStandActionPerformed(java.awt.event.ActionEvent evt) {</code>. This code will first let the dealer add value to his total. In this case, the dealer will only hit if their total is below or equal to 16.</p>
 				<p>This section also shows the dealer's total (which should be hidden up until this point) and changes the message in the status text box.</p>
-				<div class="codeheader" id="codeheader_bash">JAVA</div>
-                <div id="codebox">
+				<div class="codeheader codeheader-java">JAVA</div>
+                <div class="codebox">
                     <pre><code data-language="java">
                     <p style="color: #fff;">
 for (int k=0; k<2; k++) {
