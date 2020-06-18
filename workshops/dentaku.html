@@ -118,7 +118,7 @@
                 <br><br>
                 <p>
                   You should now be inside your own fork. To make sure, check the title of the repository. It should be YOUR_USERNAME / Dentaku and
-                  say "forked from VikingsDev/Dentaku" below it. We will need to clone this repository so click the green "Clone or download" button
+                  say "forked from VikingsDev/Dentaku" in the subtitle. We will need to clone this repository so click the green "Clone or download" button
                   on the right and click the clipboard to the right of the URL to copy it.
                 </p>
                 <img style="width:100%" src="dentaku-assets/clone-repo.png">
@@ -143,8 +143,8 @@
                   Now, we need to set up a virtual environment. Type the following code. If you had to type 'pip3' instead of 'pip'
                   in the last step, you will need to type 'python3' instead of 'python' for the remainder of this workshop.
                 </p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 python -m venv venv
@@ -159,8 +159,8 @@ python -m venv venv
                   the file using a text editor of your choice. The file should be located in your Dentaku folder. You will need to
                   fill in the following information:
                 </p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 export EMAIL="YOUR_FACEBOOK_ACCOUNT_EMAIL"
@@ -178,8 +178,8 @@ export G_CREDENTIALS="PATH_TO_YOUR_SERVICE_ACCOUNT_JSON"
                   We will now have to enter the virtual environment we made earlier. Once inside the virtual environment,
                   those that have been using 'pip3' can now use 'pip' instead.
                 </p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 source venv/bin/activate
@@ -200,8 +200,8 @@ pip install -r requirements.txt
                 <p>Create a new file in the commands folder. (This can usually be done by right-clicking the commands folder in your IDE.) Name the file <b>greet.py</b>.
                   This file will run when the user sends !greet on messenger. At the beginning of every file, you will need to add the following code.
                   Try adding it to greet.py right now!</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 from command import Command
@@ -213,8 +213,8 @@ from fbchat import Mention
                     Now, we can move onto the actual command itself. We now have to create a class and a run method to code our command in.
                     Both your class and file should have the same name, otherwise the command will not trigger properly.
                     Your code should now look like this:</p>
-                    <div class="codeheader" id="codeheader_python">PYTHON</div>
-                    <div id="codebox">
+                    <div class="codeheader codeheader-python">PYTHON</div>
+                    <div class="codebox">
                         <pre><code data-language="python">
                         <p style="color: #fff;">
 from command import Command
@@ -232,8 +232,8 @@ class greet(command):
                   the text that will be sent by the bot after the command is called. To be clear with who the bot is replying
                   to, responses from the bot will always start with @user where 'user' is name of the person who triggered the command.
                   Make the variables with the following code inside the run method:
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 def run(self):
@@ -245,8 +245,8 @@ def run(self):
                   This will cause Dentaku to say 'Hello!' to whoever triggered the command. (ex. @Steve Hello!)
                   We still need to add the code to send the message. Add the following at the end of all of your run methods.
                 </p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 self.client.send(
@@ -259,8 +259,8 @@ self.client.send(
                 <p>There's one last thing we need to do. To help others understand how to use a command, we can create a method
                   named define_documentation. For our command, there are no parameters and the command says hello. This information
                   will be shown automatically if someone uses the !help command.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                   <pre><code data-language="python">
                   <p style="color: #fff;">
 def define_documentation(self):
@@ -271,8 +271,8 @@ def define_documentation(self):
                   </code></pre>
                 </div>
                 <p>Now our command is complete! The file should look exactly like the code below. Let's try running the bot so that we can test it out.</p>
-                <div class="codeheader" id="codeheader_python">PYTHON</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-python">PYTHON</div>
+                <div class="codebox">
                   <pre><code data-language="python">
                   <p style="color: #fff;">
 from command import Command
@@ -301,8 +301,8 @@ class greet(command):
                 <p><b><i>Remember to save your changes to the file!</i></b></p>
                 <h2 id="third" class="text-center">Running the bot</h2>
                 <p>Open a terminal window and make sure that you are in the venv of Dentaku. Enter the following to run Dentaku.</p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 python main.py
@@ -322,12 +322,12 @@ python main.py
                 <br>
                 <h2 id="fourth" class="text-center">Pushing the command</h2>
                 <p>
-                  Once you are satisfied with your command, close Dentaku. In order to add your changes to GitHUb, you need to commit and then push your changes.
+                  Once you are satisfied with your command, stop running Dentaku. In order to add your changes to GitHub, you need to commit and then push your changes.
                   Enter the following commands in Terminal. You may have to enter your GitHub email and password if prompted.
                   <i>NOTE: The first line is only necessary when you create a new file. If you only changed existing files, you will not need to add the file to git.</i>
                 </p>
-                <div class="codeheader" id="codeheader_bash">BASH</div>
-                <div id="codebox">
+                <div class="codeheader codeheader-bash">BASH</div>
+                <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
 git add greet.py
@@ -337,14 +337,40 @@ git push
                 </div>
                 <p>
                   Your commit message should be a description of what you have added. Make sure that it is in the imperative form, as if you are
-                  commanding someone.
+                  giving instructions.
                 <br><i>
                   Ex: "Add greet command", <b>NOT</b> "I added !greet" or "Adds a greet command".
                 </i></p>
                 <p>Make sure to keep your fork up to date! You will need to do this by running ./pull-fork.sh in Terminal.
-                You should always update your fork before committing your own changes to prevent merge conflicts.</p>
-                <p>After committing and pushing your changes, you will need to make a pull request to the 'dev' branch of the main VikingsDev repository.
-                To do so, </p>
+                <b>You should always update your fork before making changes to prevent merge conflicts.</b></p>
+                <p>
+                  After committing and pushing your changes, you will need to make a pull request to the 'dev' branch of the main VikingsDev repository.
+                  To do so, click the 'New pull request' button and select 'compare across forks'.
+                </p>
+                <img style="width:100%" src="dentaku-assets/pull-request.png">
+                <br><br>
+                <img style="width:100%" src="dentaku-assets/pull-fork.png">
+                <br><br>
+                <p>
+                  Make sure that the BASE repository is VikingsDev/Dentaku and the base branch is 'dev'.
+                  The HEAD repository should be your fork and the branch is 'master'.
+                </p>
+                <img style="width:100%" src="dentaku-assets/pull-branch.png">
+                <br><br>
+                <p>
+                  Title your pull request in the same way you write your commit message and make sure it sums up what your
+                  pull request adds to Dentaku. When you are ready, click the green 'Create Pull Request' button and wait for approval.
+                </p>
+                <p>
+                  Congratulations, you have now completed the workshop! To have your pull request approved, you will need to create your own command
+                  (or improve an existing one). Please do NOT try to add greet.py to Dentaku, we do not need the command in our bot.
+                  Make sure that you delete the file before you push your commits so that it does not get accidentally added to GitHub. You can type
+                  <code>git rm greet.py</code> and then use <code>git commit</code> and <code>git push</code> if you need to remove it from GitHub.
+                </p>
+                <p>
+                  This project is eligible for VikingsDev Bounties. Click the button below to learn more.
+                </p>
+                <p class="text-center"><a target="_blank" href="https://vikingsdev.ca/bounties.html" class="btn btn-primary py-3">What's a Bounty?</a></p>
                 <br><br>
                 <p class="text-center"><a href="../workshops.html"
                                           class="btn btn-primary py-3">Back to Workshops</a></p>
