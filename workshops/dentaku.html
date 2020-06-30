@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate">
-                <p>In this workshop, I will be showing you how to make commands on the VikingsDev messenger bot.</b></p>
+                <p>In this workshop, I will be showing you how to make commands on the VikingsDev messenger bot.</p>
                 <div class="card" style="border-color: orange; background-color: lightgoldenrodyellow; padding: 20px;">
                     <img src="../images/workshop-icons/alert-orange.png" style="width: 50px; margin: 0 auto;">
                     <br>
@@ -123,25 +123,51 @@
                 </p>
                 <img style="width:100%" src="dentaku-assets/clone-repo.png">
                 <br><br>
+                <p><b>
+                  In the next few steps, there will be differences between MacOS/Linux and Windows users. Lines of code meant to be run by
+                  <u>MacOS and Linux users only</u> will be in <span style="color: red">red text</span>. Code meant for <u>Windows users only</u>
+                  will be in <span style="color: green">green text</span>. <code style="color: black">Black</code>, <code style="background: #3d3d3d; color: white">white</code>, and <code>pink</code>
+                  code is the same across both operating systems and will need to be run by everyone. Make sure you run the code corresponding to your operating system and ignore the other colour.
+                </b></p>
                 <p>
-                  Find the Terminal application (it should be in your applications folder) and open it. A command line should pop up in a new window.
-                  Type 'git clone' followed by the URL you have copied and then press enter:
+                  <b style="color: red">MacOS and Linux Users:</b> Find the Terminal application (it should be in your applications folder) and open it.
+                  A command line should pop up in a new window.<br>
+                  <b style="color: green">Windows Users:</b> Search for the 'cmd' application in the search bar in the bottom left of your screen and open it.
+                  A command line should pop up in a new window.
+                </p>
+                <p>
+                  Type 'git clone' into your command line followed by the URL you copied earlier and then press enter. Your code should follow the format below:
                 </p>
                 <pre><code>git clone https://github.com/YOUR_USERNAME/Dentaku.git</code></pre>
                 <p>
                   This should have created a folder named "Dentaku" in your user folder. To access it, type:
                   <pre><code>cd Dentaku</code></pre>
                 </p>
+                <p>The command line should now say 'Dentaku' somewhere on it to indicate that you are in the correct directory.</p>
+                <div class="card" style="border-color: orange; background-color: lightgoldenrodyellow; padding: 20px;">
+                    <img src="../images/workshop-icons/alert-orange.png" style="width: 50px; margin: 0 auto;">
+                    <br>
+                    <b class="text-center">For the next steps, you will need to have Python 3 installed.</b>
+                </div>
+                <br>
                 <p>
-                  The command line should now say: Dentaku USERNAME$. For the next step, we will need to use pip.
-                  To check if you have pip installed, type 'pip' and then press enter. Sometimes, you may have to
-                  type 'pip3'. If both of these commands return 'command not found', you will need to install pip.
+                  If you are not sure if you have Python installed, run <code>python --version</code> in your command line.
+                  If it returns a version number that is 3.7 or higher, you will not need to install Python and can skip to the next step.
+                  If the version is 2.7, try running <code>python3 --version</code> instead. If neither command returns a Python version
+                  higher than 3.7, you will need to click the button below and install the latest version of Python. For those
+                  that have a updated Python version when you type 'python3', you will need to type 'python3' instead of 'python'
+                  in your commands.
+                </p>
+                <p class="text-center"><a target="_blank" href="https://www.python.org/downloads/" class="btn btn-primary py-3">Install Python 3</a></p>
+                <p>
+                  For the next steps, we will also need to use pip, a Python package. If you just installed Python in the last step, you do not yet have pip and need to install it.
+                  If you are unsure if you have pip installed, run <code>python -m pip --version</code>.
+                  If the command raises an error, you will need to install pip.
                   Click the button below and follow the instructions to install pip.
                 </p>
                 <p class="text-center"><a target="_blank" href="https://pip.pypa.io/en/stable/installing/" class="btn btn-primary py-3">Install pip</a></p>
                 <p>
-                  Now, we need to set up a virtual environment. Type the following code. If you had to type 'pip3' instead of 'pip'
-                  in the last step, you will need to type 'python3' instead of 'python' for the remainder of this workshop.
+                  Now, we need to set up a virtual environment. Type the following code:
                 </p>
                 <div class="codeheader codeheader-bash">BASH</div>
                 <div class="codebox">
@@ -151,13 +177,14 @@ python -m venv venv
                     </code></pre>
                 </div>
                 <p>
-                  If the command did not work, you may have to type <code>pip install virtualenv</code> first. To check if you have
-                  successfully created a virtual environment, you can type <code>ls</code> and look for a 'venv' folder.
+                  If the command did not work, you will have to run <code>python -m pip install virtualenv</code> first. To check if you have
+                  successfully created a virtual environment, you can type <code style="color: red">ls</code> or <code style="color: green">dir</code>
+                  and look for a 'venv' folder.
                 </p>
                 <p>
-                  Next, we will need to create an export file. Type <code>touch export.sh</code> to create the file and then open
-                  the file using a text editor of your choice. The file should be located in your Dentaku folder. You will need to
-                  fill in the following information:
+                  Next, we will need to create an export file. Type <code style="color: red">touch export.sh</code> or <code style="color: green">Notepad export.sh</code>
+                  to create the file and then open the file using a text editor of your choice. The file should be located in your Dentaku folder.
+                  You will need to fill in the following information:
                 </p>
                 <div class="codeheader codeheader-bash">BASH</div>
                 <div class="codebox">
@@ -175,14 +202,15 @@ export G_CREDENTIALS="PATH_TO_YOUR_SERVICE_ACCOUNT_JSON"
                   Make sure you remember to save the file!
                 </i></p>
                 <p>
-                  We will now have to enter the virtual environment we made earlier. Once inside the virtual environment,
-                  those that have been using 'pip3' can now use 'pip' instead.
+                  We will now have to enter the virtual environment we made earlier. Make sure you do <i>NOT</i> run the lines of code that have colours
+                  corresponding to a different operating system.
                 </p>
                 <div class="codeheader codeheader-bash">BASH</div>
                 <div class="codebox">
                     <pre><code data-language="python">
                     <p style="color: #fff;">
-source venv/bin/activate
+<span style="color: red">source venv/bin/activate</span>
+<span style="color: lime">venv\Scripts\activate.bat</span>
 pip install -r requirements.txt
                     </code></pre>
                 </div>
@@ -190,10 +218,9 @@ pip install -r requirements.txt
                   The first line of code activates the virtual environment. A (venv) should appear at the beginning of your command line
                   to signal that you are now in the virtual environment. The second line will install all the packages you will need from
                   a list in the file 'requirements.txt'. In the future, you will need to add any new modules that your command needs to
-                  'requirements.txt'. You will need to have your Python IDE open for the next steps, but don't close Terminal yet.
+                  'requirements.txt'. You will need to have your Python IDE open for the next steps, but don't close the command line yet.
                   We will need it again later.
                 </p>
-                <br>
                 <h2 id="second" class="text-center">Creating a command</h2>
                 <p>Now we can start making out first command! Open the Dentaku folder as a project in your IDE. For most IDEs, the open option will be in the file tab.
                   Locate the commands folder inside Dentaku. There should already be many pre-made commands inside. This folder will be where we add our own commands.</p>
