@@ -230,6 +230,7 @@ html[data-header-theme=dark] .menu-is-opening .header__logo-letter{
 }
 .header__nav-list:hover .header__nav-item:hover{
     opacity:1
+
 }
 .header__nav-list:hover .header__nav-item--active:hover a:before{
     opacity:1;
@@ -629,7 +630,10 @@ body.menu-is-closing .site-menu__logo-letter .site-menu__nav-item a:before,body.
         left:80;
     }
 }
-
+.nav-removedec{
+    text-decoration:none;
+    textdecoration-color:none;
+}
 /*SITE NAVIGATION LINK LOOK*/
 .site-menu__nav-link{
     display:block;
