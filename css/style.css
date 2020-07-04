@@ -648,3 +648,8 @@ body.menu-is-closing .site-menu__logo-letter .site-menu__nav-item a:before,body.
     /*How fast it highlights the text*/
     transition:opacity .2s ease
 }
+body.menu-is-open .site-menu__nav-item--active .site-menu__nav-link:after{
+    transition-delay:.7s;
+    -webkit-transform:scaleX(1);
+    transform:scaleX(1)
+}
