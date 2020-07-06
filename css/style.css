@@ -549,14 +549,16 @@ body.menu-is-closing .site-menu__logo-letter .site-menu__nav-item a:before,body.
     font-weight:400
 }
 .site-menu__nav{
-    margin-left:100%;
+    margin-left:70%;
     position:absolute;
-    right:1200px;
+    right:50px;
     top:20vh;
     opacity:0;
-    /*angle in transform menu webkit and transform used for different browsers*/
-    -webkit-transform:translateX(10) rotateY(0deg) skewX(0deg);
-    transform:translateX(10) rotateY(0deg) skewX(0deg);
+    -webkit-transform:translateX(0) rotateY(-60deg) skewY(-7deg);
+    transform:translateX(0) rotateY(-60deg) skewY(-7deg);
+    transition:opacity .5s cubic-bezier(.48,0,.12,1),-webkit-transform 1s cubic-bezier(.48,0,.12,1);
+    transition:transform 1s cubic-bezier(.48,0,.12,1),opacity .5s cubic-bezier(.48,0,.12,1);
+    transition:transform 1s cubic-bezier(.48,0,.12,1),opacity .5s cubic-bezier(.48,0,.12,1),-webkit-transform 1s cubic-bezier(.48,0,.12,1);
     -webkit-perspective:1000px;
     perspective:1000px;
     -webkit-backface-visibility:hidden;
