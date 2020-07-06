@@ -14,7 +14,7 @@ html{
 body{
     margin:0
 }
-header,nav,{
+header,nav{
     display:block
 }
 
@@ -47,10 +47,9 @@ button,select{
     text-transform:none
 }
 @font-face{
-    font-family:PTSans;
+    font-family:Open;
     font-style:normal;
     font-weight:400;
-    src:url(PTSans-Regular.ttf) format("svg")
 }
 
 a{
@@ -100,7 +99,7 @@ body.prevent-scroll{
     left:0;
     position:absolute;
     top:0;
-    width:100%
+    width:100%;
     z-index:-10;
 }
 
@@ -275,11 +274,11 @@ html[data-header-theme=dark] .menu-is-opening .header__logo-letter{
         font-size:17px
     }
 }
-}
+
 .header__nav-item a:hover:before{
     opacity:1;
-    -webkit-transform-origin:center right;
-    transform-origin:center right;
+    -webkit-transform-origin:right;
+    transform-origin:right;
     -webkit-transform:scaleX(1);
     transform:scaleX(1)
 }
@@ -508,8 +507,8 @@ body.menu-is-closing .site-menu__logo-letter .site-menu__nav-item a:before,body.
     background-color:#000;
     -webkit-transform:scaleX(0);
     transform:scaleX(0);
-    -webkit-transform-origin:center right;
-    transform-origin:center right;
+    -webkit-transform-origin:right;
+    transform-origin:right;
     transition:-webkit-transform .75s cubic-bezier(.48,0,.12,1) .3s;
     transition:transform .75s cubic-bezier(.48,0,.12,1) .3s;
     transition:transform .75s cubic-bezier(.48,0,.12,1) .3s,-webkit-transform .75s cubic-bezier(.48,0,.12,1) .3s
@@ -627,8 +626,8 @@ body.menu-is-closing .site-menu__logo-letter .site-menu__nav-item a:before,body.
 @media screen and (min-width:600px){
     .site-menu__nav-link{
         font-size:40px;
-        line-height:55px
-        left:80;
+        line-height:55px;
+        left:80px;
     }
 }
 .nav-removedec{
