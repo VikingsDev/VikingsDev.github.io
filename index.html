@@ -11,96 +11,100 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-
 <body menu-state="closed" style="background-color: #1E2124;">
-<!--allows for menu overlay and background-->
-
-
-<header class="header header--animate-in " style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
-    <div class="header__inner">
-        <div class="header__logo-wrap" data-nav-link="1">
-            <a class="header__logo" href="index.html">
-                <!--logo here-->
-                <img src="https://vikingsdev.ca/asset-package/logo-color.svg" style="width:60px;height:60px;">
-            </a>
+    <!--allows for menu overlay and background-->
+    <header class="header header--animate-in " style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
+            <div class="header__inner">
+                <div class="header__logo-wrap" data-nav-link="1">
+                    <a class="header__logo" href="index.html">
+                        <!--logo here-->
+                        <img src="https://vikingsdev.ca/asset-package/logo-color.svg" style="width:60px;height:60px;">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item" data-nav-link="2">
+                            <a href="about.html" style="text-decoration: none">About</a>
+                        </li>
+                        <li class="header__nav-item" data-nav-link="3">
+                            <a href="events.html" style="text-decoration: none">Events</a>
+                        </li>
+                        <li class="header__nav-item" data-nav-link="4">
+                            <a href="bounties.html" style="text-decoration: none">Bounties</a>
+                        </li>
+                        <li class="header__nav-item" data-nav-link="5">
+                            <a href="workshops.html" style="text-decoration: none">Workshops</a>
+                        </li>
+                        <li class="header__nav-item" data-nav-link="6">
+                            <a href="contact.html" style="text-decoration: none">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="header__burger allow-hover" id="burger">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </button>
+                </nav>
+            </div>
         </div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item" data-nav-link="2">
-                    <a href="about.html" style="text-decoration: none">About</a>
-                </li>
-                <li class="header__nav-item" data-nav-link="3">
-                    <a href="events.html" style="text-decoration: none">Events</a>
-                </li>
-                <li class="header__nav-item" data-nav-link="4">
-                    <a href="bounties.html" style="text-decoration: none">Bounties</a>
-                </li>
-                <li class="header__nav-item" data-nav-link="5">
-                    <a href="workshops.html" style="text-decoration: none">Workshops</a>
-                </li>
-                <li class="header__nav-item" data-nav-link="6">
-                    <a href="contact.html" style="text-decoration: none">Contact</a>
-                </li>
-            </ul>
-            <button class="header__burger allow-hover" id="burger">
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-            </button>
-        </nav>
+    </header>
+
+
+    <div class="site-menu">
+        <div class="site-menu__bg" style="background-color: #6883DA;"></div>
+        <aside class="site-menu__info-slogan">
+            <p class="site-menu__slogan">
+                Don't know why it isn't working on mobile :(
+            </p>
+        </aside>
+        <div class="site-menu__container">
+            <nav class="site-menu__nav">
+                <ul class="site-menu__nav-list">
+                    <li class="site-menu__nav-item">
+                        <a class="site-menu__nav-link" href="index.html" style="text-decoration: none;color:white;">Home</a>
+                    </li>
+                    <li class="site-menu__nav-item">
+                        <a class="site-menu__nav-link" href="about.html" style="text-decoration: none;color:white;">About</a>
+                    </li>
+                    <li class="site-menu__nav-item">
+                        <a class="site-menu__nav-link" href="events.html" style="text-decoration: none;color:white;">Events</a>
+                    </li>
+                    <li class="site-menu__nav-item">
+                        <a class="site-menu__nav-link" href="bounties.html" style="text-decoration: none;color:white;">Bounties</a>
+                    </li>
+                    <li class="site-menu__nav-item">
+                        <a class="site-menu__nav-link" href="workshops.html" style="text-decoration: none;color:white;">Workshops</a>
+                    </li>
+                    <li class="site-menu__nav-item">
+                        <a class="site-menu__nav-link" href="contact.html" style="text-decoration: none;color:white;">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</header>
+
+    <main class="main" id="barba-wrapper">
+        <div class="barba-container" style="visibility: visible;">
+<!--        header banner-->
+<!--            create div class with padding for main content-->
+            <div class="container-fluid site-content">
+                <div class="row hero-banner">
+                    <h1 class="hero-banner-text"> Placeholder Text</h1>
+                </div>
+            </div>
 
 
-<div class="site-menu">
-    <div class="site-menu__bg" style="background-color: #6883DA;"></div>
-    <aside class="site-menu__info-slogan">
-        <p class="site-menu__slogan">
-            Don't know why it isn't working on mobile :(
-        </p>
-    </aside>
-    <div class="site-menu__container">
-        <nav class="site-menu__nav">
-            <ul class="site-menu__nav-list">
-                <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="index.html" style="text-decoration: none;color:white;">Home</a>
-                </li>
-                <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="about.html" style="text-decoration: none;color:white;">About</a>
-                </li>
-                <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="events.html" style="text-decoration: none;color:white;">Events</a>
-                </li>
-                <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="bounties.html" style="text-decoration: none;color:white;">Bounties</a>
-                </li>
-                <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="workshops.html" style="text-decoration: none;color:white;">Workshops</a>
-                </li>
-                <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="contact.html" style="text-decoration: none;color:white;">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        </div>
+    </main>
+
+    <div class="background-fill" id="background-fill">
+        <span style="opacity: 0;"></span>
+        <span style="background-color: #1E2124;"></span>
     </div>
-</div>
 
-<main class="main" id="barba-wrapper">
-    <div class="barba-container" style="visibility: visible;">
-
-
-        <!--        contenthere-->
-
-
-    </div>
-</main>
-
-<div class="background-fill" id="background-fill">
-    <span style="opacity: 0;"></span>
-    <span style="background-color: #1E2124;"></span>
-</div>
-
-<script src="js/navbarScripts.js"></script>
+    <script src="js/navbarScripts.js"></script>
 
 </body>
+
+
 </html>

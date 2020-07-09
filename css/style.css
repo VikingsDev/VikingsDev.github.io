@@ -654,3 +654,15 @@ body.menu-is-open .site-menu__nav-item--active .site-menu__nav-link:after{
     -webkit-transform:scaleX(1);
     transform:scaleX(1)
 }
+
+.site-content{
+
+    padding-top: 190px;
+    padding-bottom:30px;
+
+}
+.site-navigation{
+
+
+
+}
