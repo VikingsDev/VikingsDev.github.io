@@ -11,7 +11,7 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -189,12 +189,12 @@ body.prevent-scroll {
     left: 5%;
     overflow: hidden;
     position: absolute;
-    top: 40px
+    top: 60px
 }
 
 @media screen and (min-width: 768px) {
     .header__logo {
-        top: 80px
+        top: 60px
     }
 }
 
@@ -757,7 +757,7 @@ body.menu-is-open .site-menu__nav-item--active .site-menu__nav-link:after {
 }
 
 .site-content {
-    padding-top: 190px;
+    padding-top: 180px;
     padding-bottom: 30px;
 }
 
