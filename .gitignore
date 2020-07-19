@@ -1,3 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # Editor-based HTTP Client requests
 .idea/**/httpRequests/
 
@@ -8,6 +22,7 @@
 .idea/**/dictionaries
 .idea/**/shelf
 .idea/**/codeStyles
+.idea/**/inspectionProfiles/
 
 # Other
 **/.DS_Store

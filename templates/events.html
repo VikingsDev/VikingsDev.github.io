@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>VikingsDev</title>
     <link href="https://vikingsdev.ca/asset-package/logo-color.svg" rel="shortcut icon">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
     <!--link styling-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,32 +14,33 @@
 
 
 <body menu-state="closed" style="background-color: #1E2124;">
-
 <!--allows for menu overlay and background-->
+
+
 <header class="header header--animate-in " style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
     <div class="header__inner">
         <div class="header__logo-wrap" data-nav-link="1">
-            <a class="header__logo" href="index.html">
-                <!--logo here TODO: make this local to this project-->
-                <img src="https://vikingsdev.ca/asset-package/logo-color.svg" style="width:80px;height:80px;">
+            <a class="header__logo" href="/">
+                <!--logo here-->
+                <img src="https://vikingsdev.ca/asset-package/logo-color.svg" style="width:60px;height:60px;">
             </a>
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item" data-nav-link="2">
-                    <a href="about.html" style="text-decoration: none">About</a>
+                    <a href="about" style="text-decoration: none">About</a>
                 </li>
                 <li class="header__nav-item" data-nav-link="3">
-                    <a href="events.html" style="text-decoration: none">Events</a>
+                    <a href="events" style="text-decoration: none">Events</a>
                 </li>
                 <li class="header__nav-item" data-nav-link="4">
-                    <a href="bounties.html" style="text-decoration: none">Bounties</a>
+                    <a href="bounties" style="text-decoration: none">Bounties</a>
                 </li>
                 <li class="header__nav-item" data-nav-link="5">
-                    <a href="workshops.html" style="text-decoration: none">Workshops</a>
+                    <a href="workshops" style="text-decoration: none">Workshops</a>
                 </li>
                 <li class="header__nav-item" data-nav-link="6">
-                    <a href="contact.html" style="text-decoration: none">Contact</a>
+                    <a href="contact" style="text-decoration: none">Contact</a>
                 </li>
             </ul>
             <button class="header__burger allow-hover" id="burger">
@@ -48,7 +49,6 @@
                 <span class=""></span>
             </button>
         </nav>
-    </div>
     </div>
 </header>
 
@@ -64,22 +64,22 @@
         <nav class="site-menu__nav">
             <ul class="site-menu__nav-list">
                 <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="index.html" style="text-decoration: none;color:white;">Home</a>
+                    <a class="site-menu__nav-link" href="/" style="text-decoration: none;color:white;">Home</a>
                 </li>
                 <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="about.html" style="text-decoration: none;color:white;">About</a>
+                    <a class="site-menu__nav-link" href="about" style="text-decoration: none;color:white;">About</a>
                 </li>
                 <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="events.html" style="text-decoration: none;color:white;">Events</a>
+                    <a class="site-menu__nav-link" href="events" style="text-decoration: none;color:white;">Events</a>
                 </li>
                 <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="bounties.html" style="text-decoration: none;color:white;">Bounties</a>
+                    <a class="site-menu__nav-link" href="bounties" style="text-decoration: none;color:white;">Bounties</a>
                 </li>
                 <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="workshops.html" style="text-decoration: none;color:white;">Workshops</a>
+                    <a class="site-menu__nav-link" href="workshops" style="text-decoration: none;color:white;">Workshops</a>
                 </li>
                 <li class="site-menu__nav-item">
-                    <a class="site-menu__nav-link" href="contact.html" style="text-decoration: none;color:white;">Contact</a>
+                    <a class="site-menu__nav-link" href="contact" style="text-decoration: none;color:white;">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -88,29 +88,11 @@
 
 <main class="main" id="barba-wrapper">
     <div class="barba-container" style="visibility: visible;">
-        <!--header banner-->
-        <!--create div class with padding for main content-->
-        <div class="container-fluid site-content">
 
-            <!--title area-->
-            <h1 class="pl-5"><!--hero-banner-text-->[Page Title Here]</h1>
 
-            <!--main content-->
-            <div class="row p-2">
-                <div class="col-md">
-                    <p class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at aut culpa debitis deserunt dolorum exercitationem
-                        explicabo, facere fugiat
-                        ipsa itaque iure molestias nulla officia officiis placeat quae sint, vero!</p>
-                </div>
+        <!--        contenthere-->
 
-                <div class="col-md">
-                    <p class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam delectus ea illo ipsum laborum nemo quas
-                        voluptatibus. Autem
-                        consectetur cumque iure officia voluptatum. Atque blanditiis commodi, itaque quia reprehenderit ut?</p>
-                </div>
-            </div>
 
-        </div>
     </div>
 </main>
 
@@ -119,7 +101,6 @@
     <span style="background-color: #1E2124;"></span>
 </div>
 
-<!--scripts-->
 <script src="js/navbarScripts.js"></script>
 
 </body>
