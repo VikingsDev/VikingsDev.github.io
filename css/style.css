@@ -757,10 +757,14 @@ body.menu-is-open .site-menu__nav-item--active .site-menu__nav-link:after {
 }
 
 .site-content {
-    padding-top: 180px;
-    padding-bottom: 30px;
+    font-family: Arial, sans-serif; /*temp*/
+    padding: 190px 20px 30px;
 }
 
 .site-navigation {
 
+}
+
+.title-area {
+    padding-bottom: 70px;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>VikingsDev</title>
     <link href="https://vikingsdev.ca/asset-package/logo-color.svg" rel="shortcut icon">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
 
     <!--link styling-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,15 +14,14 @@
 
 
 <body menu-state="closed" style="background-color: #1E2124;">
+
 <!--allows for menu overlay and background-->
-
-
 <header class="header header--animate-in " style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
     <div class="header__inner">
         <div class="header__logo-wrap" data-nav-link="1">
             <a class="header__logo" href="/">
-                <!--logo here-->
-                <img src="https://vikingsdev.ca/asset-package/logo-color.svg" style="width:60px;height:60px;">
+                <!--logo here TODO: make this local to this project-->
+                <img src="https://vikingsdev.ca/asset-package/logo-color.svg" style="width:80px;height:80px;">
             </a>
         </div>
         <nav class="header__nav">
@@ -49,6 +48,7 @@
                 <span class=""></span>
             </button>
         </nav>
+    </div>
     </div>
 </header>
 
@@ -88,10 +88,62 @@
 
 <main class="main" id="barba-wrapper">
     <div class="barba-container" style="visibility: visible;">
+        <!--create div class with padding for main content-->
         <div class="container-fluid site-content">
-            <h1 class="pl-5"><a href="workshop-template">[workshop template]</a></h1>
 
-            <!--contenthere-->
+            <!--title area-->
+            <div class="title-area">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 pl-5">
+                        <h1><!--hero-banner-text-->[Workshop Title Here]</h1>
+                        <h3>[Author Name Here]</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--main content-->
+            <div class="row justify-content-center p-2">
+                <div class="col-md-8 align-content-center">
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ipsum nam, reprehenderit sed suscipit
+                        tenetur? Beatae
+                        consequuntur debitis doloremque eveniet expedita facere, in inventore libero magnam minima modi officiis veniam. Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque enim expedita impedit laborum libero maxime nulla
+                        officiis placeat repellat. Asperiores consequatur corporis inventore, nihil omnis quas rem sit velit!lorem  Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit. A, atque cumque delectus dolore eos esse excepturi id incidunt minima
+                        obcaecati officia pariatur perferendis qui reiciendis sequi, sunt totam ut, veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Accusamus, amet animi asperiores cum, ea eligendi fugiat labore nemo obcaecati perspiciatis placeat,
+                        sequi vel voluptas. Animi labore natus quaerat qui rem. lorem</p>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ipsum nam, reprehenderit sed suscipit tenetur? Beatae
+                        consequuntur debitis doloremque eveniet expedita facere, in inventore libero magnam minima modi officiis veniam. Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque enim expedita impedit laborum libero maxime nulla
+                        officiis placeat repellat. Asperiores consequatur corporis inventore, nihil omnis quas rem sit velit!lorem  Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit. A, atque cumque delectus dolore eos esse excepturi id incidunt minima
+                        obcaecati officia pariatur perferendis qui reiciendis sequi, sunt totam ut, veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Accusamus, amet animi asperiores cum, ea eligendi fugiat labore nemo obcaecati perspiciatis placeat,
+                        sequi vel voluptas. Animi labore natus quaerat qui rem. lorem</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </main>
@@ -101,6 +153,7 @@
     <span style="background-color: #1E2124;"></span>
 </div>
 
+<!--scripts-->
 <script src="js/navbarScripts.js"></script>
 
 </body>

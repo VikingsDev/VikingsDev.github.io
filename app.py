@@ -2,12 +2,14 @@ from flask import Flask, request, render_template, send_from_directory, flash, r
 
 app = Flask(__name__)  # Creates the application object
 
+test = "test"
 
 @app.route('/')
 def index():  # Defines what route "index" will do
     return render_template('index.html')  # Renders index.html
 
 
+# Starting alphabetical
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -32,10 +34,18 @@ def events():
 def workshops():
     return render_template('workshops.html')
 
+# TODO: figure out how to implement all the separate workshop pages
 
+
+# Other
 @app.route('/mainpage-template-1')
 def mainpage_template_1():
     return render_template('mainpage-template-1.html')
+
+
+@app.route('/workshop-template')
+def workshop_template():
+    return render_template('workshop-template.html')
 
 
 @app.route('/css/<path>')

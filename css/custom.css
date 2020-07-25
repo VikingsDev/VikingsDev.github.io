@@ -1,7 +1,17 @@
 /* Custom rules to override default Bootstrap classes */
 h1 {
-    font-family: Arial, sans-serif;
+    /*font-family: Georgia, sans-serif;*/
     font-size: 3em;
     /*padding-left: 14vw;*/
-    padding-bottom: 50px;
+    padding-bottom: 15px;
+}
+
+h3 {
+    /*font-family: Arial, sans-serif;*/
+    font-size: 2em;
+    /*padding-left: 14vw;*/
+}
+
+p {
+    font-size: 1.1em;
 }
