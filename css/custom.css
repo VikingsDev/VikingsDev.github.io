@@ -1,9 +1,54 @@
 /* Custom rules to override default Bootstrap classes */
-h1 {
+body {
+   font-family: 'Open Sans', sans-serif;
+}
+
+.title {
     /*font-family: Georgia, sans-serif;*/
-    font-size: 3em;
+    font-size: 8em;
     /*padding-left: 14vw;*/
+    padding-top: 4rem;
     padding-bottom: 15px;
+    color: white;
+    font-weight:600;
+}
+
+#stroke {
+    position:relative;
+  	color: black;
+    top: 30px;
+    margin-left:10px;
+    margin-bottom:44px;
+  	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+#help {
+    position:absolute;
+    top:3px;
+    margin-left: -27.8rem;
+}
+
+#help2 {
+    position:absolute;
+    color: black;
+    margin-top:-40px;
+    margin-left: -27.5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.foot-body {
+  color:white;
+  font-size:.7em;
+  line-height:1.5rem;
+}
+
+h2 {
+    color: #F5BA22;
+    font-size:.7rem;
+    margin-top:-4px;
+    font-weight:600;
 }
 
 h3 {
@@ -12,6 +57,63 @@ h3 {
     /*padding-left: 14vw;*/
 }
 
+h4 {
+    font-weight:600;
+    color:white;
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size:1em;
+    font-weight:600;
+    color:#9A419E;
+}
+
+h6 {
+  color:#A152F0;
+  font-size:1.4em;
+  font-weight:600;
+}
+
 p {
     font-size: 1.1em;
+}
+
+
+.desc {
+    font-size:.8em;
+    font-weight:300;
+    color:white;
+    line-height:1.2em;
+}
+
+.navbar-nav {
+    color:white;
+}
+
+
+.navbar-nav .nav-item > a {
+    color: #FFF;
+}
+
+.navbar-nav .nav-item > a:hover {
+    color: #F5BA22;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-item > .active-link {
+    color: #F5BA22;
+}
+
+.navbar {
+  font-size: 1.6em;
+  font-weight:600;
+}
+
+.dot {
+  height: 150px;
+  width: 150px;
+  background-color: #F5BA22;
+  border-radius: 50%;
+  display: inline-block;
 }

@@ -194,7 +194,7 @@ body.prevent-scroll {
 
 @media screen and (min-width: 768px) {
     .header__logo {
-        top: 60px
+        top: 15px
     }
 }
 
@@ -233,7 +233,7 @@ html[data-header-theme=dark] .menu-is-opening .header__logo-letter {
 
 @media screen and (min-width: 768px) {
     .header__nav {
-        top: 92px
+        top: 30px
     }
 }
 
@@ -757,7 +757,7 @@ body.menu-is-open .site-menu__nav-item--active .site-menu__nav-link:after {
 }
 
 .site-content {
-    font-family: Arial, sans-serif; /*temp*/
+    font-family: 'Open Sans', sans-serif;
     padding: 190px 20px 30px;
 }
 
