@@ -14,6 +14,13 @@ def index():  # Defines what route "index" will do
 def about():
     return render_template('about.html')
 
+@app.route('/aboutactions')
+def aboutactions():
+    return render_template('aboutactions.html')
+
+@app.route('/aboutmissions')
+def aboutmissions():
+    return render_template('aboutmissions.html')
 
 @app.route('/bounties')
 def bounties():
