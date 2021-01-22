@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aecbe8a-b61e-4377-b93f-b5b7b85a71b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-    </list>
+    <list default="true" id="eff28465-d053-45be-bea2-738e6542d59d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,19 +10,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1eEttnDsT4PYLsxdhnGVEMIWzmu" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="1kUi4GL91GPXT6YIAL0KkfKbjzk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,133 +25,63 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../photogallery-master" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="ts.external.directory.path" value="D:\Application\WebStorm 2020.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Documents\VikingsDev.github.io\js" />
-      <recent name="D:\Documents\VikingsDev.github.io\" />
-      <recent name="D:\Documents\VikingsDev.github.io\css" />
+      <recent name="C:\Users\George\Desktop\New folder\js" />
+      <recent name="C:\Users\George\Desktop\New folder\img" />
+      <recent name="C:\Users\George\Desktop\New folder\archive" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\George\Desktop\New folder" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.Flask">
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="VikingsDev.github.io" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Flask" type="Python.FlaskServer" nameIsGenerated="true">
-      <module name="VikingsDev.github.io" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.app" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3aecbe8a-b61e-4377-b93f-b5b7b85a71b3" name="Default Changelist" comment="" />
-      <created>1593898799478</created>
+      <changelist id="eff28465-d053-45be-bea2-738e6542d59d" name="Default Changelist" comment="" />
+      <created>1605761377485</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1593898799478</updated>
-      <workItem from="1593898807051" duration="1846000" />
-      <workItem from="1594001648250" duration="625000" />
-      <workItem from="1594074565095" duration="1167000" />
-      <workItem from="1594077347241" duration="2032000" />
-      <workItem from="1594180704028" duration="3942000" />
-      <workItem from="1594269021669" duration="1798000" />
-      <workItem from="1594340668154" duration="384000" />
-      <workItem from="1594447283690" duration="599000" />
-      <workItem from="1594670012767" duration="8022000" />
-      <workItem from="1594874646685" duration="599000" />
-      <workItem from="1595032133039" duration="599000" />
-      <workItem from="1595268930497" duration="136000" />
-      <workItem from="1595269118275" duration="3411000" />
-      <workItem from="1595274353540" duration="3550000" />
-      <workItem from="1595981586542" duration="6000" />
-      <workItem from="1595982731328" duration="1081000" />
-      <workItem from="1595983826517" duration="2455000" />
-      <workItem from="1596221364421" duration="379000" />
-      <workItem from="1597606920090" duration="1673000" />
-      <workItem from="1597702628904" duration="2285000" />
-      <workItem from="1597727453899" duration="786000" />
-      <workItem from="1597871040961" duration="24000" />
-      <workItem from="1597877873975" duration="11000" />
-      <workItem from="1597964108492" duration="134000" />
-      <workItem from="1597967342289" duration="602000" />
-      <workItem from="1598057083512" duration="5000" />
-      <workItem from="1598663508847" duration="7000" />
-      <workItem from="1599797593058" duration="203000" />
-      <workItem from="1601058169912" duration="171000" />
-      <workItem from="1601586754549" duration="54000" />
-      <workItem from="1610798959920" duration="12000" />
+      <updated>1605761377485</updated>
+      <workItem from="1605761379573" duration="8791000" />
+      <workItem from="1605841598404" duration="4096000" />
+      <workItem from="1605846970452" duration="5156000" />
+      <workItem from="1605902401394" duration="21106000" />
+      <workItem from="1605943160912" duration="870000" />
+      <workItem from="1606701581657" duration="4000000" />
+      <workItem from="1607059589028" duration="31000" />
+      <workItem from="1607059671332" duration="2536000" />
+      <workItem from="1607135474287" duration="105000" />
+      <workItem from="1607140824372" duration="300000" />
+      <workItem from="1609465555585" duration="1503000" />
+      <workItem from="1609472363066" duration="4951000" />
+      <workItem from="1609477623595" duration="1089000" />
+      <workItem from="1609478724420" duration="1541000" />
+      <workItem from="1609480277204" duration="4378000" />
+      <workItem from="1609486398339" duration="2654000" />
+      <workItem from="1609541560901" duration="12571000" />
+      <workItem from="1609654600978" duration="4554000" />
+      <workItem from="1610097736866" duration="39000" />
+      <workItem from="1610686413346" duration="2115000" />
+      <workItem from="1611285550828" duration="3572000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1104" y="558" key="com.intellij.ide.util.TipDialog" timestamp="1610798962857">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="1104" y="558" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.30.1920.1050@0.0.1920.1050" timestamp="1610798962857" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VikingsDev_github_io$app.coverage" NAME="app Coverage Results" MODIFIED="1597607576581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VikingsDev_github_io$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1597964216393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <option name="version" value="3" />
   </component>
 </project>
