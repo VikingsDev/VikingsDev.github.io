@@ -1,0 +1,1 @@
+!function(n){n.fn.fullHeight=function(){var i=this,e=n(window)[0].innerHeight,t=function(){return i.each(function(){i.css({height:e})})};return n(window).on("resize",function(){e=n(window)[0].innerHeight,t()}),t(),i}}(jQuery);
