@@ -482,9 +482,8 @@ td, th {
           -7px 6px #cdd2d5,
           -7px 8px #808d93,
           -8px 7px #cdd2d5;
-  /*background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.773286769.8589%2Fflat%2C550x550%2C075%2Cf.jpg&f=1&nofb=1") repeat;*/
   background-position: 10% 10%;
-  background-size: cover%;
+  background-size: cover;
   background-repeat: repeat;
   -webkit-background-clip: text;
   position: relative;
@@ -1741,7 +1740,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   right: 20px;
 }
-}
+
 .overlay {
   position: absolute;
   left: 0;
@@ -2186,7 +2185,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 45px;
   text-align: center;
 }
+
+
 .wrkshp-page {
+
+  height: 300px;
+
   overflow: hidden;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -2195,9 +2199,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding:10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   background-color: #3F3F3F;
+
 }
+
+.wrkshp-page .thumb {
+  height: 15%;   
+  width: 20%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .wrkshp-page .thumb img {
-  width: 100%;
+  height: 100%;
 }
 .wrkshp-page h4 {
   text-transform: uppercase;
