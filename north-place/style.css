@@ -1,0 +1,57 @@
+body {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+/* Toolbar styles */
+#toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20vw;
+  background-color: #6883dad0; /* Slight transparency */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000; /* Ensure toolbar is above all other content */
+}
+
+@media (max-width: 768px) {
+  #toolbar {
+    height: 50vw; /* Increase height for mobile devices */
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.color-option {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 10%;
+  cursor: pointer;
+  border: 0.5vw solid rgb(0, 0, 0);
+  margin: 0.5vw; /* Add margin for spacing between the elements */
+}
+
+@media (max-width: 768px) {
+  .color-option {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10%;
+    cursor: pointer;
+    border: 0.7vw solid rgb(0, 0, 0);
+    margin: 0.7vw; /* Add margin for spacing between the elements */
+  }
+}
