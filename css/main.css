@@ -641,8 +641,8 @@ td, th {
 }
 
 .placeframe {
-  width: 100%; 
-  height: 80vh;
+  width: round(100%); 
+  height: round(80vh);
   border: 0;
 }
 .no-padding {

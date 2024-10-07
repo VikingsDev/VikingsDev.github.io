@@ -15,7 +15,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20vw;
+  height: 15vw;
   background-color: #6883dad0; /* Slight transparency */
   display: flex;
   flex-direction: column;
