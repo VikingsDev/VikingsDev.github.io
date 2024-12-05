@@ -672,16 +672,16 @@ td, th {
   background-color: #f9f9ff;
 }
 .generic-banner {
-  margin-top: 60px;
-  background-color: #8490ff;
+  margin-top: 20px;
+  background-color: #c69249;
   text-align: center;
 }
 .generic-banner .height {
-  height: 600px;
+  height: 100px;
 }
 @media (max-width: 767.98px) {
   .generic-banner .height {
-    height: 400px;
+    height: 100px;
   }
 }
 .generic-banner .generic-banner-content h2 {
@@ -702,6 +702,11 @@ td, th {
     display: none;
   }
 }
+
+.banner-announcement {
+  padding-top: 100px
+}
+
 .generic-content h1 {
   font-weight: 600;
 }
@@ -1748,6 +1753,32 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: 20px;
 }
 
+.secondary-btn {
+  background: #8490ff;
+  line-height: 42px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  position: relative;
+}
+
+.secondary-btn:hover {
+  color: #fff;
+}
+.secondary-btn:hover span {
+  color: #fff;
+  right: 20px;
+}
+
 .overlay {
   position: absolute;
   left: 0;
@@ -1788,7 +1819,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 30px;
   }
 }
-.banner-left .primary-btn:hover {
+.banner-left .primary-btn:hover .secondary-btn:hover {
   box-shadow: 0px 20px 20px 0px rgba(132, 144, 255, 0.3);
 }
 @media (max-width: 767px) {
@@ -1844,7 +1875,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
   max-width: 445px;
 }
-.primary-btn:hover {
+.primary-btn:hover .secondary-btn:hover {
   box-shadow: 0px 4px 0px 0px rgba(255, 201, 37, 0.32);
 }
 /*-------- End home-about Area ------------*/
@@ -1902,7 +1933,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*--------- Start Portfolio Area -------------*/
 
-.portfolio-area .primary-btn {
+.portfolio-area .primary-btn .secondary-btn {
   color: #fff;
   background-color: #8490ff;
   margin-left: auto;
@@ -2721,7 +2752,7 @@ dl.accordion.time-line:before {
   background-size: cover;
   padding: 130px 0px;
 }
-.blog-home-banner .primary-btn {
+.blog-home-banner .primary-btn .secondary-btn {
   border-radius: 0px;
   background: #fff;
   color: #222;
@@ -2732,7 +2763,7 @@ dl.accordion.time-line:before {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.blog-home-banner .primary-btn:hover {
+.blog-home-banner .primary-btn:hover .secondary-btn:hover {
   background: transparent;
   border-color: #fff;
   color: #fff;
@@ -2867,7 +2898,7 @@ dl.accordion.time-line:before {
 .post-content-area .single-post .excert {
   margin-bottom: 20px;
 }
-.post-content-area .single-post .primary-btn {
+.post-content-area .single-post .primary-btn .secondary-btn{
   background: #fff !important;
   color: #222 !important;
   -webkit-transition: all 0.3s ease 0s;
@@ -2876,7 +2907,7 @@ dl.accordion.time-line:before {
   transition: all 0.3s ease 0s;
   border-radius: 0px !important;
 }
-.post-content-area .single-post .primary-btn:hover {
+.post-content-area .single-post .primary-btn:hover .secondary-btn:hover{
   background: #8490ff !important;
   color: #fff !important;
 }
@@ -3213,13 +3244,13 @@ dl.accordion.time-line:before {
   font-size: 13px;
   color: #777;
 }
-.comment-form .primary-btn {
+.comment-form .primary-btn .secondary-btn{
   border-radius: 0px !important;
   border: 1px solid transparent;
   color: #fff;
   font-weight: 600;
 }
-.comment-form .primary-btn:hover {
+.comment-form .primary-btn:hover .secondary-btn:hover{
   background: transparent;
   border-color: #8490ff !important;
   color: #8490ff !important;

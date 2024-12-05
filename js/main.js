@@ -256,6 +256,12 @@ $(document).ready(function() {
         $(".cursor").css('transform','translate(-50%, -50%) scale(1)')
     })
 
+    $(".secondary-btn").hover(function(){
+        $(".cursor").css('transform','translate(-50%, -50%) scale(13)')
+    },function(){
+        $(".cursor").css('transform','translate(-50%, -50%) scale(1)')
+    })
+
     //hide cursor
     $(".hide-hover").hover(function(){
         $(".cursor").css('transform','translate(-50%, -50%) scale(0)')
